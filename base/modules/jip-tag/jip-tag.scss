@@ -1,0 +1,147 @@
+.jip-tag {
+  position: relative;
+  padding-bottom: 40px;
+
+  @include rwd('tablet', true)
+ {
+    padding-bottom: 60px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    padding-bottom: 92px;
+  }
+}
+
+.jip-tag__inner {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px;
+  border: 1px solid $c-dark-blue
+;
+
+  @include rwd('tablet', true)
+ {
+    padding: 7px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    width: percentage(762/1155);
+    padding: 9px;
+  }
+}
+
+.jip-tag__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 22px 20px;
+
+  @include rwd('small-tablet')
+ {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 30px;
+  }
+
+  @include rwd('tablet', true)
+ {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  }
+
+  @include rwd('laptop', true)
+ {
+    padding: 0 40px;
+  }
+}
+
+.jip-tag__title {
+  padding-bottom: 8px;
+
+  @include rwd('tablet', true)
+ {
+    max-width: 236px;
+    padding-bottom: 0;
+  }
+
+  @include rwd('laptop', true)
+ {
+    max-width: 331px;
+    padding-bottom: 0;
+  }
+}
+
+.jip-tag__footer {
+  display: flex;
+
+  @include rwd('tablet', true)
+ {
+    text-align: right;
+  }
+}
+
+.jip-tag__background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: $c-dark-blue
+;
+}
+
+.jip-tag__background-image {
+  @include pseudo-ratio(122/265);
+
+  width: 100%;
+  height: 100%;
+
+  @include rwd('small-tablet')
+ {
+    @include pseudo-ratio(162/426);
+  }
+
+  @include rwd('small-tablet', true)
+ {
+    @include pseudo-ratio(162/600);
+  }
+
+  @include rwd('tablet', true)
+ {
+    @include pseudo-ratio(137/663);
+  }
+
+  @include rwd('laptop', true)
+ {
+    @include pseudo-ratio(126/741);
+  }
+}
+
+.jip-tag--single-post {
+  margin-top: 36px;
+  padding-bottom: 35px;
+
+  @include rwd('tablet', true)
+ {
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    margin-top: 20px;
+    padding-bottom: 65px;
+  }
+
+  & + .content--single-post .content__wysiwyg-inner *:first-child {
+    margin-top: 0;
+  }
+}

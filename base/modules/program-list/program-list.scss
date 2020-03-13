@@ -1,0 +1,42 @@
+.program-list--secondary {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $c-border
+;
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 15px;
+  }
+}
+
+.program-list__list {
+  margin-top: 10px;
+}
+
+.program-list__description {
+  color: $c-grey4
+;
+}
+
+.program-list__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .title {
+    width: percentage(3/4);
+  }
+  .score {
+    width: percentage(1/4);
+    text-align: right;
+    white-space: nowrap;
+  }
+  a {
+    color: $c-blue
+;
+  }
+}
+

@@ -1,0 +1,165 @@
+.card-tenth {
+  @include pseudo-ratio(0.35);
+  display: table;
+  flex: 1 0 auto;
+  width: 100%;
+  @media (--sm) {
+    display: flex;
+  }
+  &:before {
+    width: 0;
+    display: table-cell;
+  }
+}
+
+.card-tenth__block {
+  position: relative;
+  display: table-cell;
+  width: 100%;
+  padding: 20px 20px 5px 20px;
+  @media (--sm) {
+    padding: 40px 20px 35px;
+  }
+  @media (--ml) {
+    padding: 20px 20px 35px 20px;
+  }
+}
+
+.card-tenth__inner {
+  @media (--sm) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+.card-tenth__wrapper {
+  position: relative;
+  display: table;
+  width: 100%;
+  min-height: 176px;
+  overflow: hidden;
+  @media (--sm) {
+    min-height: 406px;
+  }
+}
+
+.card-tenth__block,
+.card-tenth__wrapper {
+  @media (--sm) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.card-tenth__logo-wrapper {
+  vertical-align: bottom;
+  @media (--sm) {
+    display: flex;
+    align-items: flex-end;
+    flex: 1 0 auto;
+  }
+}
+
+.card-tenth__logo {
+  margin-bottom: 2px;
+  width: 78px;
+  &.image--contain .image__img {
+    position: static;
+    @media (--sm) {
+      height: auto;
+    }
+  }
+}
+
+.card-tenth__image-figure {
+  &.image--cover {
+    position: static;
+  }
+  &:after {
+    @extend .absolute-full;
+    content: '';
+    background: rgba(var(--c-dark-blue2) , .8.5);
+  }
+}
+
+.card-tenth__link {
+  @extend .button-link-text;
+
+  &:hover {
+    .text,
+    .icon-arrow {
+      background: var(--c-blue-gray);
+      color: var(--c-black);
+    }
+
+    .icon-arrow:before {
+      animation: arrow-move 1s ease-in-out;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .text,
+  .icon-arrow {
+    @extend .transition;
+  }
+
+  .link-wrap {
+    display: inherit;
+    clear: both;
+  }
+
+  .text {
+    display: inline;
+    color: var(--c-white);
+  }
+
+  .icon-arrow {
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    width: 40px;
+    height: 15px;
+    margin-bottom: -3px;
+    line-height: 1;
+    color: var(--c-white);
+    &:before {
+      left: 0;
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      transform: translate3d(0,-50%,0);
+      background: transparent;
+    }
+  }
+}
+
+.no-object-fit {
+  .card-tenth__image-figure {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+  }
+  .card-tenth__logo-wrapper {
+    position: relative;
+    display: block;
+  }
+  .card-tenth__logo {
+    position: absolute;
+    left: 0;
+    top: auto;
+    bottom: 8px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+  .card-tenth__inner {
+    flex: 1;
+  }
+}

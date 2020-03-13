@@ -1,0 +1,26 @@
+.social-links--footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -15px;
+  @include rwd('small-tablet', true)
+ {
+    justify-content: flex-start;
+  }
+  .social-links__link {
+    @type 22px 22px;
+    @type $ml
+ 16px 16px;
+    color: $c-sunglow
+;
+    &:hover {
+      color: $c-white
+;
+    }
+  }
+}
+
+.social-links__item {
+  display: inline-block;
+  padding: 0 12.5px;
+}

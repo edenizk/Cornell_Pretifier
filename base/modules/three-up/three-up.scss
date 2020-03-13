@@ -1,0 +1,60 @@
+.three-up__grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.three-up--bg {
+  overflow: hidden;
+  .three-up__wrapper {
+    padding: 55px 0;
+    @extend .bg-diagonal;
+    background: $c-light-grey
+;
+    @include rwd('small-tablet', true)
+ {
+      padding: 60px 0;
+    }
+    @include rwd('tablet', true)
+ {
+      padding: 75px 0;
+    }
+    @include rwd('laptop', true)
+ {
+      padding: 90px 0;
+    }
+    @include rwd('large-laptop', true)
+ {
+      padding: 115px 0;
+    }
+    @include rwd('ultra')
+ {
+      padding: 130px 0;
+    }
+  }
+  .card-sixth__mask {
+    position: relative;
+    overflow: hidden;
+  }
+  .card-sixth__mask:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -5%;
+    right: 0;
+    width: 110%;
+    height: 30px;
+    background: $c-white
+;
+    transform: rotate3d(0,0,1,2deg);
+    bottom: -15px;
+  }
+}
+
+.three-up__item {
+  display: flex;
+  width: 100%;
+  @include rwd('tablet', true)
+ {
+    width: 33.33%;
+  }
+}
+

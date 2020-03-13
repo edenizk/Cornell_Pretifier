@@ -1,0 +1,669 @@
+.wysiwyg,
+body#tinymce,
+.et-content {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  h1 {
+    @extend .main-title;
+  }
+
+  h2 {
+    @extend .secondary-title;
+  }
+
+  h2.main-heading,
+  h3 {
+    @extend .main-heading;
+    text-transform: none;
+  }
+
+  h4 {
+    @extend .sub-heading;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: .5em;
+    margin-bottom: .75em;
+  }
+
+  p {
+    @extend .p;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    @include rwd('small-tablet', true)
+ {
+      margin-top: 7px;
+      margin-bottom: 7px;
+    }
+  }
+
+  .p-large p {
+    @extend .p-large;
+  }
+
+  /*
+  next element after p
+   */
+  p + *,
+  p + img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  /*
+  next element after h1
+   */
+  h1 + * {
+    margin-top: 7px;
+    @include rwd('small-tablet', true)
+ {
+      margin-top: 18px;
+    }
+  }
+
+  /*
+  next element after h2
+   */
+  h2:not(.main-heading) + * {
+    margin-top: 25px;
+    @include rwd('laptop', true)
+ {
+      margin-top: 30px;
+    }
+    @include rwd('large-laptop', true)
+ {
+      margin-top: 40px;
+    }
+    @include rwd('ultra')
+ {
+      margin-top: 50px;
+    }
+  }
+
+  /*
+  Blockquote
+   */
+  blockquote {
+    @extend .quote;
+    position: relative;
+    margin: 50px 0 0;
+    @include rwd('laptop', true)
+ {
+      margin-top: 60px;
+    }
+    + * {
+      margin-top: 30px;
+    }
+    &:before {
+      content: "\e90a";
+      font-family: 'crn';
+      position: absolute;
+      top: -30px;
+      color: $c-sunglow
+;
+      @include rwd('laptop', true)
+ {
+        top: -40px;
+      }
+    }
+  }
+
+  /*
+  Image
+   */
+  img,
+  figure {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    &.large-image {
+      max-width: 120%;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+    &.alignleft {
+      float: left;
+      margin: 0 10px 10px 0;
+    }
+    &.alignright {
+      float: right;
+      margin: 0 0 10px 10px;
+    }
+    &.aligncenter:not(.large-image) {
+      margin: 10px auto;
+    }
+  }
+  .aligncenter,
+  .alignright,
+  .alignnone {
+    img,
+    figure {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .wp-caption-text {
+    @extend .caption;
+    margin-top: 12px;
+    padding: 0;
+    text-align: center;
+    color: $c-dark-gray
+;
+  }
+
+  .wp-caption {
+    margin-bottom: 25px;
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  /*
+  List
+   */
+  ul, ol {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px -10px 0;
+    list-style: none;
+    @include rwd('small-tablet', true)
+ {
+      margin-top: 24px;
+    }
+  }
+
+  ol {
+    margin-left: -1.65em;
+  }
+
+  li {
+    flex: 1 1 100%;
+    min-width: 100%;
+    margin-top: 10px;
+    position: relative;
+    padding: 0 10px 0 32px;
+    @include rwd('small-tablet', true)
+ {
+      margin-top: 15px;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  ul > li:before {
+    content: '';
+    background: $c-dark-red
+;
+    display: block;
+    height: 7px;
+    width: 7px;
+    left: 10px;
+    top: 7px;
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  ul.gfield_checkbox {
+    margin: 10px 0 15px;
+
+    > li {
+      padding-left: 0;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  ul > li {
+    list-style: none;
+  }
+
+  ol > li {
+    list-style: decimal;
+    padding-left: .5em;
+  }
+
+  ul.gfield_radio {
+    > li {
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  /*
+  Responsive video
+   */
+  .rte__video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin: 20px 0;
+  }
+  .rte__video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .rte__video-wrapper + * {
+    margin-top: 30px;
+  }
+
+  /*
+  Button
+   */
+  .button-link, .button {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .button .button-link {
+    color: $c-white
+;
+  }
+
+  /*
+  hr line
+   */
+  hr {
+    display: block;
+    margin-bottom: 50px;
+    padding-top: 1.75em;
+    border: 0;
+    border-bottom: 1px solid $c-border
+;
+  }
+
+  /*
+  Bold + italic
+   */
+  strong {
+    font-weight: 700;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  table {
+    max-width: 100%;
+    td {
+      display: block;
+      @include rwd('small-tablet', true)
+ {
+        display: table-cell;
+      }
+    }
+    img {
+      max-width: 100%;
+      transform: none;
+      @include rwd('small-tablet', true)
+ {
+        max-width: 200px;
+      }
+    }
+    .even {
+      td * {
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  a:not(.button, .button-link, .link-hover, .image-link) {
+    color: $c-blue
+;
+    border-bottom: 1px solid $c-blue
+;
+    &:hover {
+      color: $c-black
+;
+    }
+    img {
+      margin-left: 0;
+      transform: none;
+    }
+  }
+
+  /* Impact List */
+  .impact-items {
+    display: block;
+    padding: 0;
+    margin: 0 -15px;
+    font-size: 0;
+    list-style: none outside none;
+    text-align: center;
+    @include rwd('tablet', true)
+ {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -80px;
+    }
+  }
+
+  li.impact-item {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
+    vertical-align: top;
+    @include rwd('tablet', true)
+ {
+      width: 33.33%;
+      margin-bottom: 45px;
+      padding: 0 15px;
+    }
+    @include rwd('laptop', true)
+ {
+      margin-bottom: 75px;
+      padding: 0 40px;
+    }
+    &:before {
+      content: none;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+      text-decoration: none;
+      border: none;
+      @include rwd('tablet', true)
+ {
+        display: block;
+      }
+      & + p {
+        display: none;
+      }
+    }
+    p {
+      @extend .p;
+      margin-top: 13px;
+      @include rwd('tablet', true)
+ {
+        margin-top: 25px;
+      }
+      &:empty {
+        display: none;
+      }
+    }
+    h3 {
+      @extend .sub-heading;
+      margin: 0;
+      @include rwd('laptop', true)
+ {
+        margin-top: 13px;
+      }
+    }
+    .link {
+      @extend .label-text;
+      margin-top: 15px;
+      color: $c-blue2
+
+    }
+  }
+
+  .impact-image {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border: 5px solid $c-white
+;
+    border-radius: 50%;
+    margin: 0;
+    background: $c-green2
+;
+    @include rwd('small-tablet')
+ {
+      width: 178px;
+      height: 178px;
+      float: none;
+    }
+    @include rwd('laptop', true)
+ {
+      width: 250px;
+      height: 250px;
+    }
+    .impact-red & {
+      background: $c-red2
+;
+    }
+  }
+
+  .impact-content {
+    display: block;
+    flex: 1 0 0;
+    @include rwd('tablet', true)
+ {
+      width: 100%
+    }
+  }
+
+  .impact-image-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    transform: translate(-50%,-50%);
+    img {
+      display: inline-block;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      transform: scale(.7);
+      backface-visibility: hidden;
+    }
+  }
+  .two-columns {
+    li {
+      flex: 0 1 50%;
+      min-width: 50%;
+      padding: 0 10px 0 32px;
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+  }
+  h3.gf_progressbar_title {
+    @extend .label-text;
+  }
+  // Change font for Gravity form inside wysiwyg
+  .gform_wrapper *,
+  .gform_wrapper .gfield * {
+    @extend .heading;
+  }
+
+  .jip-p-wysiwyg {
+    @extend .jip-p;
+  }
+
+  .jip-p-intro-wysiwyg {
+    @extend .jip-p-intro;
+  }
+
+  .jip-drop-cap-wysiwyg {
+    @extend .text-stroke;
+    @type 80px 60px;
+
+    float: left;
+    padding: 14px 18px 0 10px;
+
+    @include rwd('tablet', true)
+ {
+      padding: 14px 18px 0 8px;
+    }
+
+    @include rwd('laptop', true)
+ {
+      @type 105px 60px;
+      padding: 25px 14px 0 6px;
+    }
+  }
+
+  .jip-p,
+  .jip-p-intro {
+    margin: 20px 0 0;
+
+    @include rwd('ultra')
+ {
+      margin: 25px 0 0;
+    }
+  }
+
+  .jip-p + .jip-p {
+    @include rwd('tablet', true)
+ {
+      margin: 30px 0 0;
+    }
+  }
+
+  .jip-block-quote-wysiwyg {
+    @extend .jip-block-quote;
+
+    margin: 25px 0 25px;
+
+    @include rwd('tablet', true)
+ {
+      margin: 30px 0 30px;
+    }
+
+    @include rwd('ultra')
+ {
+      margin: 40px 0 40px;
+    }
+  }
+}
+
+.wysiwyg.how-we-evolved__content {
+  .jip-block-quote-wysiwyg {
+    padding-left: 28px;
+
+    @include rwd('laptop', true)
+ {
+      padding-left: 48px;
+    }
+  }
+}
+
+.wysiwyg.jip-about__content-text,
+.wysiwyg.jip-wysiwyg__content {
+  a:not(.button, .button-link, .link-hover, .image-link) {
+    color: $c-jip-green
+;
+    border-bottom: 1px solid $c-jip-green
+;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+#tinymce.page-template-page-jip-flexible {
+  background-color: transparent;
+}
+
+/**
+ * Everest Timeline Plugin overwrite
+ */
+.et-main-blog-wrapper {
+  ol,
+  ul {
+    display: block;
+    margin: 0;
+    list-style: none;
+
+    li {
+      display: block;
+      width: auto;
+      min-width: initial;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      &::before {
+        content: none;
+      }
+
+      a {
+        border: 0 !important;
+      }
+    }
+  }
+  .et-image {
+    margin-bottom: 5px;
+    @media only screen and (min-width: 641px) {
+      img {
+        margin: 0 auto !important;
+      }
+    }
+  }
+  .et-date {
+    @extend .label-text;
+    color: $c-white
+;
+    margin: 20px 0;
+    padding: 10px;
+  }
+  .et-post-bx {
+    .bx-prev,
+    .bx-next {
+      color: $c-white
+ !important;
+    }
+  }
+  .et-title {
+    @extend .h3;
+  }
+
+  @media only screen and (max-width: 640px) {
+    .et-outer-wrap {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.elfsight-widget {
+  .eui-widget-title {
+    @extend .h2;
+  }
+  .eui-item-text {
+    @extend .p;
+  }
+}
+
+.wysiwyg--event-details {
+  margin-bottom: 30px;
+  padding-top: 30px;
+
+  @include rwd('tablet', true)
+ {
+    padding-top: 35px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 60px;
+    margin-bottom: 60px;
+  }
+}

@@ -1,0 +1,66 @@
+.our-people {
+  padding-top: 65px;
+  padding-bottom: 335px;
+  background: var(--c-dark-blue);
+  overflow: hidden;
+
+  @media (--m) {
+    padding-bottom: 245px;
+  }
+
+  @media (--ml) {
+    padding-bottom: 390px;
+  }
+
+  .flickity-page-dots {
+    bottom: -38px;
+  }
+
+  .flickity-page-dots .dot {
+    width: 10px;
+    height: 10px;
+    border: none;
+    background: var(--c-white);
+    opacity: 0.21;
+  }
+
+  .flickity-page-dots .dot.is-selected {
+    background: var(--c-jip-green);
+    opacity: 1;
+  }
+}
+
+.our-people--jip-landing {
+  padding-top: 28px;
+
+  @media (--m) {
+    padding-top: 1px;
+  }
+
+  @media (--l) {
+    padding-top: 48px;
+  }
+}
+
+.our-people__grid {
+  &:after {
+    content: 'flickity';
+    display: none;
+
+    @media (--ml) {
+      content: '';
+    }
+  }
+
+  .flickity-viewport {
+    overflow: visible;
+
+    @media (--ml) {
+      overflow: hidden;
+    }
+  }
+
+  @media (--ml) {
+    display: flex;
+  }
+}

@@ -1,0 +1,91 @@
+.how-we-evolved {
+  background-color: $c-dark-blue
+;
+}
+
+.how-we-evolved__inner {
+  padding: 36px 0 40px;
+  border-bottom: 1px solid $c-white
+;
+
+  @include rwd('tablet', true)
+ {
+    padding: 40px 0 40px;
+  }
+
+  @include rwd('ultra')
+ {
+    padding: 100px 0 90px;
+  }
+}
+
+.how-we-evolved__title {
+  margin-bottom: 20px;
+
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 70px;
+  }
+
+  @include rwd('ultra')
+ {
+    margin-bottom: 60px;
+  }
+}
+
+.how-we-evolved__content {
+  @include rwd('tablet', true)
+ {
+    max-width: 550px;
+  }
+
+  @include rwd('laptop', true)
+ {
+    max-width: none;
+  }
+}
+
+.how-we-evolved__grid-item {
+  width: 100%;
+}
+
+.how-we-evolved__grid-item--left {
+  @include rwd('laptop', true)
+ {
+    width: calc(885 / 1320 * 100%);
+    padding-right: 130px;
+  }
+}
+
+.how-we-evolved__grid-item--right {
+  display: none;
+
+  @include rwd('laptop', true)
+ {
+    display: block;
+    width: calc(435 / 1320 * 100%);
+    padding-left: 0;
+  }
+}
+
+.how-we-evolved__image {
+  padding: 10px;
+  border: 1px solid $c-white
+;
+
+  &:nth-child(odd) {
+    margin-right: 100px;
+  }
+
+  &:nth-child(even) {
+    margin-left: 100px;
+  }
+
+  &:nth-child(n+1) {
+    margin-top: -1px;
+  }
+}
+
+.how-we-evolved__image-figure {
+  @include pseudo-ratio(332/306);
+}

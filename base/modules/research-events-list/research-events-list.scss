@@ -1,0 +1,46 @@
+.research-events-list__load-more {
+  color: $c-blue
+;
+  text-align: center;
+
+  @include rwd('small-tablet', true)
+ {
+    text-align: left;
+  }
+
+  @include rwd('small-tablet', true)
+ {
+    margin-top: 20px;
+  }
+}
+
+.research-events-list__load-more-button {
+  border: none;
+  color: $c-white
+;
+  background-color: transparent;
+}
+
+.research-events-list__wrapper {
+  padding-bottom: 32px;
+
+  @include rwd('small-tablet', true)
+ {
+    padding-bottom: 25px;
+  }
+
+  @include rwd('tablet', true)
+ {
+    padding-bottom: 31px;
+  }
+
+  @include rwd('laptop', true)
+ {
+    padding-bottom: 35px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    padding-bottom: 49px;
+  }
+}

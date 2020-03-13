@@ -1,0 +1,78 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 calc($container-edge
+ + $gutter-xs
+/2);
+
+  @include rwd('small-tablet')
+ {
+    padding: 0 calc($container-edge-sm
+ + $gutter-sm
+/2);
+  }
+  @include rwd('small-tablet', true)
+ {
+    padding: 0 calc($container-edge-m
+ + $gutter-m
+/2);
+  }
+
+  @include rwd('tablet', true)
+ {
+    padding: 0 calc($container-edge-ml
+ + $gutter-ml
+/2);
+  }
+
+  @include rwd('laptop', true)
+ {
+    padding: 0 calc($container-edge-l
+ + $gutter-l
+/2);
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    padding: 0 calc($container-edge-xl
+ + $gutter-xl
+/2);
+  }
+
+  @include rwd('ultra')
+ {
+  }
+}
+
+.jip-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 $jip-container-edge
+;
+
+  @include rwd('tablet', true)
+ {
+    padding: 0 $jip-container-edge-m
+;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    padding: 0 $jip-container-edge-l
+;
+  }
+
+  @include rwd('ultra')
+ {
+    padding: 0 $jip-container-edge-xl
+;
+  }
+}
+
+.container--xs {max-width: 419px}
+.container--s {max-width: 599px}
+.container--m {max-width: 740px}
+.container--ml {max-width: 980px}
+.container--l {max-width: 1220px}
+.container--xl {max-width: 1440px}
+.container--xxl {max-width: 1800px}

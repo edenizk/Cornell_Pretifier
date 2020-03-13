@@ -1,0 +1,71 @@
+.single-company--single-post {
+  .company-detail {
+    padding: 50px 0;
+    @include rwd('tablet', true)
+ {
+      padding: 130px 0 85px;
+    }
+  }
+}
+.company-detail__block--left {
+  width: 100%;
+  @include rwd('tablet', true)
+ {
+    width: calc(100% / 3);
+  }
+}
+.company-detail__block--middle {
+  width: 100%;
+  @include rwd('tablet', true)
+ {
+    width: calc(100% / 2);
+  }
+}
+.company-detail__block--right {
+  width: 100%;
+  @include rwd('tablet', true)
+ {
+    width: calc(100% / 6);
+  }
+}
+.company-detail__image {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: $c-white
+;
+  @include pseudo-ratio(220/360);
+}
+.company-detail__meta {
+  display: block;
+  margin-top: 5px;
+  color: $c-dark-gray
+;
+}
+.company-detail__block:not(:first-child) {
+  margin-top: 12px;
+  @include rwd('tablet', true)
+ {
+    margin-top: 0;
+  }
+}
+.company-detail__title {
+  margin-bottom: 10px;
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 25px;
+  }
+}
+.company-detail__button {
+  margin-top: 20px;
+  @include rwd('tablet', true)
+ {
+    margin-top: 35px;
+  }
+}
+.company-detail__stage {
+  margin-top: 7px;
+  @include rwd('tablet', true)
+ {
+    margin-top: 15px;
+  }
+}

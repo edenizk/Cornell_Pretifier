@@ -1,0 +1,185 @@
+.program-v2 {
+  padding: 30px 18px;
+  background: $c-white
+;
+
+  @include rwd('tablet', true)
+ {
+    padding: 40px;
+    padding-right: 23px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 45px 57px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 40px 73px;
+  }
+
+  &:not(:first-of-type) {
+    margin-top: 20px;
+
+    @include rwd('large-laptop', true)
+ {
+      margin-top: 30px;
+    }
+  }
+}
+
+.program-v2__row {
+  @include rwd('tablet', true)
+ {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+
+.program-v2__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.program-v2__intro {
+  margin-top: 12px;
+}
+
+.program-v2__block {
+  width: 100%;
+}
+
+.program-v2__block--courseload {
+  width: 100%;
+  @include rwd('tablet', true)
+ {
+    width: 35%;
+  }
+  @include rwd('laptop', true)
+ {
+    width: calc(50% - 77px);
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: calc(300 / 954 * 100%);
+  }
+  @include rwd('ultra')
+ {
+    width: calc(342 / 1010 * 100%);
+  }
+}
+
+.program-v2__block--overview {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+
+  @include rwd('tablet', true)
+ {
+    width: calc(262 / 597 * 100%);
+    margin: 0;
+  }
+  @include rwd('laptop', true)
+ {
+    width: calc(50% - 77px);
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: calc(419 / 954 * 100%);
+  }
+  @include rwd('ultra')
+ {
+    width: calc(420 / 1010 * 100%);
+  }
+}
+
+.program-v2__block--courseload,
+.program-v2__block--overview {
+  @include rwd('laptop', true)
+ {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.program-v2__row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid $c-border
+;
+  margin-bottom: 25px;
+  @include rwd('laptop', true)
+ {
+    padding-bottom: 30px;
+    margin-bottom: 35px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    align-items: stretch;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+  }
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+}
+
+.program-v2__title {
+  margin-bottom: 15px;
+}
+
+.program-v2__overview {
+  margin-bottom: 5px;
+}
+
+.program-v2__divider {
+  width: 100%;
+  height: 32px;
+  margin-bottom: 30px;
+  background: $c-grey5
+;
+  clip-path: polygon(0 94%,-1% 100%,100% 5%,100% 0);
+
+  @include rwd('tablet', true)
+ {
+    width: calc(75 / 597 * 100%);
+    height: auto;
+    margin: 0 42px 0 17px;
+    clip-path: polygon(0 99%,2% 100%,100% 0%,97% 0);
+  }
+  @include rwd('laptop', true)
+ {
+    width: 83px;
+    margin: 0 40px 0 30px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: 100px;
+    margin: 0 77px 0 58px;
+  }
+  @include rwd('ultra')
+ {
+    margin: 0 64px 0 84px;
+  }
+}
+
+.program-v2__description {
+  * {
+    color: rgba($c-black
+, 70%);
+  }
+}
+
+.program__title {
+  margin-bottom: 14px;
+}
+
+.program__overview {
+  margin-bottom: 5px;
+}

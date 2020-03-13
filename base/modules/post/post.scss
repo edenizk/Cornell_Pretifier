@@ -1,0 +1,17 @@
+.post--404 > .container {
+  padding-top: 60px;
+  padding-bottom: calc(60px + $footer-pad-top
+);
+
+  @include rwd('laptop', true)
+ {
+    padding-bottom: calc(60px + $footer-pad-top-ml
+);
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    padding-bottom: calc(120px + $footer-pad-top-l
+);
+  }
+}

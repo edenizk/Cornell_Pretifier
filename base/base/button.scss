@@ -1,0 +1,244 @@
+.button {
+  @extend .label-text;
+  position: relative;
+  display: inline-block;
+  padding: 14px 30px;
+  text-align: center;
+  color: $c-white
+;
+  background: $c-blue
+;
+  border: none;
+  transition: .3s ease;
+  overflow:hidden;
+  z-index: 1;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $c-dark-red
+;
+    z-index: -1;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    left: -10%;
+    width: 0;
+    bottom: -1%;
+    height: 120%;
+    transition: .3s ease;
+    background: $c-navy
+;
+    transform: skewX(-18deg) translate3d(0, 0, 0);
+    z-index: -1;
+  }
+  &:hover {
+    cursor: pointer;
+    &:after {
+      left: -10%;
+      width: 120%;
+    }
+  }
+}
+
+.button--small {
+  padding: 9px 25px;
+}
+
+@mixin button-link-global {
+  display: inline;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  vert-align: bottom;
+  transition: background .3s, color .3s;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  overflow: hidden;
+  /* color: $c-dark-red
+ !important; */
+  .icon-arrow {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+    margin-bottom: -3px;
+    @type 32px, 1;
+  }
+  .icon-arrow:before {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate3d(0, -50%, 0);
+    background: transparent;
+  }
+  .link-wrap {
+    display: block;
+  }
+  &:hover {
+    .icon-arrow:before {
+      animation: arrow-move 1s ease-in-out;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+
+.button-link {
+  @include button-link-global;
+  @extend .label-text;
+  color: $c-blue
+;
+  &:before {
+    color: $c-blue
+;
+  }
+  &:hover {
+    &:before {
+      color: $c-blue
+;
+    }
+  }
+}
+
+.button-link--has-underline {
+  border-bottom: 1px solid $c-blue
+;
+  .icon-arrow {
+    @type 28px 1;
+    width: 20px;
+  }
+  .icon-arrow:before {
+    right: -5px;
+  }
+}
+
+.button-link:hover {
+  color: $c-navy
+;
+}
+
+.button-link-white {
+  .text {
+    color: $c-black
+;
+  }
+
+  @include button-link-global;
+  @extend .label-text;
+  &, &:before {
+    color: $c-white
+;
+  }
+  &:hover {
+    color: $c-white
+;
+    &:before {
+      color: $c-white
+;
+    }
+  }
+}
+
+.link-hover {
+  display: inline;
+  transition: all .2s ease;
+}
+
+.button--black:before {
+  background: $c-black
+;
+}
+
+.button--dark-red {
+  &,
+  &:before {
+    background: $c-dark-red
+;
+  }
+
+  &:after {
+    background: $c-red2
+;
+  }
+}
+
+.card-tenth__link:hover .text,
+.card-icon__inner:hover .link-hover,
+.link-hover:hover {
+  color: $c-black
+;
+  background: $c-blue-gray
+;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes arrow-move {
+  50% {
+    transform: translate3d(10px,-50%,0);
+  }
+}
+
+@keyframes arrow-move {
+  50% {
+    transform: translate3d(10px,-50%,0);
+  }
+}
+
+.jip-button {
+  @extend .jip-label-text;
+  position: relative;
+  display: inline-block;
+  padding: 6px 12px 5px 14px;;
+  text-align: center;
+  color: $c-dark-blue
+;
+  background: $c-white
+;
+  border: none;
+  transition: .3s ease;
+  overflow:hidden;
+  z-index: 1;
+
+  @include rwd('laptop', true)
+ {
+    padding: 16px 36px;
+  }
+
+  &.jip-button--hover,
+  &:hover {
+    box-shadow: 4px 4px 0 $c-sunglow
+;
+  }
+}
+
+.jip-button__icon {
+  position: relative;
+  display: inline-block;
+  width: 31px;
+  height: 10px;
+  margin-left: 8px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.jip-button--link {
+  padding: 0;
+
+  @include rwd('laptop', true)
+ {
+    padding-top: 6px;
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+}

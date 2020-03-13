@@ -1,0 +1,99 @@
+.jip-carousel__wrap {
+  position: relative;
+  margin-top: -37px;
+
+  @media (--m) {
+    margin-top: -55px;
+  }
+
+  @media (--ml) {
+    margin-top: -70px;
+  }
+
+  @media (--l) {
+    margin-top: -91px;
+  }
+}
+
+.jip-carousel__container {
+  margin-bottom: 45px;
+
+  @media (--ml) {
+    margin-bottom: 120px;
+  }
+
+  .flickity-viewport {
+    transition: height 0.3s ease-in-out;
+
+    @media (--m) {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.jip-carousel__grid {
+  margin-left: -5px;
+  width: calc(100% + 10px);
+
+  @media (--m) {
+    margin-left: -10px;
+    width: calc(100% + 20px);
+  }
+
+  @media (--ml) {
+    margin-left: -20px;
+    width: calc(100% + 40px);
+  }
+}
+
+.jip-carousel--landing {
+  .flickity-viewport {
+    overflow: visible;
+  }
+
+  .flickity-prev-next-button {
+    top: calc(100% + 15px);
+
+    @media (--ml) {
+      top: calc(100% + 35px);
+    }
+
+    &:before,
+    &:after {
+      border-color: var(--c-dark-blue);
+    }
+
+    &.next {
+      right: 17px;
+
+      @media (--xl) {
+        right: 50px;
+      }
+    }
+
+    &.previous {
+      left: initial;
+      right: 65px;
+
+      @media (--ml) {
+        right: 105px;
+      }
+
+      @media (--xl) {
+        right: 130px;
+      }
+    }
+  }
+
+  .flickity-button-icon {
+    fill: var(--c-dark-blue);
+  }
+
+  & .flickity-button:disabled {
+    opacity: 0.3;
+  }
+
+  &.flickity-enabled {
+    transition: 0.3s ease-in-out;
+  }
+}

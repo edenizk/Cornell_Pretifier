@@ -1,0 +1,85 @@
+.quote-author {
+  margin-top: 20px;
+  margin-bottom: 0;
+  @include rwd('tablet', true)
+ {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.quote-author__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  @include rwd('tablet', true)
+ {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.quote-author__image-inner {
+  @include pseudo-ratio(1/1);
+  position: relative;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  overflow: hidden;
+  @include rwd('small-tablet', true)
+ {
+    height: 83px;
+    width: 83px;
+  }
+  @include rwd('tablet', true)
+ {
+    width: 115px;
+    height: 115px;
+  }
+  @include rwd('laptop', true)
+ {
+    width: 104px;
+    height: 104px;
+  }
+}
+
+.quote-author__content {
+  margin: 0;
+  padding-left: 10px;
+  @include rwd('tablet', true)
+ {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    text-align: left;
+    padding-left: 15px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-left: 25px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin: 15px 0 0 0;
+  }
+}
+
+.quote-author__title {
+  color: $c-dark-gray
+;
+}
+
+.quote-author__cta {
+  color: $c-blue
+;
+  flex-basis: 100%;
+  @include rwd('tablet', true)
+ {
+    flex-basis: auto;
+  }
+}

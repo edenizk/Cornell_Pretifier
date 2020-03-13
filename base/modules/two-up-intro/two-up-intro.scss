@@ -1,0 +1,88 @@
+.two-up-intro {
+
+}
+
+.two-up-intro__inner {
+  padding-bottom: 20px;
+  overflow: hidden;
+  @include rwd('laptop', true)
+ {
+    display: flex;
+    justify-content: stretch;
+  }
+}
+
+.two-up-intro__image-inner {
+  width: 100%;
+  @include rwd('laptop', true)
+ {
+    width: 44.6%;
+  }
+}
+
+.two-up-intro__image-figure {
+  @include pseudo-ratio(186/280);
+  position: relative;
+  @include rwd('small-tablet', true)
+ {
+    @include pseudo-ratio(184/494);
+  }
+  @include rwd('laptop', true)
+ {
+    @include pseudo-ratio(350/390);
+    height: 100%;
+  }
+}
+
+.two-up-intro__content {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  @include rwd('laptop', true)
+ {
+    width: 55.4%;
+  }
+}
+
+.two-up-intro__content-inner {
+  position: relative;
+  padding: 25px 15px 40px 25px;
+  background-color: $c-black
+;
+  color: $c-white
+;
+  @include rwd('small-tablet', true)
+ {
+    padding: 35px 40px 60px;
+  }
+  @include rwd('laptop', true)
+ {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 90px 55px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 115px 75px;
+  }
+  @include rwd('ultra')
+ {
+    padding: 123px 75px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 50%;
+    z-index: -1;
+    display: block;
+    transform: skewY(3.5deg);
+    transform-origin: 100% 0;
+    background: $c-black
+;
+  }
+}

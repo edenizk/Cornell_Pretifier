@@ -1,0 +1,83 @@
+.archive-list__load-more {
+  color: $c-blue
+;
+
+  @include rwd('small-tablet', true)
+ {
+    text-align: center;
+  }
+
+  @include rwd('small-tablet', true)
+ {
+    margin-top: 20px;
+  }
+}
+
+.archive-list__load-more-button {
+  border: none;
+  color: $c-blue
+;
+  background-color: transparent;
+  .icon-arrow-down {
+    font-weight: 700;
+  }
+}
+
+.archive-list__wrapper {
+  padding-bottom: 32px;
+  @include rwd('small-tablet', true)
+ {
+    padding-bottom: 25px;
+  }
+  @include rwd('tablet', true)
+ {
+    padding-bottom: 31px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-bottom: 35px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-bottom: 49px;
+  }
+}
+
+.archive-list--default {
+  padding: 0;
+
+  .archive-list__container {
+    max-width: 945px;
+    @include rwd('large-laptop', true)
+ {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.archive-list--landing {
+  .archive-list__wrapper {
+    border-bottom: 1px solid $c-border
+;
+    position: relative;
+    padding: 50px 0 32px;
+    overflow: hidden;
+    @include rwd('small-tablet', true)
+ {
+      padding: 57px 0 25px;
+    }
+    @include rwd('tablet', true)
+ {
+      padding: 50px 0 31px;
+    }
+    @include rwd('laptop', true)
+ {
+      padding: 75px 0 35px;
+    }
+    @include rwd('large-laptop', true)
+ {
+      padding: 86px 0 49px;
+    }
+  }
+}

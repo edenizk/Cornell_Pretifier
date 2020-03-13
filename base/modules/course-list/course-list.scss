@@ -1,0 +1,134 @@
+.course-list__wrapper {
+  @extend .container;
+
+  @media (--s-max) {
+    padding: 0;
+  }
+}
+
+.course-list {
+  margin-bottom: 30px;
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 45px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 50px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 80px;
+
+    &.course-list--curriculum {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.course-list__title {
+  @media (--s-max) {
+    padding-left: 20px;
+
+    .course-list--curriculum & {
+      padding-left: 0;
+    }
+  }
+}
+
+.course-list__course-description {
+  a {
+    color: $c-blue2
+;
+    border-bottom: 1px solid $c-blue2
+;
+
+    &:hover {
+      color: $c-black
+;
+      border-bottom: 1px solid $c-blue2
+;
+    }
+  }
+}
+
+.course-list__header {
+  margin-bottom: 50px;
+  padding: 0 20px;
+  text-align: center;
+
+  @include rwd('tablet', true)
+ {
+    max-width: 483px;
+    margin: 0 auto 30px;
+    padding: 0;
+  }
+  @include rwd('laptop', true)
+ {
+    max-width: 555px;
+    margin-bottom: 40px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    max-width: 675px;
+    margin-bottom: 60px;
+  }
+}
+
+.course-list--curriculum .course-list__title + * {
+  margin-top: 10px;
+
+  @include rwd('tablet', true)
+ {
+    margin-top: 15px;
+  }
+  @include rwd('ultra')
+ {
+    margin-top: 20px;
+  }
+}
+
+.course-list__course {
+  margin-bottom: 20px;
+  padding: 0 20px;
+
+  @include rwd('tablet', true)
+ {
+    max-width: 483px;
+    margin: 0 auto 20px;
+    padding: 0;
+    text-align: center;
+  }
+  @include rwd('laptop', true)
+ {
+    max-width: 555px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    max-width: 675px;
+    margin-bottom: 30px;
+  }
+}
+
+.course-list__course-name {
+  + * {
+    margin-top: 10px;
+  }
+}
+
+.course-list__anchor {
+  display: block;
+  /**
+  Transform to set offset from header
+   */
+  transform: translateY(-40px);
+
+  @include rwd('small-tablet', true)
+ {
+    transform: translateY(-50px);
+  }
+  @include rwd('tablet', true)
+ {
+    transform: translateY(-60px);
+  }
+}

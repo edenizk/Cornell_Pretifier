@@ -1,0 +1,112 @@
+.jip-carousel__wrap {
+  position: relative;
+  margin-top: -37px;
+
+  @include rwd('tablet', true)
+ {
+    margin-top: -55px;
+  }
+
+  @include rwd('laptop', true)
+ {
+    margin-top: -70px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    margin-top: -91px;
+  }
+}
+
+.jip-carousel__container {
+  margin-bottom: 45px;
+
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 120px;
+  }
+
+  .flickity-viewport {
+    transition: height 0.3s ease-in-out;
+
+    @include rwd('tablet', true)
+ {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.jip-carousel__grid {
+  margin-left: -5px;
+  width: calc(100% + 10px);
+
+  @include rwd('tablet', true)
+ {
+    margin-left: -10px;
+    width: calc(100% + 20px);
+  }
+
+  @include rwd('laptop', true)
+ {
+    margin-left: -20px;
+    width: calc(100% + 40px);
+  }
+}
+
+.jip-carousel--landing {
+  .flickity-viewport {
+    overflow: visible;
+  }
+
+  .flickity-prev-next-button {
+    top: calc(100% + 15px);
+
+    @include rwd('laptop', true)
+ {
+      top: calc(100% + 35px);
+    }
+
+    &:before,
+    &:after {
+      border-color: $c-dark-blue
+;
+    }
+
+    &.next {
+      right: 17px;
+
+      @include rwd('ultra')
+ {
+        right: 50px;
+      }
+    }
+
+    &.previous {
+      left: initial;
+      right: 65px;
+
+      @include rwd('laptop', true)
+ {
+        right: 105px;
+      }
+
+      @include rwd('ultra')
+ {
+        right: 130px;
+      }
+    }
+  }
+
+  .flickity-button-icon {
+    fill: $c-dark-blue
+;
+  }
+
+  & .flickity-button:disabled {
+    opacity: 0.3;
+  }
+
+  &.flickity-enabled {
+    transition: 0.3s ease-in-out;
+  }
+}

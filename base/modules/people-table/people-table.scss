@@ -1,0 +1,150 @@
+.people-table-module__inner {
+  overflow-x: auto;
+}
+
+.people-table {
+  width: 100%;
+  min-width: 900px;
+
+  @media (--l-max) {
+    min-width: unset;
+  }
+}
+
+.people-table__thead {
+  background: $c-navy
+;
+}
+
+.people-table__th {
+  position: relative;
+  padding: 18px 8px;
+  text-align: left;
+  color: $c-white
+;
+  cursor: pointer;
+
+  @media (--m-max) {
+    padding: 10px 2px;
+  }
+
+  @media (--s-max ) {
+    display: none;
+  }
+
+
+}
+
+.people-table__th,
+.people-table__td {
+  width: 25%;
+  @media (--s-max) {
+    width: 100%;
+  }
+  &:first-child {
+    padding-left: 60px;
+
+    @media (--l-max) {
+      padding-left: 30px;
+    }
+
+    @media (--m-max) {
+      padding-left: 10px;
+    }
+  }
+  &:last-child {
+    padding-right: 60px;
+
+    @media (--l-max) {
+      padding-right: 30px;
+    }
+
+    @media (--m-max) {
+      padding-right: 10px;
+    }
+  }
+}
+
+.people-table__th-icon {
+  position: relative;
+  top: 2px;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.people-table__tr {
+  background: $c-white
+;
+  &:not(:first-child) {
+    border-top: 1px solid $c-border
+;
+  }
+  &:nth-child(2n) {
+    background: $c-grey
+;
+    @media (--s-max) {
+      background: unset;
+    }
+  }
+  &:nth-child(2n - 1) {
+    @media (--s-max) {
+      background: $c-grey
+;
+    }
+  }
+  @media (--s-max) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.people-table__td {
+
+  /* &:not(:first-child) {
+    @media (--s-max) {
+      display: none;
+    }
+  } */
+
+  @include rwd('laptop', true)
+ {
+    padding: 8px;
+  }
+
+  @media (--s-max) {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+  }
+}
+
+@media (--s-max) {
+  .people-table__td::before {
+    content: attr(data-head);
+    font-weight: 700;
+  }
+}
+
+.people-table__th a,
+.people-table__td a {
+  position: relative;
+  padding-right: 20px;
+  color: $c-blue
+;
+  text-decoration: underline;
+
+  @media (--sm-max) {
+    padding-right: unset;
+  }
+
+  .icon-external {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @media (--l-max) {
+      display: none;
+    }
+  }
+}

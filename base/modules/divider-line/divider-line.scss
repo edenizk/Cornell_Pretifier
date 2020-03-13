@@ -1,0 +1,25 @@
+.divider-line {
+  padding-bottom: 22px;
+  @include rwd('small-tablet', true)
+ {
+    padding-bottom: 45px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-bottom: 35px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-bottom: 40px;
+  }
+}
+
+.divider-line__line {
+  border: 0;
+  border-bottom: 1px solid $c-border
+;
+}
+
+.divider-line--no-spacing-bottom {
+  padding: 0;
+}

@@ -1,0 +1,400 @@
+.footer {
+  position: relative;
+  z-index: 2;
+}
+
+.footer__wrapper {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  margin-top: 0;
+  color: $c-white
+;
+  background: $c-dark-blue2
+;
+  @include rwd('small-tablet', true)
+ {
+    padding-bottom: 45px;
+  }
+  @include rwd('tablet', true)
+ {
+    padding-bottom: 25px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 75px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 50%;
+    z-index: -1;
+    display: block;
+    transform-origin: 100% 0;
+    background: $c-dark-blue2
+;
+    transform: rotate3d(0, 0, 1, 2deg);
+    @include rwd('small-tablet')
+ {
+      transform: rotate3d(0, 0, 1, 2deg);
+    }
+    @include rwd('laptop', true)
+ {
+      transform: rotate3d(0, 0, 1, 1.4deg);
+    }
+    @include rwd('large-laptop', true)
+ {
+      transform: rotate3d(0, 0, 1, 1.3deg);
+    }
+  }
+}
+
+.footer__block-main {
+  @include rwd('laptop', true)
+ {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 38px;
+    border-bottom: $footer-border
+;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-bottom: 75px;
+  }
+}
+
+.footer__block-menu {
+  margin-bottom: 15px;
+  @include rwd('small-tablet', true)
+ {
+    margin-bottom: 30px;
+  }
+  @include rwd('tablet', true)
+ {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  @include rwd('laptop', true)
+ {
+    flex: 1 1 0;
+    margin-bottom: 0;
+    padding-right: 30px;
+  }
+}
+
+.footer__block-sponsors {
+  margin-top: 25px;
+  @include rwd('tablet', true)
+ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-top: 35px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-top: 30px;
+  }
+}
+
+.footer__block-social {
+  margin-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: $footer-border
+;
+  @include rwd('small-tablet', true)
+ {
+    margin-top: 20px;
+    padding-bottom: 30px;
+  }
+  @include rwd('tablet', true)
+ {
+    margin-top: 5px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-top: 20px;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.footer__widget {
+  padding-top: 4px;
+  padding-bottom: 2px;
+  border-bottom: $footer-border
+;
+  @include rwd('small-tablet', true)
+ {
+    padding-bottom: 4px;
+  }
+  @include rwd('tablet', true)
+ {
+    width: 33.33%;
+    border-bottom: 0;
+  }
+  .footer__menu {
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    @include rwd('tablet', true)
+ {
+      max-height: none;
+      overflow: visible;
+    }
+    a:hover {
+      color: $c-sunglow
+;
+    }
+  }
+}
+
+.footer__widget-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  @include rwd('tablet', true)
+ {
+    cursor: default;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 10px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 20px;
+  }
+  @include rwd('ultra')
+ {
+    margin-bottom: 15px;
+  }
+}
+
+.footer__widget-icon {
+  @include transition();
+  color: $c-white
+;
+  font-size: 1.7em;
+  @include rwd('tablet', true)
+ {
+    display: none;
+  }
+}
+
+.footer__widget--activate {
+  .footer__menu {
+    max-height: 9999px;
+    @include rwd('tablet', true)
+ {
+      max-height: none;
+    }
+  }
+  .footer__widget-icon {
+    transform: rotate(-180deg);
+  }
+}
+
+.footer__logos {
+  @include rwd('small-tablet', true)
+ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @include rwd('tablet', true)
+ {
+    width: 100%;
+    max-width: 55%;
+    justify-content: normal;
+  }
+}
+
+.footer__logo-first,
+.footer__logo-second {
+  display: block;
+  position: relative;
+  @include rwd('small-tablet', true)
+ {
+    max-width: none;
+  }
+}
+
+.footer__logo-first {
+  margin-bottom: 50px;
+  max-width: 228px;
+  @include rwd('small-tablet', true)
+ {
+    flex: 1 1 0;
+    max-width: none;
+    margin-bottom: 0;
+    padding-right: 30px;
+    border-right: $footer-border
+;
+  }
+  @include rwd('large-laptop', true)
+ {
+    max-width: 295px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-right: 20px;
+  }
+  @include rwd('ultra')
+ {
+    padding-right: 40px;
+  }
+}
+
+.footer__logo-second {
+  max-width: 142px;
+  margin-right: auto;
+  @include rwd('small-tablet', true)
+ {
+    width: 27.2%;
+    padding-left: 40px;
+  }
+  @include rwd('tablet', true)
+ {
+    padding-left: 20px;
+  }
+  @include rwd('ultra')
+ {
+    padding-left: 40px;
+  }
+}
+
+.footer__logo-first .footer__logo-figure {
+  @include pseudo-ratio(58/228);
+}
+
+.footer__logo-second .footer__logo-figure {
+  @include pseudo-ratio(70/142);
+  @include rwd('tablet', true)
+ {
+    @include pseudo-ratio(48/97);
+  }
+}
+
+.footer__block-bottom {
+  margin-top: 23px;
+  @include rwd('small-tablet', true)
+ {
+    display: none;
+  }
+  @include rwd('tablet', true)
+ {
+    display: block;
+    margin-top: 0;
+    padding-left: 40px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-left: auto;
+    padding-left: 0;
+  }
+}
+
+.footer__address {
+  color: $c-white
+;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__menu {
+  padding-top: 5px;
+  @include rwd('tablet', true)
+ {
+    padding-top: 0;
+  }
+  .menu-item {
+    padding: 4px 0;
+    &:last-of-type {
+      padding-bottom: 8px;
+    }
+    @include rwd('tablet', true)
+ {
+      padding: 0;
+    }
+    a {
+      @extend .footer-menu-link;
+    }
+  }
+}
+
+.footer__block-newsletter {
+  @include rwd('laptop', true)
+ {
+    width: 35%;
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: 355px;
+  }
+  @include rwd('ultra')
+ {
+    width: 315px;
+  }
+
+  form {
+    @include rwd('small-tablet', true)
+ {
+      margin-bottom: 15px;
+    }
+
+    .validation_error {
+      color: $c-dark-red
+;
+    }
+
+    .gfield input[type=text] {
+      background-color: rgba(255, 255, 255, .1);
+      color: white;
+    }
+  }
+
+  button[type=submit] {
+    color: $c-white
+;
+
+    &,
+    &:before {
+      background: $c-dark-red
+;
+    }
+
+    &:after {
+      background-color: $c-white
+;
+    }
+
+    &:hover,
+    &:active {
+      color: $c-black
+;
+    }
+
+    + img {
+      display: none;
+    }
+  }
+}

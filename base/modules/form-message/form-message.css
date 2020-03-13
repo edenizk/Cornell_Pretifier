@@ -1,0 +1,14 @@
+.form-message__wrapper {
+	border-top: 1px solid var(--c-border)
+}
+
+.form-message__inner {
+	width: 100%;
+	@media (--m) {
+		width: calc(10 / 12 * 100%);
+		margin: 0 auto;
+	}
+	@media (--l) {
+		width: calc(8 / 12 * 100%);
+	}
+}

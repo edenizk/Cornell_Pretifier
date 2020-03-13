@@ -1,0 +1,38 @@
+.research-events-list__load-more {
+  color: var(--c-blue);
+  text-align: center;
+
+  @media (--sm) {
+    text-align: left;
+  }
+
+  @media (--sm) {
+    margin-top: 20px;
+  }
+}
+
+.research-events-list__load-more-button {
+  border: none;
+  color: var(--c-white);
+  background-color: transparent;
+}
+
+.research-events-list__wrapper {
+  padding-bottom: 32px;
+
+  @media (--sm) {
+    padding-bottom: 25px;
+  }
+
+  @media (--m) {
+    padding-bottom: 31px;
+  }
+
+  @media (--ml) {
+    padding-bottom: 35px;
+  }
+
+  @media (--l) {
+    padding-bottom: 49px;
+  }
+}

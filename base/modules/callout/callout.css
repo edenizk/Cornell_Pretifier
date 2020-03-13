@@ -1,0 +1,289 @@
+.callout__wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.callout__image-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33,40,48,0.52);
+    @media (--m) {
+      background-color: var(--c-grey--overlay);
+    }
+  }
+}
+
+.callout__image-figure--desktop {
+  display: none;
+
+  @media (--m) {
+    display: block;
+  }
+}
+
+.callout__image-figure--mobile {
+  @media (--m) {
+    display: none;
+  }
+}
+
+.callout__block-content {
+  position: relative;
+  width: 100%;
+  padding: 55px 35px 75px;
+  z-index: 1;
+  @media (--m) {
+    display: flex;
+    align-items: center;
+    padding: 55px 45px;
+  }
+  @media (--ml) {
+    padding: 75px 50px 70px;
+  }
+  @media (--l) {
+    padding: 80px 55px 70px;
+  }
+  @media (--xl) {
+    padding: 88px 70px 80px;
+  }
+
+  .button:before {
+    background-color: var(--c-dark-red);
+  }
+}
+
+.callout__title,
+.callout__description,
+.callout__description > * {
+  color: var(--c-white);
+}
+
+.callout__title {
+  margin-bottom: 10px;
+}
+
+.callout__content {
+  @media (--m) {
+    flex: 1 1 0;
+    padding-right: 50px;
+  }
+}
+
+.callout__footer {
+  margin-top: 15px;
+  @media (--m) {
+    display: flex;
+    margin-top: 0;
+    padding-right: 25px;
+    vertical-align: middle;
+  }
+  @media (--ml) {
+    padding-right: 50px;
+  }
+  @media (--l) {
+    padding-right: 110px;
+  }
+}
+
+.callout__mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  transform: skew(0, 5deg);
+  margin-bottom: -5%;
+  @extend .bg-cover;
+  background-position: top right;
+  @media (--sm) {
+    height: 126px;
+  }
+  @media (--m) {
+    height: 100%;
+    width: 190px;
+    left: auto;
+    right: 0;
+    transform: skew(-10deg, 0);
+    margin-bottom: 0;
+    margin-right: -3%;
+  }
+  @media (--ml) {
+    width: 257px;
+  }
+  @media (--l) {
+    width: 276px;
+  }
+  @media (--xl) {
+    width: 294px;
+  }
+}
+
+.callout__mask--mobile,
+.callout__mask--tablet,
+.callout__mask--desktop {
+  margin: 0;
+  transform: none;
+}
+
+.callout__mask-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -5px;
+  height: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.callout__mask--mobile {
+  @include pseudo-ratio(170/280);
+
+  top: 50%;
+  bottom: 0;
+  height: auto;
+
+  @media (--s) {
+    bottom: auto;
+  }
+
+  @media (--sm) {
+    display: none;
+  }
+}
+
+.callout__mask--tablet {
+  display: none;
+
+  @media (--sm) {
+    left: auto;
+    right: 0;
+    display: block;
+    bottom: -5px;
+    height: 105%;
+    width: 220px;
+  }
+
+  @media (--ml) {
+    display: none;
+  }
+}
+
+.callout__mask--desktop {
+  display: none;
+
+  @media (--ml) {
+    display: block;
+    bottom: -5px;
+    height: 105%;
+    width: 381px;
+  }
+}
+
+.callout--shortcode {
+  .callout__container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+.callout--curriculum {
+  margin: 40px 0;
+  padding: 0;
+
+  @media (--l) {
+    margin: 60px 0;
+  }
+  @media (--xl) {
+    margin: 70px 0;
+  }
+  &:first-child {
+     margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.callout--flexible {
+  padding: 0 0 65px;
+  background-color: var(--c-dark-blue);
+  overflow: hidden;
+
+  @media (--m) {
+    padding: 0 0 80px;
+  }
+
+  @media (--l) {
+    padding: 0 0 120px;
+  }
+
+  .callout__wrapper {
+    @include pseudo-ratio(351/280);
+
+    @media (--sm) {
+      @include pseudo-ratio(183/663);
+    }
+
+    @media (--l) {
+      @include pseudo-ratio(233/1327);
+    }
+  }
+
+  .callout__block-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (--sm) {
+      padding: 55px 35px 55px;
+    }
+
+    @media (--m) {
+      flex-direction: row;
+      min-height: 183px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @media (--l) {
+      padding: 87.5px 90px;
+    }
+  }
+
+  .callout__title {
+    @extend .jip-sub-heading;
+
+    text-transform: uppercase;
+  }
+
+  .callout__description {
+    @extend .jip-p-large;
+  }
+
+  .callout__footer {
+    @media (--m) {
+      padding-right: 63px;
+    }
+
+    @media (--ml) {
+      padding-right: 131px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.cta-list__wrapper {
+  @extend .container;
+
+  @media (--s-max) {
+    padding: 0;
+  }
+}
+
+.cta-list {
+  margin-bottom: 40px;
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 45px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 50px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 80px;
+  }
+}
+
+.cta-list__header {
+  margin-bottom: 20px;
+  padding: 0 20px;
+
+  @include rwd('tablet', true)
+ {
+    width: 75%;
+    margin: 0 auto 20px;
+    padding: 0;
+    text-align: center;
+  }
+  @include rwd('large-laptop', true)
+ {
+    max-width: 675px;
+    margin-bottom: 30px;
+  }
+}
+
+.cta-list__title + * {
+  margin-top: 10px;
+}

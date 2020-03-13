@@ -1,0 +1,69 @@
+.cta-item {
+  margin-bottom: 5px;
+  padding: 0 20px;
+  background-color: $c-light-grey
+;
+  @include rwd('small-tablet', true)
+ {
+    padding: 0 30px;
+  }
+  @include rwd('tablet', true)
+ {
+    padding: 0 37px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 0 45px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 0 70px;
+  }
+  @include rwd('ultra')
+ {
+    padding: 0 40px;
+  }
+}
+
+.cta-item__inner {
+  position: relative;
+  padding: 26px 110px 26px 0;
+  cursor: pointer;
+  @include rwd('small-tablet', true)
+ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 115px 20px 0;
+  }
+  @include rwd('tablet', true)
+ {
+    padding-right: 135px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 29px;
+    padding-bottom: 29px;
+  }
+}
+
+.cta-item__button {
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cta-item__description {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.cta-item__title {
+  flex: 1 1 auto;
+}

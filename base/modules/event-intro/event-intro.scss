@@ -1,0 +1,85 @@
+.event-intro {
+  width: 100%;
+  margin-bottom: 40px;
+  @include rwd('small-tablet', true)
+ {
+    margin-bottom: 30px;
+  }
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 40px;
+  }
+  @media (--m-1) {
+    width: percentage(9/12);
+    margin-bottom: 0;
+  }
+}
+
+.event-intro__image-inner {
+  width: 100%;
+  margin-bottom: 20px;
+  @include rwd('tablet', true)
+ {
+    width: 47%;
+    max-width: 437.5px;
+    margin-bottom: 0;
+    padding-right: 27.5px;
+  }
+}
+
+.event-intro__image-figure {
+  @include pseudo-ratio(143/280);
+  @include rwd('small-tablet', true)
+ {
+    @include pseudo-ratio(235/494);
+  }
+  @include rwd('tablet', true)
+ {
+    @include pseudo-ratio(170/318);
+  }
+  @include rwd('laptop', true)
+ {
+    @include pseudo-ratio(170/315);
+  }
+  @include rwd('ultra')
+ {
+    max-width: 400px;
+  }
+}
+
+.event-intro__content {
+  width: 100%;
+  @include rwd('tablet', true)
+ {
+    width: 53%;
+  }
+}
+
+.event-intro__content-inner {
+  @include rwd('laptop', true)
+ {
+    padding-right: 20px;
+  }
+  @include rwd('ultra')
+ {
+    max-width: 437px;
+    padding: 0;
+  }
+}
+
+.event-intro__title {
+  margin-bottom: 5px;
+}
+
+.event-intro__sub-title {
+  margin-bottom: 5px;
+  color: $c-brown
+;
+}
+
+.event-intro__link {
+  &:hover {
+    background-color: $c-green
+;
+  }
+}

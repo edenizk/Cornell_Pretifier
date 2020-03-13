@@ -1,0 +1,6 @@
+.event-list {
+  width: 100%;
+  @media (--m-1) {
+    width: percentage(3/12);
+  }
+}

@@ -1,0 +1,122 @@
+--font-body:$font-body
+--font-heading:$font-heading
+--bsu-mobile:$bsu-mobile
+--bsu:$bsu
+--header-height:$header-height
+--header-height-l:$header-height-l
+--footer-pad-top:$footer-pad-top
+--footer-pad-top-ml:$footer-pad-top-ml
+--footer-pad-top-l:$footer-pad-top-l
+--padding:$padding
+--paddingXS:$paddingXS
+--paddingM:$paddingM
+--c-black:$c-black
+--c-light-black:$c-light-black
+--c-white:$c-white
+--c-blue:$c-blue
+--c-blue2:$c-blue2
+--c-blue3:$c-blue3
+--c-blue4:$c-blue4
+--c-green:$c-green
+--c-green2:$c-green2
+--c-grey:$c-grey
+--c-grey2:$c-grey2
+--c-grey3:$c-grey3
+--c-grey4:$c-grey4
+--c-grey5:$c-grey5
+--c-grey6:$c-grey6
+--c-grey7:$c-grey7
+--c-grey8:$c-grey8
+--c-grey--overlay:$c-grey$overlay
+--c-grey--overlay2:$c-grey$overlay2
+--c-navy:$c-navy
+--c-brown:$c-brown
+--c-brown2:$c-brown2
+--c-blue-gray:$c-blue-gray
+--c-dark-gray:$c-dark-gray
+--c-dark-gray1:$c-dark-gray1
+--c-light-green:$c-light-green
+--c-light-grey:$c-light-grey
+--c-light-grey2:$c-light-grey2
+--c-border:$c-border
+--c-border2:$c-border2
+--c-red:$c-red
+--c-red2:$c-red2
+--c-dark-red:$c-dark-red
+--c-dark-blue:$c-dark-blue
+--c-dark-blue2:$c-dark-blue2
+--c-dark-blue-overlay:$c-dark-blue-overlay
+--c-dark-blue-30:$c-dark-blue-30
+--c-flickity-dot:$c-flickity-dot
+--c-breadcrumb-link:$c-breadcrumb-link
+--c-nav-sub-links:$c-nav-sub-links
+--c-sunglow:$c-sunglow
+--c-black-01:$c-black-01
+--c-jip-blue:$c-jip-blue
+--c-jip-pink:$c-jip-pink
+--c-jip-light-gray:$c-jip-light-gray
+--c-jip-green:$c-jip-green
+--c-jip-blue-sky:$c-jip-blue-sky
+--c-jip-red:$c-jip-red
+--c-jip-dark-blue:$c-jip-dark-blue
+--duration:$duration
+--speed:$speed
+--ease:$ease
+--gutter-xs:$gutter-xs
+--gutter-sm:$gutter-sm
+--gutter-m:$gutter-m
+--gutter-ml:$gutter-ml
+--gutter-l:$gutter-l
+--gutter-xl:$gutter-xl
+--container-edge:$container-edge
+--container-edge-sm:$container-edge-sm
+--container-edge-m:$container-edge-m
+--container-edge-ml:$container-edge-ml
+--container-edge-l:$container-edge-l
+--container-edge-xl:$container-edge-xl
+--footer-border:$footer-border
+--icon-size:$icon-size
+--jip-carousel-dot-color:$jip-carousel-dot-color
+--jip-container-edge:$jip-container-edge
+--jip-container-edge-m:$jip-container-edge-m
+--jip-container-edge-l:$jip-container-edge-l
+--jip-container-edge-xl:$jip-container-edge-xl
+--sidenav-width:$sidenav-width
+--sidenav-gutter:$sidenav-gutter
+--sidenav-gutter-xl:$sidenav-gutter-xl
+xs:@include rwd('all')
+xs-max:@include rwd('phone', true)
+s:@include rwd('small-tablet')
+s-max:@include rwd('small-tablet', true)
+sm:@include rwd('small-tablet', true)
+ms:@include rwd('tablet', true)
+sm-max:@include rwd('tablet')
+m:@include rwd('tablet', true)
+m-1:@include rwd('medium-tablet', true)
+m-2:@include rwd('large-tablet', true)
+m-max:@include rwd('large-tablet')
+ml:@include rwd('laptop', true)
+max-nav:@include rwd('laptop')
+mobile-nav:@include rwd('laptop', true)
+ml-max:@include rwd('large-laptop')
+l:@include rwd('large-laptop', true)
+l-max:@include rwd('ultra')
+xl:@include rwd('ultra')
+--xs:$xs
+--xs-max:$xs-max
+--s:$s
+--s-max:$s-max
+--sm:$sm
+--ms:$ms
+--sm-max:$sm-max
+--m:$m
+--m-1:$m-1
+--m-2:$m-2
+--m-max:$m-max
+--ml:$ml
+--max-nav:$max-nav
+--mobile-nav:$mobile-nav
+--ml-max:$ml-max
+--l:$l
+--l-max:$l-max
+--xl:$xl

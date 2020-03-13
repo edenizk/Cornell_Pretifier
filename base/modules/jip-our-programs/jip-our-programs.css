@@ -1,0 +1,114 @@
+.jip-our-programs {
+  margin-bottom: -1px;
+  padding: 26px 0 40px;
+  background-color: var(--c-dark-blue);
+
+  @media (--s) {
+    padding: 60px 0;
+  }
+}
+
+.jip-our-programs__header {
+  @media (--m) {
+    margin-bottom: 40px;
+  }
+
+  @media (--l) {
+    margin-bottom: 57px;
+  }
+}
+
+.jip-our-programs__list {
+  border: 1px solid var(--c-white);
+}
+
+
+.jip-our-programs--about {
+  position: relative;
+  padding: 0;
+  background-color: var(--c-white);
+
+  .jip-our-programs__list {
+    position: relative;
+    background-color: var(--c-dark-blue);
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: var(--c-white);
+    z-index: 1;
+  }
+
+  .jip-our-programs__header {
+    padding-bottom: 30px;
+    background-color: var(--c-dark-blue);
+
+    @media (--m) {
+      margin-bottom: 0;
+      padding-bottom: 40px;
+    }
+
+    @media (--xl) {
+      padding-bottom: 70px;
+    }
+  }
+
+  .jip-our-programs__block {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: 100%;
+      height: 50px;
+      background-color: var(--c-dark-blue);
+
+      @media (--m) {
+        height: 40px;
+      }
+
+      @media (--xl) {
+        height: 93px;
+      }
+    }
+  }
+}
+
+.jip-our-programs__footer {
+  text-align: center;
+  padding: 19px 0 33px;
+
+  @media (--m) {
+    padding-top: 40px;
+  }
+
+  @media (--xl) {
+    padding-top: 60px;
+  }
+}
+
+.jip-our-programs__footer-inner {
+  margin: 0 auto;
+
+  @media (--m) {
+    max-width: 436px;
+  }
+
+  @media (--ml) {
+    max-width: 742px;
+  }
+}
+
+.jip-our-programs__footer-description {
+  color: var(--c-dark-blue);
+}
+
+.jip-our-programs__footer-button {
+  margin-top: 20px;
+  background-color: var(--c-dark-blue);
+  color: var(--c-white);
+
+  @media (--xl) {
+    margin-top: 40px;
+  }
+}

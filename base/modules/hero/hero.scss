@@ -1,0 +1,326 @@
+.hero {
+  display: table;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  @include pseudo-ratio(115/320);
+  @include rwd('small-tablet', true)
+ {
+    @include pseudo-ratio(162/600);
+  }
+  @include rwd('tablet', true)
+ {
+    @include pseudo-ratio(162/600);
+  }
+  @include rwd('laptop', true)
+ {
+    @include pseudo-ratio(300/980);
+  }
+  &:before {
+    display: table-cell;
+    width: 0;
+  }
+}
+
+.hero__background {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+
+  .hero__background-image {
+    @extend .absolute-full;
+
+    &:after {
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.65)
+      );
+    }
+  }
+}
+
+.hero__container {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  z-index: 2;
+
+  @include rwd('small-tablet', true)
+ {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.hero__wrapper {
+  max-width: 1370px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 20px 0;
+
+  @include rwd('small-tablet')
+ {
+    padding: 20px 32px;
+  }
+
+  @include rwd('small-tablet', true)
+ {
+    padding: 20px 5px;
+  }
+
+  @include rwd('tablet', true)
+ {
+    padding: 30px 20px;
+  }
+
+  @include rwd('laptop', true)
+ {
+    padding: 50px 28px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    padding: 60px 108px;
+  }
+
+  @include rwd('ultra')
+ {
+    padding: 60px 60px 60px 104px;
+  }
+}
+
+.hero__title,
+.hero__subtitle {
+  color: $c-white
+;
+}
+
+.hero__subtitle {
+  display: none;
+  @include rwd('tablet', true)
+ {
+    display: block;
+  }
+}
+
+.hero__canvas-wrapper {
+  @extend .absolute-full;
+  overflow: hidden;
+}
+
+.hero__canvas-image {
+  position: absolute;
+  top: -33%;
+  left: 33.5%;
+  height: 400px;
+  width: 400px;
+  transform: rotate(-71deg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include rwd('tablet', true)
+ {
+    left: 29.5%;
+    height: 1010px;
+    width: 1010px;
+  }
+}
+
+.hero__canvas {
+  display: none;
+  position: absolute;
+  top: -33%;
+  left: 29.5%;
+  height: 1010px;
+  width: 1010px;
+  transform: rotate(-71deg);
+  @include rwd('tablet', true)
+ {
+    display: block;
+  }
+}
+
+.hero-after__wrapper {
+  padding-top: 20px;
+  @include rwd('small-tablet', true)
+ {
+    padding-top: 37px;
+  }
+  @include rwd('tablet', true)
+ {
+    padding-top: 47px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-top: 60px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 80px;
+  }
+  & + main .content.section-gutter:first-child,
+  .page-template-page-jip-flexible & {
+    padding-top: 0;
+  }
+}
+
+.hero-carousel,
+.hero-grid,
+.hero-icons {
+  padding-top: 0;
+}
+
+.hero--small {
+  &:before {
+    padding-bottom: 20%;
+  }
+}
+
+.hero-carousel--timeline {
+  padding-top: 25px;
+
+  @include rwd('small-tablet', true)
+ {
+    padding-top: 40px;
+  }
+
+  @include rwd('tablet', true)
+ {
+    padding-top: 100px;
+  }
+}
+
+.hero--curriculum {
+  .hero__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero__container {
+    @include rwd('small-tablet')
+ {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include rwd('laptop', true)
+ {
+      padding-left: 55px;
+      padding-right: 55px;
+    }
+    @include rwd('large-laptop', true)
+ {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+    @include rwd('ultra')
+ {
+      padding-left: 142px;
+      padding-right: 142px;
+    }
+  }
+}
+
+.hero--build-at-cornell {
+  @include pseudo-ratio(140/320);
+
+  @include rwd('tablet', true)
+ {
+    @include pseudo-ratio(250/740);
+  }
+
+  @include rwd('ultra')
+ {
+    @include pseudo-ratio(430/1440);
+  }
+
+  &::before {
+    display: table-cell;
+  }
+
+  .hero__background::before {
+    content: none;
+  }
+
+  .hero__container {
+    vertical-align: middle;
+  }
+
+  .hero__content {
+    padding: 0;
+  }
+
+  .hero__title {
+    padding: 0;
+    color: $c-black
+;
+  }
+
+  .hero__description {
+    display: none;
+
+    @include rwd('laptop', true)
+ {
+      display: block;
+      max-width: 760px;
+      margin-top: 15px;
+    }
+  }
+}
+
+.hero--events {
+  display: flex;
+  align-items: flex-end;
+
+  &:before {
+    padding-bottom: calc(100% * (157/320));
+
+    @include rwd('tablet', true)
+ {
+      padding-bottom: calc(100% * (250/740));
+    }
+
+    @include rwd('ultra')
+ {
+      padding-bottom: calc(100% * (430/1440));
+    }
+  }
+
+  .hero__container {
+    width: 100%;
+  }
+
+  .hero__content {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include rwd('tablet', true)
+ {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+
+    @include rwd('ultra')
+ {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      padding-left: 0;
+    }
+  }
+}

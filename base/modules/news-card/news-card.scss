@@ -1,0 +1,327 @@
+.news-card {
+  position: relative;
+  padding: 45px 0 80px;
+  overflow: hidden;
+  @include rwd('small-tablet', true)
+ {
+    padding: 65px 0 80px;
+  }
+  @include rwd('tablet', true)
+ {
+    padding: 70px 0 50px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-top: 55px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 100px;
+  }
+  &.is-last:not(.news-card--grey) {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewY(4deg);
+    @include rwd('small-tablet', true)
+ {
+      transform: skewY(3deg);
+    }
+  }
+
+  .carousel {
+    svg path {
+      fill: $c-black
+;
+    }
+    .flickity-button {
+      width: 33px;
+      height: 33px;
+      top: auto;
+      transform: none;
+      background: transparent;
+      @include rwd('tablet', true)
+ {
+        width: 41px;
+        height: 41px;
+        bottom: -80px;
+      }
+      &.previous {
+        right: 50px;
+        left: auto;
+        @include rwd('tablet', true)
+ {
+          right: 58px;
+        }
+      }
+      &.next {
+        right: 10px;
+      }
+    }
+    &:not(.carousel--hide-button) {
+      .flickity-button {
+        display: none;
+        @include rwd('tablet', true)
+ {
+          display: block;
+        }
+      }
+    }
+    .flickity-page-dots {
+      bottom: -50px;
+      .dot {
+        transition: background 300ms;
+        border: 1px solid $c-dark-blue2
+;
+        opacity: 1;
+        margin: 0 5px;
+      }
+      .is-selected {
+        background: $c-dark-blue2
+;
+      }
+      @include rwd('tablet', true)
+ {
+        display: none;
+      }
+    }
+  }
+}
+
+.news-card--home {
+  @include rwd('tablet', true)
+ {
+    padding: 70px 0 0;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-top: 55px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 100px;
+  }
+
+  .carousel {
+    .flickity-button {
+      @include rwd('tablet', true)
+ {
+        bottom: -60px;
+      }
+      @include rwd('laptop', true)
+ {
+        bottom: -80px;
+      }
+    }
+  }
+}
+
+.news-card__container {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 0;
+  @include rwd('tablet', true)
+ {
+    max-width: 720px;
+  }
+  @include rwd('laptop', true)
+ {
+    max-width: 960px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    max-width: 1240px;
+  }
+}
+
+.news-card__wrapper {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.news-card--diagonal {
+  @extend .bg-diagonal;
+}
+
+.news-card__header {
+  color: $c-white
+;
+}
+
+.news-card__block {
+  position: relative;
+  padding: 16px 0;
+  @include rwd('small-tablet', true)
+ {
+    padding: 18px 0;
+  }
+  @include rwd('tablet', true)
+ {
+    padding: 28px 0 60px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 30px 0 80px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 45px;
+  }
+}
+
+/*
+Class .news-card--grey is used in News template only
+ */
+.news-card--grey,
+.news-card--white-background {
+  &.is-last {
+    overflow-y: visible;
+    overflow-x: hidden;
+    margin-bottom: -65px;
+    @include rwd('tablet', true)
+ {
+      margin-bottom: -70px;
+    }
+    @include rwd('laptop', true)
+ {
+      margin-bottom: -75px;
+    }
+    @include rwd('large-laptop', true)
+ {
+      margin-bottom: -80px;
+    }
+    @include rwd('ultra')
+ {
+      margin-bottom: -85px;
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+  .news-card__header {
+    color: $c-black
+;
+  }
+
+  .card-fourth__item {
+    width: 33.3333%;
+  }
+
+  .carousel {
+    .flickity-button {
+      border-color: $c-black
+;
+    }
+    svg path {
+      fill: $c-black
+;
+    }
+    .flickity-page-dots {
+      .dot {
+        opacity: 1;
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+.news-card--grey {
+  background: $c-light-grey
+;
+  &.is-last {
+    &:after {
+      background: $c-light-grey
+;
+    }
+  }
+}
+
+.news-card--white-background {
+  background: $c-white
+;
+  &.is-last {
+    &:after {
+      background: $c-white
+;
+    }
+  }
+}
+
+.news-card__item--content-image {
+  .card-fourth__title,
+  .card-fourth__description,
+  .card-fourth__footer .button-link {
+    color: $c-black
+;
+  }
+  .card-fourth__content-inner {
+    padding-top: 40px;
+    background-color: $c-green
+;
+    clip-path: polygon(0 12%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+.news-card__bottom-text {
+  position: absolute;
+  left: 0;
+  bottom: -80px;
+  color: $c-white
+;
+  z-index: 10;
+  @include rwd('tablet', true)
+ {
+    bottom: 0;
+  }
+  p {
+    @extend .home-tag-row-label;
+    color: $c-black
+;
+  }
+  a {
+    @extend .link-hover;
+    position: relative;
+    display: inline-block;
+    color: $c-black
+;
+    border-bottom: 1px solid $c-dark-red
+;
+    line-height: 1;
+
+    &:hover {
+      color: #fff;
+      background-color: $c-dark-red
+;
+    }
+  }
+}
+
+.news-card--header-black {
+  background: transparent;
+
+  .news-card__header {
+    color: $c-black
+;
+  }
+
+  .flickity-button {
+    border-color: $c-black
+;
+    color: $c-black
+;
+  }
+
+  &.news-card .carousel svg path {
+    fill: $c-black
+;
+  }
+}

@@ -1,0 +1,147 @@
+.program-carousel {
+  background-color: var(--c-light-grey);
+  padding: 30px 0 60px;
+
+  @media (--m) {
+    padding: 60px 0 106px;
+  }
+}
+
+.program_carousel__content {
+  @media (--xl) {
+    max-width: 764px;
+  }
+}
+
+.program-carousel__inner {
+  position: relative;
+}
+
+.program-carousel__description {
+  margin-top: 15px;
+
+  @media (--m) {
+    margin-top: 20px;
+  }
+
+  @media (--xl) {
+    margin-top: 22px;
+  }
+}
+
+.program-carousel__button {
+  display: inline-block;
+  margin-top: 20px;
+
+  @media (--xl) {
+    margin-top: 31px;
+  }
+}
+
+.program-carousel__list-wrap {
+  margin-top: 18px;
+}
+
+.program-carousel__list {
+  margin-left: -21px;
+  margin-right: -21px;
+
+  @media (--m) {
+    margin-left: -11px;
+    margin-right: -53px;
+  }
+
+  @media (--ml) {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  .flickity-button {
+    width: 26px;
+    height: 26px;
+    top: auto;
+    transform: none;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--c-dark-gray);
+
+    @media (--m) {
+      bottom: -10px;
+    }
+
+    @media (--ml) {
+      width: 40px;
+      height: 40px;
+      bottom: -40px;
+    }
+
+    &.previous {
+      right: 52px;
+      left: auto;
+
+      @media (--m) {
+        right: 60px;
+      }
+    }
+    &.next {
+      right: 20px;
+
+      @media (--m) {
+        right: 28px;
+      }
+
+      @media (--ml) {
+        right: 12px;
+      }
+    }
+  }
+}
+
+.program-carousel__button {
+  color: var(--c-black);
+}
+
+.program-carousel__item {
+  width: 86%;
+  padding: 12px 0 12px 22px;
+
+  @media (--m) {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  &:last-child {
+    @media (--m-max) {
+      padding-right: 22px;
+      padding-left: 0;
+      margin-left: 22px;
+    }
+  }
+
+  @media (--s) {
+    width: 60%;
+  }
+
+  @media (--m) {
+    width: 42.6%;
+  }
+
+  @media (--ml) {
+    width: 33.3333%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  @media (--xl) {
+    width: 25%;
+  }
+
+  & .company-list-item__wrapper {
+    box-shadow: 0 2px 7px 0 var(--c-black-01);
+  }
+
+  & .company-list-item__container {
+    background-color: var(--c-white);
+    overflow: hidden;
+  }
+}

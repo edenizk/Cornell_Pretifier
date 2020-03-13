@@ -1,0 +1,40 @@
+.cta-list__wrapper {
+  @extend .container;
+
+  @media (--s-max) {
+    padding: 0;
+  }
+}
+
+.cta-list {
+  margin-bottom: 40px;
+  @media (--m) {
+    margin-bottom: 45px;
+  }
+  @media (--ml) {
+    margin-bottom: 50px;
+  }
+  @media (--l) {
+    margin-bottom: 80px;
+  }
+}
+
+.cta-list__header {
+  margin-bottom: 20px;
+  padding: 0 20px;
+
+  @media (--m) {
+    width: 75%;
+    margin: 0 auto 20px;
+    padding: 0;
+    text-align: center;
+  }
+  @media (--l) {
+    max-width: 675px;
+    margin-bottom: 30px;
+  }
+}
+
+.cta-list__title + * {
+  margin-top: 10px;
+}

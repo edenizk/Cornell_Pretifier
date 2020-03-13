@@ -1,0 +1,36 @@
+.list-section {
+  position: relative;
+}
+
+.list-section--pb0 {
+  padding-bottom: 0;
+
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+
+.list-section--bg {
+  background: $c-light-grey
+;
+  @extend .bg-diagonal;
+  padding: 45px 0;
+  overflow: hidden;
+  @include rwd('small-tablet', true)
+ {
+    padding: 55px 0;
+  }
+  @include rwd('tablet', true)
+ {
+    padding: 80px 0;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 70px 0;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 115px 0;
+  }
+}

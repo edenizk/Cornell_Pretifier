@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'din-2014';
+  src: url('../fonts/DINOT-Bold.eot');
+  src: url('../fonts/DINOT-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINOT-Bold.woff') format('woff'),
+  url('../fonts/DINOT-Bold.ttf') format('truetype'),
+  url('../fonts/DINOT-Bold.svg#DINOT-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'din-2014';
+  src: url('../fonts/DINOT-Medium.eot');
+  src: url('../fonts/DINOT-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINOT-Medium.woff') format('woff'),
+  url('../fonts/DINOT-Medium.ttf') format('truetype'),
+  url('../fonts/DINOT-Medium.svg#DINOT-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'din-2014';
+  src: url('../fonts/DINOT.eot');
+  src: url('../fonts/DINOT.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINOT.woff') format('woff'),
+  url('../fonts/DINOT.ttf') format('truetype'),
+  url('../fonts/DINOT.svg#DINOT') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'adelle';
+  src: url('../fonts/Adelle-Regular.eot');
+  src: url('../fonts/Adelle-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Adelle-Regular.woff') format('woff'),
+  url('../fonts/Adelle-Regular.ttf') format('truetype'),
+  url('../fonts/Adelle-Regular.svg#Adelle-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'adelle';
+  src: url('../fonts/Adelle-Italic.eot');
+  src: url('../fonts/Adelle-Italic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Adelle-Italic.woff') format('woff'),
+  url('../fonts/Adelle-Italic.ttf') format('truetype'),
+  url('../fonts/Adelle-Italic.svg#Adelle-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}

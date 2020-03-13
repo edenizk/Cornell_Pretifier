@@ -1,0 +1,135 @@
+.card-primary {
+  width: 100%;
+  margin-top: 25px;
+  @include rwd('tablet', true)
+ {
+    display: flex;
+    flex-direction: column;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:nth-child(2) {
+    @include rwd('tablet', true)
+ {
+      margin-top: 0;
+    }
+  }
+  &:nth-child(3) {
+    @include rwd('tablet', true)
+ {
+      margin-top: 0;
+    }
+  }
+}
+
+.card-primary__inner {
+  display: flex;
+  height: 100%;
+  flex: 1 1 auto;
+  @include rwd('small-tablet', true)
+ {
+    align-items: center;
+  }
+  @include rwd('tablet', true)
+ {
+    flex-direction: column;
+    flex: 1 0 auto;
+    background: $c-light-grey
+;
+  }
+}
+
+.card-primary__image-inner {
+  display: flex;
+  flex-direction: column;
+  width: 32.6%;
+  overflow: hidden;
+  @include rwd('small-tablet', true)
+ {
+    justify-content: center;
+    width: 36.21%;
+  }
+  @include rwd('tablet', true)
+ {
+    width: 100%;
+  }
+}
+
+.card-primary__description {
+  margin-bottom: 8px;
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 18px;
+  }
+}
+
+.card-primary__content {
+  position: relative;
+  flex: 1 1 0;
+  padding-left: 15px;
+  @include rwd('small-tablet', true)
+ {
+    padding-left: 30px;
+  }
+  @include rwd('tablet', true)
+ {
+    width: 100%;
+    padding: 20px 25px 35px;
+    flex: 1 1 auto;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: -2px;
+      right: 0;
+      height: 22px;
+      background: $c-light-grey
+;
+      transform: rotate3d(0,0,4,3.3deg);
+    }
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 20px 30px 40px;
+  }
+  @include rwd('ultra')
+ {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+.card-primary__image-figure {
+  @include pseudo-ratio(79/96);
+  position: relative;
+  width: 100%;
+  @include rwd('small-tablet', true)
+ {
+    @include pseudo-ratio(122/196);
+  }
+  @include rwd('tablet', true)
+ {
+    @include pseudo-ratio(208/278);
+  }
+}
+
+.card-primary__title {
+  margin-top: -8px;
+  @include rwd('tablet', true)
+ {
+    margin-top: 0;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 3px;
+  }
+}
+
+.card-primary__footer {
+  .button-link {
+    color: $c-dark-red
+;
+  }
+}

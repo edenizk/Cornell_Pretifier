@@ -1,0 +1,74 @@
+.schedule-program-v2 {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  background: $c-grey5
+;
+
+  @include rwd('small-tablet', true)
+ {
+    padding-top: 30px;
+    margin-bottom: 24px;
+  }
+  @include rwd('tablet', true)
+ {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-top: 80px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 105px;
+    padding-bottom: 95px;
+    margin-bottom: 120px;
+  }
+}
+
+.schedule-program-v2__title {
+  margin-bottom: 30px;
+  text-align: center;
+
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 40px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 50px;
+  }
+}
+
+.schedule-program-v2__footer {
+  position: relative;
+  padding-top: 20px;
+  color: $c-grey4
+;
+  z-index: 1;
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 40px;
+  }
+}
+
+.schedule-program-v2__container {
+  @include rwd('small-tablet')
+ {
+    padding: 0 40px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 0 55px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 0 60px;
+  }
+  @include rwd('ultra')
+ {
+    padding: 0 142px;
+  }
+}

@@ -1,0 +1,21 @@
+.divider-line {
+  padding-bottom: 22px;
+  @media (--sm) {
+    padding-bottom: 45px;
+  }
+  @media (--ml) {
+    padding-bottom: 35px;
+  }
+  @media (--l) {
+    padding-bottom: 40px;
+  }
+}
+
+.divider-line__line {
+  border: 0;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.divider-line--no-spacing-bottom {
+  padding: 0;
+}

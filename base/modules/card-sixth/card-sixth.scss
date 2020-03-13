@@ -1,0 +1,254 @@
+
+
+/**
+Bottom spacing lower, stay in single row
+ */
+.card-sixth--1-col {
+  margin-bottom: 30px;
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 50px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 70px;
+  }
+
+  .card-sixth__mask {
+    @include pseudo-ratio(57/277);
+    @include rwd('small-tablet', true)
+ {
+      @include pseudo-ratio(38/495);
+    }
+    @include rwd('laptop', true)
+ {
+      @include pseudo-ratio(18/280);
+    }
+    @include rwd('large-laptop', true)
+ {
+      @include pseudo-ratio(54/1154);
+    }
+  }
+  .card-sixth__image-inner {
+    transform: translateY(-70px);
+    @media(--ml) {
+      transform: translateY(-80px);
+    }
+  }
+}
+
+/**
+3 cards per row, less bottom spacing
+ */
+.card-sixth--2-col,
+.card-sixth--3-col {
+  margin-top: 30px;
+  @include rwd('tablet', true)
+ {
+    margin-top: $gutter-m
+;
+  }
+}
+
+.card-sixth--2-col {
+  &:nth-child(1) {
+    margin-top: 0;
+    @include rwd('tablet', true)
+ {
+      margin-top: 0;
+    }
+  }
+  &:nth-child(2) {
+    @include rwd('tablet', true)
+ {
+      margin-top: 0;
+    }
+  }
+  .card-sixth__mask {
+    @include pseudo-ratio(57/277);
+  }
+  .card-sixth__image-inner {
+    transform: translateY(-70px);
+    @media(--sm) {
+      transform: translateY(-88px);
+    }
+    @media(--ml) {
+      transform: translateY(-80px);
+    }
+    @media(--l) {
+      transform: translateY(-100px);
+    }
+  }
+}
+
+.card-sixth--3-col {
+  &:nth-child(1) {
+    margin-top: 0;
+    @include rwd('tablet', true)
+ {
+      margin-top: 0;
+    }
+  }
+  &:nth-child(2),
+  &:nth-child(3) {
+    @include rwd('tablet', true)
+ {
+      margin-top: 0;
+    }
+  }
+  .card-sixth__mask {
+    @include pseudo-ratio(57/277);
+    @include rwd('small-tablet', true)
+ {
+      @include pseudo-ratio(68/495);
+    }
+    @include rwd('tablet', true)
+ {
+      @include pseudo-ratio(58/320);
+    }
+    @include rwd('laptop', true)
+ {
+      @include pseudo-ratio(53/280);
+    }
+    @include rwd('large-laptop', true)
+ {
+      @include pseudo-ratio(65/353);
+    }
+    @include rwd('ultra')
+ {
+      @include pseudo-ratio(70/367);
+    }
+  }
+  .card-sixth__image-inner {
+    transform: translateY(-70px);
+    @media(--sm) {
+      transform: translateY(-88px);
+    }
+    @media(--ml) {
+      transform: translateY(-80px);
+    }
+  }
+}
+
+.card-sixth__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  background: $c-white
+;
+}
+
+.card-sixth__mask {
+  @extend .bg-diagonal;
+  @include pseudo-ratio(114/277);
+  z-index: 1;
+  &:before {
+    position: relative;
+    content: '';
+    background: $c-sunglow
+;
+  }
+}
+
+.card-sixth__block {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1 0 auto;
+  width: 100%;
+  flex-direction: column;
+  padding: 0 20px 22px;
+  background: $c-white
+;
+  @include rwd('small-tablet', true)
+ {
+    padding: 0 25px 27px;
+  }
+  @include rwd('tablet', true)
+ {
+    padding: 0 30px 30px;
+  }
+  @include rwd('ultra')
+ {
+    padding: 0 37px 41px;
+  }
+}
+
+.card-sixth__image-inner {
+  transform: translateY(-65px);
+  margin-bottom: -65px;
+}
+
+.card-sixth__image-figure {
+  @include pseudo-ratio(1/1);
+  position: relative;
+  width: 164px;
+  border-radius: 50%;
+  overflow: hidden;
+  @media(--sm) {
+    width: 176px;
+  }
+  @media(--ml) {
+    width: 160px;
+  }
+  @media(--l) {
+    width: 200px;
+  }
+}
+
+.card-sixth__subtitle {
+  color: $c-dark-gray
+;
+  margin-bottom: 5px;
+  @include rwd('small-tablet', true)
+ {
+    margin-bottom: 0;
+  }
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 17px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 8px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 12px;
+  }
+}
+
+.card-sixth__description {
+  margin-bottom: 5px;
+}
+
+.card-sixth__content {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1 0 auto;
+  width: 100%;
+
+  .button-link {
+    color: $c-dark-red
+;
+  }
+}
+
+.card-sixth__footer--mobile {
+  @include rwd('tablet', true)
+ {
+    display: none;
+  }
+}
+
+.card-sixth__footer--desktop {
+  display: none;
+  @include rwd('tablet', true)
+ {
+    display: block;
+  }
+}

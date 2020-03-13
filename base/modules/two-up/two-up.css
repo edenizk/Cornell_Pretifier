@@ -1,0 +1,25 @@
+.two-up__grid {
+  margin-bottom: -1 * var(--gutter-xs);
+  @media (--sm) {
+    margin-bottom: -1 * var(--gutter-sm);
+  }
+  @media (--m) {
+    margin-bottom: -1 * var(--gutter-m);
+  }
+  @media (--ml) {
+    margin-bottom: -1 * var(--gutter-ml);
+  }
+  @media (--l) {
+    margin-bottom: -1 * var(--gutter-l);
+  }
+  @media (--xl) {
+    margin-bottom: -1 * var(--gutter-xl);
+  }
+}
+
+.two-up__item {
+  width: 100%;
+  @media (--m) {
+    width: 50%;
+  }
+}

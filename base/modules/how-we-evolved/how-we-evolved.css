@@ -1,0 +1,80 @@
+.how-we-evolved {
+  background-color: var(--c-dark-blue);
+}
+
+.how-we-evolved__inner {
+  padding: 36px 0 40px;
+  border-bottom: 1px solid var(--c-white);
+
+  @media (--m) {
+    padding: 40px 0 40px;
+  }
+
+  @media (--xl) {
+    padding: 100px 0 90px;
+  }
+}
+
+.how-we-evolved__title {
+  margin-bottom: 20px;
+
+  @media (--m) {
+    margin-bottom: 70px;
+  }
+
+  @media (--xl) {
+    margin-bottom: 60px;
+  }
+}
+
+.how-we-evolved__content {
+  @media (--m) {
+    max-width: 550px;
+  }
+
+  @media (--ml) {
+    max-width: none;
+  }
+}
+
+.how-we-evolved__grid-item {
+  width: 100%;
+}
+
+.how-we-evolved__grid-item--left {
+  @media (--ml) {
+    width: calc(885 / 1320 * 100%);
+    padding-right: 130px;
+  }
+}
+
+.how-we-evolved__grid-item--right {
+  display: none;
+
+  @media (--ml) {
+    display: block;
+    width: calc(435 / 1320 * 100%);
+    padding-left: 0;
+  }
+}
+
+.how-we-evolved__image {
+  padding: 10px;
+  border: 1px solid var(--c-white);
+
+  &:nth-child(odd) {
+    margin-right: 100px;
+  }
+
+  &:nth-child(even) {
+    margin-left: 100px;
+  }
+
+  &:nth-child(n+1) {
+    margin-top: -1px;
+  }
+}
+
+.how-we-evolved__image-figure {
+  @include pseudo-ratio(332/306);
+}

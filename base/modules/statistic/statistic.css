@@ -1,0 +1,9 @@
+.statistic {
+
+}
+
+.statistic__content {
+  @media (--m) {
+    display: flex;
+  }
+}

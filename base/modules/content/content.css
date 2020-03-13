@@ -1,0 +1,129 @@
+.content--intro {
+  position: relative;
+  text-align: center;
+  @media (--sm) {
+    padding: 40px 0;
+  }
+  @media (--m) {
+    padding: 45px 0 40px;
+  }
+  @media (--ml) {
+    padding: 60px 0 50px;
+  }
+  @media (--l) {
+    padding: 85px 0 70px;
+  }
+  + * {
+    @media (--sm) {
+      padding-top: 40px;
+    }
+    @media (--ml) {
+      padding-top: 60px;
+    }
+    @media (--l) {
+      padding-top: 70px;
+    }
+  }
+  .content__wysiwyg {
+    position: relative;
+    width: 100%;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--c-border);
+      @media (--sm) {
+        bottom: -40px;
+      }
+      @media (--ml) {
+        bottom: -50px;
+      }
+      @media (--l) {
+        bottom: -70px;
+      }
+      /*
+      * Disable bottom border on Curriculum v1 + People Grid page template
+      * This module is used on multiple pages so I disable it using page template class from body tag.
+      */
+      .page-template-page-curriculum &,
+      .page-template-page-people-grid & {
+        content: none;
+      }
+    }
+  }
+  .content__wysiwyg-inner {
+    margin: 0 auto;
+    @media (--m) {
+      width: percentage(10/12);
+    }
+    @media (--l) {
+      width: percentage(762/1155);
+    }
+  }
+}
+
+.content--side-navigation {
+  .content__wysiwyg-inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.content--fullwidth .content__wysiwyg,
+.content--fullwidth .content__wysiwyg-inner {
+  width: 100%;
+}
+
+.content__wysiwyg {
+  width: 100%;
+  margin: 0 auto;
+  @media (--m) {
+    width: percentage(10/12);
+
+    .page-side-navigation__block & {
+      width: 100%;
+    }
+  }
+  @media (--l) {
+    width: percentage(762/1155);
+
+    .page-side-navigation__block & {
+      width: 100%;
+    }
+  }
+}
+
+.content--single-people {
+  padding-top: 0;
+  .content__wysiwyg {
+    @media (--m) {
+      width: 100%;
+    }
+    @media (--ml) {
+      width: percentage(10/12);
+      max-width: 765px;
+    }
+  }
+}
+
+.content--single-post {
+  padding-top: 0;
+}
+
+.content:last-child {
+  .content__wysiwyg {
+    @media (--m) {
+      padding-bottom: 65px;
+    }
+  }
+}
+
+.content--curriculum {
+  .content__wysiwyg:after {
+    content: none;
+  }
+}

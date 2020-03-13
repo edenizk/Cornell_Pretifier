@@ -1,0 +1,37 @@
+.two-up__grid {
+  margin-bottom: -1 * $gutter-xs
+;
+  @include rwd('small-tablet', true)
+ {
+    margin-bottom: -1 * $gutter-sm
+;
+  }
+  @include rwd('tablet', true)
+ {
+    margin-bottom: -1 * $gutter-m
+;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-bottom: -1 * $gutter-ml
+;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: -1 * $gutter-l
+;
+  }
+  @include rwd('ultra')
+ {
+    margin-bottom: -1 * $gutter-xl
+;
+  }
+}
+
+.two-up__item {
+  width: 100%;
+  @include rwd('tablet', true)
+ {
+    width: 50%;
+  }
+}

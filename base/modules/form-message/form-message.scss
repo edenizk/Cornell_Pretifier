@@ -1,0 +1,17 @@
+.form-message__wrapper {
+	border-top: 1px solid $c-border
+
+}
+
+.form-message__inner {
+	width: 100%;
+	@include rwd('tablet', true)
+ {
+		width: calc(10 / 12 * 100%);
+		margin: 0 auto;
+	}
+	@include rwd('large-laptop', true)
+ {
+		width: calc(8 / 12 * 100%);
+	}
+}

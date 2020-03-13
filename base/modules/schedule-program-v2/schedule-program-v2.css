@@ -1,0 +1,61 @@
+.schedule-program-v2 {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  background: var(--c-grey5);
+
+  @media (--sm) {
+    padding-top: 30px;
+    margin-bottom: 24px;
+  }
+  @media (--m) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+  }
+  @media (--ml) {
+    padding-top: 80px;
+  }
+  @media (--l) {
+    padding-top: 105px;
+    padding-bottom: 95px;
+    margin-bottom: 120px;
+  }
+}
+
+.schedule-program-v2__title {
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media (--ml) {
+    margin-bottom: 40px;
+  }
+  @media (--l) {
+    margin-bottom: 50px;
+  }
+}
+
+.schedule-program-v2__footer {
+  position: relative;
+  padding-top: 20px;
+  color: var(--c-grey4);
+  z-index: 1;
+  @media (--l) {
+    padding-top: 40px;
+  }
+}
+
+.schedule-program-v2__container {
+  @media (--s) {
+    padding: 0 40px;
+  }
+  @media (--ml) {
+    padding: 0 55px;
+  }
+  @media (--l) {
+    padding: 0 60px;
+  }
+  @media (--xl) {
+    padding: 0 142px;
+  }
+}

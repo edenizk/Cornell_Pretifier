@@ -1,0 +1,42 @@
+.theme-block {
+  padding: 40px 0 100px;
+  color: var(--c-black);
+  background: var(--c-grey7);
+  overflow: hidden;
+  @media (--m) {
+    padding: 60px 0;
+  }
+  @media (--ml) {
+    padding: 80px 0;
+  }
+  @media (--l) {
+    padding: 100px 0;
+  }
+}
+
+.theme-block__headline {
+  color: var(--c-brown2);
+  @media (--l) {
+    margin-bottom: 20px;
+  }
+}
+
+.theme-block__container {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  @media (--m) {
+    max-width: 720px;
+  }
+  @media (--ml) {
+    max-width: 960px;
+  }
+  @media (--l) {
+    max-width: 1240px;
+  }
+}
+
+.theme-block__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}

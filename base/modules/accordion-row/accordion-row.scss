@@ -1,0 +1,211 @@
+.accordion-row {
+  padding-top: 20px;
+  border-bottom: 1px solid $c-border
+;
+  transition: all .3s ease-out;
+  @include rwd('tablet', true)
+ {
+    padding-top: 25px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 35px;
+  }
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.accordion-row__title {
+  position: relative;
+  padding-right: 30px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  user-select: none;
+  @include rwd('tablet', true)
+ {
+    padding-right: 50px;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 2px;
+    background: $c-blue2
+;
+    transition: transform .2s ease-in-out;
+    @include rwd('tablet', true)
+ {
+      width: 15px;
+    }
+    @include rwd('laptop', true)
+ {
+      width: 18px;
+      height: 3px;
+    }
+    @include rwd('large-laptop', true)
+ {
+      width: 20px;
+    }
+  }
+  &:before {
+    transform: rotate(90deg);
+  }
+}
+
+.accordion-row__content {
+  max-height: 0;
+  margin: 10px 20px 10px 0;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+  @include rwd('small-tablet')
+ {
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  @include rwd('small-tablet', true)
+ {
+    margin-right: 30px;
+  }
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 20px;
+    margin-right: 60px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-top: 15px;
+  }
+}
+
+.accordion-row--activate {
+  .accordion-row__content {
+    margin-bottom: 20px;
+    @include rwd('tablet', true)
+ {
+      margin-bottom: 25px;
+    }
+    @include rwd('large-laptop', true)
+ {
+      margin-bottom: 35px;
+    }
+  }
+  .accordion-row__title:before {
+    transform: rotate(0deg);
+  }
+}
+
+.accordion-row--company-filter {
+  padding-top: 10px;
+  @include rwd('tablet', true)
+ {
+    width: 33.3333%;
+    padding: 0 15px;
+    border: 0;
+  }
+
+  .accordion-row__title {
+    @extend .label-text;
+    @include rwd('tablet', true)
+ {
+      margin-bottom: 13px;
+      pointer-events: none;
+    }
+
+    &:before {
+      content: none;
+    }
+
+    &:after {
+      width: 6px;
+      height: 6px;
+      top: calc(50% - 3px);
+      transform: translate3d(0, -50%, 0) rotate(-45deg);
+      background: transparent;
+      border-left: 1px solid $c-black
+;
+      border-bottom: 1px solid $c-black
+;
+      @include rwd('tablet', true)
+ {
+        content: none;
+      }
+    }
+  }
+
+  &.accordion-row--activate {
+    .accordion-row__title:after {
+      transform: translate3d(0, -50%, 0) rotate(135deg);
+    }
+  }
+
+  .accordion-row__content {
+    margin: 5px 10px 5px 0;
+    @include rwd('tablet', true)
+ {
+      margin: 0 20px 0 0;
+    }
+  }
+}
+
+.company-filter--page-events,
+.company-filter--page-build-at {
+  .accordion-row--company-filter {
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid $c-border
+;
+
+    .accordion-row__title {
+      margin-top: 10px;
+      margin-bottom: 0;
+      pointer-events: inherit;
+
+      @include rwd('tablet', true)
+ {
+        margin-top: 16px;
+      }
+
+      &:before {
+        content: '';
+        top: 12px;
+        width: 12px;
+        height: 2px;
+      }
+
+      &:after {
+        position: absolute;
+        top: 12px;
+        right: 0;
+        content: '';
+        display: block;
+        width: 12px;
+        height: 2px;
+        background: $c-blue2
+;
+        transition: transform .2s ease-in-out;
+        border: none;
+        transform: rotate(0deg);
+      }
+    }
+
+    &.accordion-row--activate {
+      .accordion-row__title:after {
+        transform: rotate(0deg);
+      }
+    }
+
+    .accordion-row__content {
+      margin: 0 20px 10px 0;
+
+      @include rwd('tablet', true)
+ {
+        margin: 0 20px 16px 0;
+      }
+    }
+  }
+}

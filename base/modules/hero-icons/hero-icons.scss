@@ -1,0 +1,92 @@
+.hero-icons__list {
+  @media(--m) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.hero-icons__item {
+  margin-bottom: 10px;
+  @include rwd('tablet', true)
+ {
+    width: percentage(1/3);
+  }
+  &:nth-of-type(n+2) {
+    @include rwd('tablet', true)
+ {
+      border-left: 1px solid $c-border
+;
+    }
+  }
+}
+
+.hero-icons__image-figure {
+  flex: 0 0 auto;
+  width: 40px;
+  margin-bottom: 5px;
+  @include pseudo-ratio(1/1);
+  @include rwd('tablet', true)
+ {
+    width: 45px;
+  }
+  &.imcontain .image__img {
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hero-icons__item:first-child & {
+    margin-bottom: 10px;
+    @include rwd('tablet', true)
+ {
+      width: 35px;
+    }
+  }
+  .hero-icons__item:last-child & {
+    margin-bottom: 0;
+    @include rwd('tablet', true)
+ {
+      width: 50px;
+    }
+  }
+}
+
+.hero-icons__item-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  @include rwd('tablet', true)
+ {
+    flex-direction: column;
+  }
+}
+
+.hero-icons__content {
+  width: 100%;
+  margin-left: 15px;
+  @include rwd('tablet', true)
+ {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+.hero-icons__description {
+  color: $c-dark-gray
+;
+  @include rwd('tablet', true)
+ {
+    padding: 5px 20px 0;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 5px 40px 0;
+  }
+}
+
+.no-object-fit {
+  .hero-icons__image-figure {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

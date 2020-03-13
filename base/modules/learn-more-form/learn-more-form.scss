@@ -1,0 +1,12 @@
+.learn-more-form__inner {
+  width: 100%;
+  margin: 0 auto;
+  @include rwd('tablet', true)
+ {
+    width: percentage(8/12);
+  }
+  @include rwd('laptop', true)
+ {
+    width: percentage(10/12);
+  }
+}

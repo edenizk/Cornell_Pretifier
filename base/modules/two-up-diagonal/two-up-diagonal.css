@@ -1,0 +1,86 @@
+.two-up-diagonal__inner {
+  background: var(--c-grey7);
+}
+
+.two-up-diagonal__image-figure {
+  @include pseudo-ratio(186/278);
+  @media(--sm) {
+    @include pseudo-ratio(183/494);
+  }
+  @media(--m) {
+    @include pseudo-ratio(246/660);
+  }
+  @media(--ml) {
+    @include pseudo-ratio(345/308);
+  }
+}
+
+.two-up-diagonal__inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  @extend .bg-diagonal;
+}
+
+.two-up-diagonal__image {
+  width: 100%;
+  @media(--ml) {
+    width: 45%;
+  }
+}
+
+.two-up-diagonal__content {
+  width: 100%;
+  color: var(--c-black);
+  padding: 10px 20px 60px;
+  @extend .bg-diagonal;
+  &:before {
+    height: 40px;
+    background: var(--c-black);
+    top: -25px;
+  }
+  @media(--s) {
+    padding-bottom: 65px;
+  }
+  @media(--sm) {
+    padding: 25px 40px 66px;
+  }
+  @media(--ml) {
+    padding: 50px;
+    width: 55%;
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+  @media(--l) {
+    padding: 75px;
+  }
+}
+
+.two-up-diagonal__content-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/*
+Class two-up-diagonal--bg is used for News template only
+ */
+.two-up-diagonal--bg {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    background: var(--c-light-grey);
+  }
+
+  .two-up-diagonal__inner:after {
+    background: var(--c-light-grey);
+  }
+}

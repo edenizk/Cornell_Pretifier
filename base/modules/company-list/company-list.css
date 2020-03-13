@@ -1,0 +1,36 @@
+.company-list {
+  margin-top: 20px;
+
+  @media (--m) {
+    margin-top: 45px;
+  }
+}
+.company-list__load-more {
+  margin-top: 20px;
+  text-align: center;
+
+  @media (--m) {
+    margin-top: 50px;
+  }
+}
+.company-list__load-more-button {
+  border: none;
+  color: var(--c-blue);
+  background-color: transparent;
+  .icon-arrow-down {
+    font-weight: 700;
+  }
+}
+.company-list__empty {
+  text-align: center;
+}
+
+.startup-module--page-events {
+  .company-list {
+    overflow: initial;
+  }
+
+  .company-list__grid {
+    display: block;
+  }
+}

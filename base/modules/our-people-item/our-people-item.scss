@@ -1,0 +1,250 @@
+.our-people-item {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid $c-white
+;
+  border-right-color: transparent;
+
+  @include rwd('small-tablet', true)
+ {
+    width: 43.33%;
+  }
+
+  @include rwd('laptop', true)
+ {
+    width: 25%;
+    padding: 12px;
+    border-right-color: $c-white
+;
+
+    &:nth-child(even) {
+      transform: translate3d(0, 28%, 0);
+    }
+
+    &:nth-child(n+2) {
+      margin-left: -1px;
+    }
+  }
+
+  &:hover {
+    .our-people-item__image {
+      filter: none;
+    }
+  }
+
+  &:last-child {
+    border-right-color: $c-white
+;
+  }
+}
+
+.our-people-item--cta {
+  .our-people-item__inner {
+    background: transparent;
+  }
+}
+
+.our-people-item__inner {
+  @include pseudo-ratio(302/288);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: $c-grey6
+;
+  overflow: hidden;
+  z-index: 2;
+
+  &:before {
+    @include rwd('laptop', true)
+ {
+      padding-bottom: calc(100% * 333 / 306);
+    }
+  }
+}
+
+.our-people-item__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 10px 16px;
+  color: $c-dark-blue
+;
+  background: $c-grey6
+;
+}
+
+.our-people-item__image {
+  position: absolute;
+  top: 41px;
+  left: 0;
+  bottom: 0;
+  flex: 1 0 auto;
+  width: 100%;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  z-index: 1;
+
+  @include rwd('laptop', true)
+ {
+    top: 44px;
+  }
+
+  .is-grayscale & {
+    display: none;
+  }
+
+  .our-people-item--cta & {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: none;
+    opacity: 0.05;
+  }
+
+  .image__img {
+    height: auto;
+    min-height: 100%;
+
+    .our-people-item--cta & {
+      height: 100%;
+    }
+  }
+}
+
+.our-people-item__cta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.our-people-item__cta-link {
+  padding: 20px;
+  text-align: center;
+  text-decoration: underline;
+
+  &.jip-link {
+    .our-people-item__cta-icon {
+      &,
+      &:after {
+        border-color: $c-sunglow
+;
+        box-shadow: none;
+      }
+    }
+
+    &:hover {
+      .our-people-item__cta-icon {
+        &,
+        &:after {
+          border-color: $c-black
+;
+         box-shadow: none;
+        }
+      }
+    }
+  }
+
+  &:not(.jip-link) {
+    color: $c-brown2
+;
+
+    &:hover {
+      .our-people-item__cta-icon {
+        &:before {
+          box-shadow: inset 0 0 0 25px $c-brown2
+;
+        }
+
+        &:after {
+          border-color: $c-black
+;
+        }
+      }
+    }
+  }
+}
+
+.our-people-item__cta-icon {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin: 14px auto 0;
+  padding: 0;
+  user-select: none;
+  border-radius: 50%;
+  border: 1.5px solid $c-grey2
+;
+  box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  transition: all .3s ease;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: transparent;
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 0 $c-brown2
+;
+    transition: all .3s ease-in-out;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 2px);
+    width: 9px;
+    height: 9px;
+    transform: translate3d(-50%, -50%, 0) rotate(45deg);
+    border-top: 1.5px solid $c-grey2
+;
+    border-right: 1.5px solid $c-grey2
+;
+    transition: all .3s ease-in-out;
+  }
+}
+
+.our-people-item__image--grayscale {
+  display: none;
+  position: absolute;
+  top: 41px;
+  left: 0;
+  bottom: 0;
+  flex: 1 0 auto;
+  width: 115%;
+  z-index: 1;
+
+  @include rwd('laptop', true)
+ {
+    top: 44px;
+  }
+
+  .is-grayscale & {
+    display: block;
+  }
+
+  img.grayscale:hover {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+  }
+
+  svg image:hover {
+    filter: none;
+  }
+}

@@ -1,0 +1,10 @@
+.learn-more-form__inner {
+  width: 100%;
+  margin: 0 auto;
+  @media (--m) {
+    width: percentage(8/12);
+  }
+  @media (--ml) {
+    width: percentage(10/12);
+  }
+}

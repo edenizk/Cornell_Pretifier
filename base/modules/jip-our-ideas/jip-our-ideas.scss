@@ -1,0 +1,164 @@
+.jip-our-ideas {
+  padding: 40px 0 75px;
+  background: $c-dark-blue
+;
+  overflow: hidden;
+
+  @include rwd('tablet', true)
+ {
+    padding: 47px 0 75px;
+  }
+
+  @include rwd('laptop', true)
+ {
+    padding: 60px 0 95px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    padding: 62px 0 112px;
+  }
+
+  .flickity-button {
+    display: none;
+
+    @include rwd('laptop', true)
+ {
+      display: block;
+    }
+
+    &.next {
+      right: -29px;
+    }
+
+    &.previous {
+      left: -29px;
+    }
+
+    &:hover {
+      &:before {
+        box-shadow: none;
+      }
+
+      path {
+        fill: $c-dark-blue
+
+      }
+    }
+  }
+
+  .flickity-button:disabled {
+    display: none;
+  }
+
+  .flickity-prev-next-button {
+    width: 58px;
+    height: 58px;
+    background-color: $c-sunglow
+;
+    border: 0;
+  }
+
+  .flickity-button-icon {
+    width: 28%;
+    height: 28%;
+    fill: $c-dark-blue
+;
+  }
+
+  .flickity-page-dots {
+    bottom: -35px;
+
+    @include rwd('laptop', true)
+ {
+      display: none;
+    }
+  }
+
+  .flickity-page-dots .dot {
+    width: 10px;
+    height: 10px;
+    border: none;
+    background: $c-white
+;
+    opacity: 0.21;
+  }
+
+  .flickity-page-dots .dot.is-selected {
+    background: $c-jip-green
+;
+    opacity: 1;
+  }
+
+  .jip-our-ideas__list--hide-button {
+    .flickity-prev-next-button {
+      @include rwd('laptop', true)
+ {
+        display: none;
+      }
+    }
+  }
+}
+
+.jip-our-ideas__header {
+  margin-bottom: 21px;
+
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 42px;
+  }
+}
+
+.jip-our-ideas__list {
+  margin-bottom: 60px;
+  position: relative;
+
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 36px;
+  }
+
+  .flickity-button {
+    z-index: 2;
+  }
+
+  .flickity-viewport {
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+
+    @include rwd('laptop', true)
+ {
+      overflow: hidden;
+      box-shadow: 0 0 0 1px $c-white
+ inset;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+
+      &::before {
+        border-left: 1px solid $c-white
+;
+        left: 0;
+        right: auto;
+      }
+
+      &::after {
+        border-right: 1px solid $c-white
+;
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}
+
+.jip-our-programs__button-wrap {
+  text-align: center;
+}

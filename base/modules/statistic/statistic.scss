@@ -1,0 +1,10 @@
+.statistic {
+
+}
+
+.statistic__content {
+  @include rwd('tablet', true)
+ {
+    display: flex;
+  }
+}

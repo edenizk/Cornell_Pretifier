@@ -1,0 +1,252 @@
+.gallery-carousel {
+  padding-bottom: 80px;
+  background: $c-grey7
+;
+  color: $c-black
+;
+  overflow: hidden;
+  @include rwd('tablet', true)
+ {
+    padding-bottom: 0;
+    background-color: $c-white
+;
+  }
+  @include rwd('ultra')
+ {
+    padding-bottom: 100px;
+  }
+  .carousel-order {
+    bottom: -53px;
+    left: 85px;
+    color: $c-green
+;
+    @include rwd('tablet', true)
+ {
+      display: none;
+    }
+  }
+
+  .flickity-button {
+    top: auto;
+    bottom: -60px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    background: transparent;
+    @include rwd('tablet', true)
+ {
+      width: 44px;
+      height: 44px;
+    }
+    svg path {
+      fill: $c-black
+;
+    }
+    @include rwd('tablet', true)
+ {
+      display: block;
+      top: 50px;
+      bottom: auto;
+    }
+    @include rwd('laptop', true)
+ {
+      top: auto;
+      bottom: 0;
+    }
+    @include rwd('large-laptop', true)
+ {
+      bottom: 10px;
+    }
+  }
+  .flickity-prev-next-button.previous {
+    left: 20px;
+    @include rwd('tablet', true)
+ {
+      left: auto;
+      right: 84px;
+    }
+    @include rwd('laptop', true)
+ {
+      left: 30px;
+      right: auto;
+    }
+    @include rwd('large-laptop', true)
+ {
+      left: 40px;
+    }
+  }
+  .flickity-prev-next-button.next {
+    left: 50px;
+    @include rwd('tablet', true)
+ {
+      right: 30px;
+      left: auto;
+    }
+    @include rwd('laptop', true)
+ {
+      left: 84px;
+      right: auto;
+    }
+    @include rwd('large-laptop', true)
+ {
+      left: 94px;
+    }
+  }
+  .flickity-button:disabled {
+    opacity: 1;
+    border-color: $c-grey2
+;
+    svg path {
+      fill: $c-grey2
+;
+    }
+  }
+  .flickity-page-dots {
+    display: none;
+  }
+  .dot {
+    background: $c-grey
+;
+  }
+  .card-header {
+    display: none;
+    color: $c-white
+;
+    @include rwd('tablet', true)
+ {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    @include rwd('large-laptop', true)
+ {
+      margin: 50px 0;
+    }
+    @include rwd('ultra')
+ {
+      margin: 70px 0;
+    }
+  }
+  .card-header__image-figure {
+    @include pseudo-ratio(180/320);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .card-header__description {
+    color: $c-black
+;
+    margin-bottom: 20px;
+  }
+}
+
+.gallery-carousel__inner {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  @include rwd('tablet', true)
+ {
+    display: flex;
+    overflow: hidden;
+  }
+}
+
+.gallery-carousel__header-inner {
+  padding: 0 15px;
+  @include rwd('all')
+ {
+    padding: 0 20px;
+  }
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 30px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 0 30px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 0 60px;
+  }
+}
+
+.gallery-carousel__header {
+  position: relative;
+  margin-bottom: 20px;
+  @include rwd('tablet', true)
+ {
+    width: 30%;
+    margin-bottom: 0;
+    padding-top: 50px;
+    background: $c-grey7
+;
+  }
+  @include rwd('ultra')
+ {
+    padding-top: 80px;
+    width: 25%;
+  }
+  &:before,
+  &:after {
+    @include rwd('tablet', true)
+ {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -10px;
+      right: 2px;
+      height: 50px;
+      background: $c-grey7
+;
+    }
+    @include rwd('ultra')
+ {
+    }
+  }
+  &:before {
+    display: block;
+    transform: rotate3d(0,0,2,4deg);
+    @include rwd('large-laptop', true)
+ {
+      top: -35px;
+    }
+  }
+  &:after {
+    display: none;
+    @include rwd('large-laptop', true)
+ {
+      display: block;
+      top: -22px;
+      right: 0;
+    }
+  }
+}
+
+.gallery-carousel__grid-wrapper {
+  @include rwd('tablet', true)
+ {
+    width: 70%;
+    align-self: flex-end;
+  }
+  @include rwd('ultra')
+ {
+    width: 75%;
+  }
+}
+
+.gallery-carousel__headline {
+  color: $c-black
+;
+  margin-bottom: 10px;
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 15px;
+  }
+}
+
+.gallery-carousel__intro,
+.gallery-carousel__intro > * {
+  color: $c-black
+;
+}

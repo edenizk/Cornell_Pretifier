@@ -1,0 +1,12 @@
+.post--404 > .container {
+  padding-top: 60px;
+  padding-bottom: calc(60px + var(--footer-pad-top));
+
+  @media (--ml) {
+    padding-bottom: calc(60px + var(--footer-pad-top-ml));
+  }
+
+  @media (--l) {
+    padding-bottom: calc(120px + var(--footer-pad-top-l));
+  }
+}

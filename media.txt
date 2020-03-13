@@ -1,0 +1,36 @@
+xs:@include rwd('all')
+xs-max:@include rwd('phone', true)
+s:@include rwd('small-tablet')
+s-max:@include rwd('small-tablet', true)
+sm:@include rwd('small-tablet', true)
+ms:@include rwd('tablet', true)
+sm-max:@include rwd('tablet')
+m:@include rwd('tablet', true)
+m-1:@include rwd('medium-tablet', true)
+m-2:@include rwd('large-tablet', true)
+m-max:@include rwd('large-tablet')
+ml:@include rwd('laptop', true)
+max-nav:@include rwd('laptop')
+mobile-nav:@include rwd('laptop', true)
+ml-max:@include rwd('large-laptop')
+l:@include rwd('large-laptop', true)
+l-max:@include rwd('ultra')
+xl:@include rwd('ultra')
+--xs:$xs
+--xs-max:$xs-max
+--s:$s
+--s-max:$s-max
+--sm:$sm
+--ms:$ms
+--sm-max:$sm-max
+--m:$m
+--m-1:$m-1
+--m-2:$m-2
+--m-max:$m-max
+--ml:$ml
+--max-nav:$max-nav
+--mobile-nav:$mobile-nav
+--ml-max:$ml-max
+--l:$l
+--l-max:$l-max
+--xl:$xl

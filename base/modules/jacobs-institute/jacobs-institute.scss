@@ -1,0 +1,278 @@
+.jacobs-institute {
+  position: relative;
+  background: $c-dark-blue
+;
+  overflow: hidden;
+}
+
+.jacobs-institute__inner {
+  padding: 30px 0;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  @include rwd('small-tablet', true)
+ {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include rwd('tablet', true)
+ {
+    padding: 100px 0 100px 200px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 120px 0 100px 320px;
+  }
+}
+
+.jacobs-institute__header {
+  @media (--sm-max) {
+    position: relative;
+    z-index: 1;
+  }
+
+}
+
+.jacobs-institute__logo {
+  height: 78px;
+  width: 160px;
+  margin-bottom: 20px;
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 0;
+    width: 100px;
+    height: 480px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    left: 0;
+  }
+}
+
+.jacobs-institute__logo-img {
+  height: 100%;
+  display: block;
+}
+
+.jacobs-institute__logo--mobile {
+  display: block;
+  @include rwd('tablet', true)
+ {
+    display: none;
+  }
+}
+
+.jacobs-institute__logo--desktop {
+  display: none;
+  @include rwd('tablet', true)
+ {
+    display: block;
+  }
+}
+
+.jacobs-institute__carousel {
+    &.carousel {
+      &:after {
+        @include rwd('small-tablet', true)
+ {
+          content: 'flickity';
+          display: none;
+        }
+    }
+  }
+  .jacobs-institute__item {
+    margin-bottom: 30px;
+    .jacobs-institute__item-image {
+      display: none;
+      @include rwd('small-tablet', true)
+ {
+        display: block;
+      }
+    }
+    &:first-child {
+      .jacobs-institute__item-image {
+        display: block;
+      }
+    }
+  }
+  &.flickity-enabled {
+    display: block;
+    .jacobs-institute__item {
+      width: 50%;
+      @include rwd('laptop', true)
+ {
+        width: 40%;
+        padding-right: 42px;
+      }
+      &:first-child {
+        width: 80%;
+        @include rwd('small-tablet', true)
+ {
+          padding-right: 42px;
+        }
+        @include rwd('laptop', true)
+ {
+          width: 60%;
+          padding-right: 62px;
+        }
+      }
+    }
+    .flickity-viewport {
+      overflow: visible;
+    }
+  }
+}
+
+.jacobs-institute__description,
+.jacobs-institute__item-label,
+.jacobs-institute__item-title {
+  color: $c-white
+;
+}
+
+.jacobs-institute__item-label {
+  text-transform: uppercase;
+}
+
+.jacobs-institute__description {
+  position: relative;
+  max-width: 100%;
+  z-index: 2;
+
+  @include rwd('small-tablet', true)
+ {
+    max-width: 70%;
+  }
+
+  @include rwd('tablet', true)
+ {
+    max-width: 385px;
+  }
+
+  @include rwd('laptop', true)
+ {
+    max-width: 600px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    max-width: 680px;
+  }
+}
+
+.jacobs-institute__content {
+  position: relative;
+  margin-top: 20px;
+  z-index: 2;
+  @include rwd('small-tablet', true)
+ {
+    margin-top: 70px;
+  }
+
+  .flickity-button {
+    border-color: $c-white
+;
+  }
+}
+
+.jacobs-institute__item-title {
+  margin-top: 10px;
+  @include rwd('small-tablet', true)
+ {
+    margin-top: 20px;
+  }
+  .icon-arrow {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+  .button-link-white {
+    @extend .jacobs-institute-item-title-secondary;
+    .icon-arrow {
+      width: 45px;
+      @type 45px 1;
+    }
+  }
+  .jacobs-institute__item:first-child & {
+    .button-link-white {
+      @extend .jacobs-institute-item-title-main;
+    }
+    .icon-arrow {
+      @type 50px 1;
+    }
+  }
+}
+
+.jacobs-institute__item-image {
+  margin-top: 8px;
+  @include pseudo-ratio(194/291);
+
+  .jacobs-institute__item:first-child & {
+    @include pseudo-ratio(282/500);
+  }
+}
+
+.jacobs-institute__item {
+  @extend .transition;
+}
+
+.jacobs-institute {
+  .carousel {
+    svg path {
+      fill: $c-white
+;
+    }
+    .flickity-button {
+      top: -65px;
+      transform: none;
+      display: none;
+      background: transparent;
+      &.previous {
+        right: 40px;
+        left: auto;
+      }
+      @include rwd('small-tablet')
+ {
+        display: block;
+      }
+    }
+  }
+  .flickity-item--previous {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-100px,0);
+  }
+}
+
+.jacobs-institute__background {
+  @extend .absolute-full;
+  z-index: 0;
+}
+
+.jacobs-institute__canvas-image {
+  height: 1706px;
+  width: 1706px;
+  position: absolute;
+  bottom: 10%;
+  right: -60%;
+  z-index: 1;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(-25deg);
+}
+
+.jacobs-institute__canvas {
+  display: none;
+  position: absolute;
+  bottom: 10%;
+  right: -60%;
+  height: 1706px;
+  width: 1706px;
+  transform: rotate(-25deg);
+  @include rwd('laptop', true)
+ {
+    display: block;
+  }
+}

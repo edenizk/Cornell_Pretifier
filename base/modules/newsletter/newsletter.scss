@@ -1,0 +1,99 @@
+.newsletter__title {
+  margin-bottom: 3px;
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 0;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 7px;
+  }
+}
+
+.newsletter__wrapper {
+  display: flex;
+  flex-direction: column;
+  @include rwd('tablet', true)
+ {
+    flex-direction: row;
+  }
+  @include rwd('laptop', true)
+ {
+    flex-direction: column;
+  }
+}
+
+.newsletter__block--content,
+.newsletter__block--input-group {
+  width: 100%;
+}
+
+.newsletter__input-group {
+  @include rwd('small-tablet', true)
+ {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;
+  }
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 0;
+  }
+  @include rwd('laptop', true)
+ {
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  .gfield_label {
+    display: none;
+  }
+  .validation_error {
+    display: none;
+  }
+}
+
+
+.newsletter__description {
+  margin-bottom: 10px;
+}
+
+.newsletter__input {
+  @extend .p-small;
+  width: 100%;
+  padding: 11px 15px 10px;
+  background: transparent;
+  color: $c-border
+;
+  border: 1px solid $c-white
+;
+  @include rwd('small-tablet', true)
+ {
+    width: calc(2/3*100% - 11px);
+  }
+  @include rwd('tablet', true)
+ {
+    width: auto;
+    flex: 1 1 0;
+    margin-right: 8px;
+  }
+  &::placeholder {
+    color: $c-border
+;
+  }
+}
+
+.newsletter__button {
+  width: 100%;
+  margin-top: 8px;
+  @include rwd('small-tablet', true)
+ {
+    width: calc(1/3*100%);
+    margin-top: 0;
+  }
+  @include rwd('tablet', true)
+ {
+    width: auto;
+  }
+}
+

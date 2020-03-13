@@ -1,0 +1,76 @@
+.our-people {
+  padding-top: 65px;
+  padding-bottom: 335px;
+  background: $c-dark-blue
+;
+  overflow: hidden;
+
+  @include rwd('tablet', true)
+ {
+    padding-bottom: 245px;
+  }
+
+  @include rwd('laptop', true)
+ {
+    padding-bottom: 390px;
+  }
+
+  .flickity-page-dots {
+    bottom: -38px;
+  }
+
+  .flickity-page-dots .dot {
+    width: 10px;
+    height: 10px;
+    border: none;
+    background: $c-white
+;
+    opacity: 0.21;
+  }
+
+  .flickity-page-dots .dot.is-selected {
+    background: $c-jip-green
+;
+    opacity: 1;
+  }
+}
+
+.our-people--jip-landing {
+  padding-top: 28px;
+
+  @include rwd('tablet', true)
+ {
+    padding-top: 1px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 48px;
+  }
+}
+
+.our-people__grid {
+  &:after {
+    content: 'flickity';
+    display: none;
+
+    @include rwd('laptop', true)
+ {
+      content: '';
+    }
+  }
+
+  .flickity-viewport {
+    overflow: visible;
+
+    @include rwd('laptop', true)
+ {
+      overflow: hidden;
+    }
+  }
+
+  @include rwd('laptop', true)
+ {
+    display: flex;
+  }
+}

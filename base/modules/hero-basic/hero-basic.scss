@@ -1,0 +1,90 @@
+.hero-basic {
+  text-align: center;
+  > .container {
+    padding: 40px 0;
+
+    @include rwd('tablet', true)
+ {
+      padding: 60px 0;
+    }
+  }
+}
+
+.hero-basic__subtitle {
+  color: $c-blue
+;
+  margin-bottom: 10px;
+
+  @include rwd('small-tablet', true)
+ {
+    margin-bottom: 18px;
+  }
+
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 11px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 24px;
+  }
+}
+
+.hero-basic__title {
+  margin-bottom: 9px;
+
+  @include rwd('small-tablet', true)
+ {
+    margin-bottom: 15px;
+  }
+
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 13px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 29px;
+  }
+}
+
+.hero-basic__description {
+  color: $c-dark-gray1
+;
+  a {
+    color: $c-blue
+;
+    &:hover {
+      border-bottom: 1px solid $c-blue
+;
+    }
+  }
+}
+
+.hero-basic__image {
+  @include pseudo-ratio(1/1);
+  width: 140px;
+  margin: 15px auto 0;
+  border-radius: 50%;
+  overflow: hidden;
+  @include rwd('small-tablet', true)
+ {
+    width: 188px;
+    margin-top: 20px;
+  }
+  @include rwd('tablet', true)
+ {
+    width: 235px;
+    margin-top: 35px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-top: 30px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-top: 40px;
+  }
+}

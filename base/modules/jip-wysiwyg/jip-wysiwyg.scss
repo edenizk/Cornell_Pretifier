@@ -1,0 +1,29 @@
+.jip-wysiwyg__inner {
+  padding-top: 30px;
+
+  @include rwd('tablet', true)
+ {
+    padding-top: 40px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 84px;
+  }
+}
+
+.jip-wysiwyg__title {
+  padding-bottom: 26px;
+  color: $c-black
+;
+
+  @include rwd('tablet', true)
+ {
+    padding-bottom: 20px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    padding-bottom: 30px;
+  }
+}

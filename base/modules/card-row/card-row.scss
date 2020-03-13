@@ -1,0 +1,139 @@
+.card-row {
+  margin-bottom: 25px;
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 40px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 35px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 40px;
+  }
+  @include rwd('ultra')
+ {
+    margin-bottom: 50px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-row__inner {
+  padding-bottom: 25px;
+  border-bottom: 1px solid $c-light-green
+;
+  @include rwd('small-tablet', true)
+ {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 30px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-bottom: 40px;
+  }
+  @include rwd('tablet', true)
+ {
+    padding-bottom: 35px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-bottom: 45px;
+  }
+  @include rwd('ultra')
+ {
+    padding-bottom: 55px;
+  }
+}
+
+.card-row__image-figure {
+  display: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include rwd('tablet', true)
+ {
+    @include pseudo-ratio(118/210);
+    display: block;
+    position: relative;
+  }
+}
+
+.card-row__image-inner {
+  display: none;
+  @include rwd('tablet', true)
+ {
+    display: block;
+    position: relative;
+    width: percentage(210/663);
+  }
+  @include rwd('laptop', true)
+ {
+    width: percentage(262/873);
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: percentage(291/1097);
+  }
+  @include rwd('ultra')
+ {
+    width: percentage(291/1155);
+  }
+}
+
+.card-row__block-content {
+  &:first-child {
+    margin-left: 0;
+  }
+  @include rwd('tablet', true)
+ {
+    flex: 1 1 0;
+    margin-left: 25px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-left: 35px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-left: 45px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.card-row__title {
+  margin-bottom: 10px;
+}
+
+.card-row__footer {
+  margin-top: 20px;
+  @include rwd('small-tablet', true)
+ {
+    margin-top: 15px;
+  }
+  @include rwd('tablet', true)
+ {
+    margin-top: 10px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-top: 0;
+    flex: none;
+  }
+
+  .button-link {
+    color: $c-dark-red
+;
+  }
+}
+
+.card-row__content {
+  @include rwd('large-laptop', true)
+ {
+    width: 75%;
+  }
+}

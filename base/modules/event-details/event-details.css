@@ -1,0 +1,40 @@
+.event-details {
+  display: block;
+  padding: 50px 0;
+}
+
+.event-details__inner {
+  border-top: 1px solid rgb(200, 205, 206);
+
+  @media (--m) {
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+}
+
+.event-details__block-left {
+  width: 100%;
+
+  @media (--m) {
+    width: calc(7 / 12 * 100%);
+    padding-right: 30px;
+  }
+
+  @media (--l) {
+    width: calc(9 / 12 * 100%);
+    padding-right: 123px;
+  }
+}
+
+.event-details__block-right {
+  width: 100%;
+
+  @media (--m) {
+    width: calc(5 / 12 * 100%);
+  }
+
+  @media (--l) {
+    width: calc(3 / 12 * 100%);
+  }
+}
+

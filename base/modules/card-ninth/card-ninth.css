@@ -1,0 +1,35 @@
+.card-ninth {
+  position: relative;
+  min-height: 219px;
+  @media (--sm) {
+    max-width: 415px;
+  }
+  @media (--m) {
+    max-width: 440px;
+  }
+  @media (--ml) {
+    width: 100%;
+    max-width: none;
+  }
+  .icon-arrow {
+    width: 50px;
+    margin-bottom: 0;
+    @type 50px, 1;
+  }
+}
+
+.card-ninth__content {
+  margin-top: 15px;
+
+  .button-link-white .icon-arrow {
+    color: var(--c-black);
+  }
+}
+
+.card-ninth__link {
+  @extend .button-link-text-lg;
+}
+
+.card-ninth__image-figure {
+  @include pseudo-ratio(0.564);
+}

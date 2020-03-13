@@ -1,0 +1,53 @@
+.media-highlights {
+  background: $c-white
+;
+  @include rwd('tablet', true)
+ {
+    padding: 40px 0;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 60px 0;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 70px 0;
+  }
+  @include rwd('ultra')
+ {
+    padding: 80px 0;
+  }
+}
+.media-highlights__label {
+  margin-bottom: 5px;
+  color: $c-brown2
+;
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 10px;
+  }
+}
+
+.media-highlights__item {
+  width: 100%;
+  margin-bottom: 25px;
+  @include rwd('small-tablet', true)
+ {
+    margin-bottom: 20px;
+  }
+  @include rwd('tablet', true)
+ {
+    width: 20%;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.media-highlights__title {
+  &:hover,
+  &:focus {
+    background-color: $c-blue-gray
+;
+  }
+}

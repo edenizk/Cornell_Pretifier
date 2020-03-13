@@ -1,0 +1,44 @@
+.card-event {
+  width: 100%;
+  margin-bottom: 25px;
+  @media (--m) {
+    width: 50%;
+    margin-bottom: 0;
+  }
+  @media (--m-1) {
+    width: 100%;
+  }
+  &:last-child {
+    margin-bottom: 0;
+    .card-event__inner {
+      border: none;
+      @media (--ml) {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.card-event__sub-title {
+  margin-bottom: 5px;
+  color: var(--c-brown);
+}
+
+.card-event__inner {
+  @media (--m) {
+    padding-right: 20px;
+    border-right: 1px solid var(--c-light-green);
+  }
+  @media (--m-1) {
+    margin-bottom: 20px;
+    padding: 0 0 15px;
+    border: none;
+  }
+}
+
+.card-event__link {
+  &:hover {
+    background-color: var(--c-green);
+  }
+}

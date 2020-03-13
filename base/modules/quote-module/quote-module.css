@@ -1,0 +1,60 @@
+.quote-module__content {
+  padding: 45px 22px;
+  @extend .bg-diagonal;
+  background: var(--c-light-grey);
+  margin: 0 auto;
+  width: 100%;
+  @media (--sm) {
+    padding: 50px 35px 80px;
+  }
+  @media (--m) {
+    padding: 60px 70px;
+  }
+  @media (--ml) {
+    width: percentage(10/12);
+    padding: 80px 75px;
+  }
+  @media (--l) {
+    padding: 104px 107px;
+  }
+}
+
+.quote-module__author {
+  @media (--m) {
+    margin-top: 30px;
+  }
+  @media (--ml) {
+    margin-top: 20px;
+  }
+  @media (--l) {
+    margin-top: 25px;
+  }
+
+  .button-link {
+    padding: 0;
+  }
+
+  .button-link:before {
+    display: none;
+  }
+}
+
+.quote-module__text {
+  position: relative;
+  .icon-quote {
+    color: var(--c-sunglow);
+    font-size: 20px;
+    @media (--m) {
+      position: absolute;
+      z-index: 1;
+      top: 3px;
+      left: -32px;
+    }
+    @media (--ml) {
+      left: -27px;
+    }
+    @media (--l) {
+      left: -37px;
+    }
+  }
+}

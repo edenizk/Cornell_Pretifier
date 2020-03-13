@@ -1,0 +1,57 @@
+.accordion {
+  @extend .transition;
+  outline: none;
+}
+
+.accordion__inner {
+
+  @include rwd('laptop', true)
+ {
+    width: calc(10/12*100%);
+
+    .page-side-navigation__block--right & {
+      width: 100%;
+    }
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: calc(8/12*100%);
+
+    .page-side-navigation__block--right & {
+      width: 100%;
+    }
+  }
+  .page-side-navigation__block--right & {
+    max-width: 760px;
+  }
+}
+
+.content + .accordion--no-title {
+  @include rwd('tablet', true)
+ {
+    margin-top: -65px;
+  }
+}
+
+.accordion--company-filter {
+  padding: 0;
+
+  .accordion__container {
+    padding: 0;
+  }
+
+  .accordion__inner {
+    @include rwd('laptop', true)
+ {
+      width: 100%;
+    }
+  }
+
+  .accordion__list {
+    @include rwd('tablet', true)
+ {
+      display: flex;
+      margin: 0 -15px;
+    }
+  }
+}

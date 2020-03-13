@@ -1,0 +1,36 @@
+.jip-wave {
+  @include pseudo-ratio(125/1440);
+
+  position: relative;
+  bottom: -1px;
+  width: 100%;
+  overflow: hidden;
+  color: $c-dark-blue
+;
+  background: $c-white
+;
+
+  @include rwd('tablet', true)
+ {
+    @include pseudo-ratio(100/1440);
+  }
+}
+
+.jip-wave svg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+
+  @include rwd('tablet', true)
+ {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.jip-wave-wrapper {
+  position: relative;
+  overflow: hidden;
+}

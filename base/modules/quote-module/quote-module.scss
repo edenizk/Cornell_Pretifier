@@ -1,0 +1,72 @@
+.quote-module__content {
+  padding: 45px 22px;
+  @extend .bg-diagonal;
+  background: $c-light-grey
+;
+  margin: 0 auto;
+  width: 100%;
+  @include rwd('small-tablet', true)
+ {
+    padding: 50px 35px 80px;
+  }
+  @include rwd('tablet', true)
+ {
+    padding: 60px 70px;
+  }
+  @include rwd('laptop', true)
+ {
+    width: percentage(10/12);
+    padding: 80px 75px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 104px 107px;
+  }
+}
+
+.quote-module__author {
+  @include rwd('tablet', true)
+ {
+    margin-top: 30px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-top: 20px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-top: 25px;
+  }
+
+  .button-link {
+    padding: 0;
+  }
+
+  .button-link:before {
+    display: none;
+  }
+}
+
+.quote-module__text {
+  position: relative;
+  .icon-quote {
+    color: $c-sunglow
+;
+    font-size: 20px;
+    @include rwd('tablet', true)
+ {
+      position: absolute;
+      z-index: 1;
+      top: 3px;
+      left: -32px;
+    }
+    @include rwd('laptop', true)
+ {
+      left: -27px;
+    }
+    @include rwd('large-laptop', true)
+ {
+      left: -37px;
+    }
+  }
+}

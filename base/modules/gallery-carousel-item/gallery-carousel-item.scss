@@ -1,0 +1,86 @@
+.gallery-carousel-item {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-item--animation {
+  .gallery-carousel-item__content {
+    transform: translate3d(0, 0, 0);
+    transition-delay: .2s;
+    opacity: 1;
+  }
+}
+
+.gallery-carousel-item__image-figure {
+  @include pseudo-ratio(180/320);
+  position: relative;
+  margin-bottom: 20px;
+  @include rwd('tablet', true)
+ {
+    @include pseudo-ratio(5/6);
+    margin-bottom: 0;
+  }
+  @include rwd('laptop', true)
+ {
+    @include pseudo-ratio(4/5);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    opacity: .95;
+    background: linear-gradient(to bottom, rgba(239, 241, 243, 0), $c-grey8
+ 75%);
+    @media (--sm-max) {
+      display: none;
+    }
+  }
+}
+
+.gallery-carousel-item__content {
+  padding: 0 15px;
+  transition: transform .15s ease;
+  @include rwd('all')
+ {
+    padding: 0 20px;
+  }
+  @include rwd('tablet', true)
+ {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    display: flex;
+    padding: 0;
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+}
+
+.gallery-carousel-item__order {
+  display: none;
+  padding-right: 15px;
+  color: $c-black
+;
+  @include rwd('tablet', true)
+ {
+    display: block;
+  }
+}
+
+.gallery-carousel-item__description {
+  @include rwd('tablet', true)
+ {
+    width: 430px;
+    padding-left: 15px;
+    padding-right: 30px;
+    border-left: 1px solid rgba($c-black
+, .3);
+  }
+  p {
+    color: $c-black
+;
+  }
+}

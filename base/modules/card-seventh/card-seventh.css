@@ -1,0 +1,68 @@
+.card-seventh {
+  margin-bottom: 30px;
+  @media (--m) {
+    width: percentage(1/3);
+    margin-bottom: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-seventh__inner {
+  display: flex;
+  @media (--m) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.card-seventh__shape {
+  @include pseudo-ratio;
+  display: table;
+  position: relative;
+  width: 70px;
+  top: 6px;
+  margin-right: 20px;
+  background-color: var(--c-sunglow);
+  border-radius: 50%;
+  overflow: hidden;
+  @media (--m) {
+    width: 158px;
+    margin: 0 0 20px;
+    top: auto;
+  }
+  &:before {
+    display: table-cell;
+    width: 0;
+  }
+}
+
+.card-seventh__shape--image {
+  background-color: transparent;
+
+  &.card-seventh__stat {
+    color: var(--c-black);
+  }
+}
+
+.card-seventh__stat {
+  display: table-cell;
+  vertical-align: middle;
+  color: var(--c-black);
+  text-align: center;
+}
+
+.card-seventh__content {
+  flex: 1 1 auto;
+}
+
+.card-seventh__title {
+  margin-bottom: 5px;
+}
+
+.card-seventh__content {
+  max-width: 307px;
+  margin: 0 auto;
+}

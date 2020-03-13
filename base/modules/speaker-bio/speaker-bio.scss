@@ -1,0 +1,13 @@
+.speaker-bio__title {
+  margin-bottom: 20px;
+
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 30px;
+  }
+}
+
+.speaker-bio__inner {
+  padding-left: 27px;
+  border-left: 1px solid rgb(0, 51, 160);
+}

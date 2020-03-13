@@ -1,0 +1,144 @@
+.jip-our-initiatives-item {
+  width: 100%;
+  background-color: $c-dark-blue
+;
+}
+
+.jip-our-initiatives-item__inner {
+  @include rwd('tablet', true)
+ {
+    border: 1px solid $c-white
+;
+  }
+}
+
+.jip-our-initiatives-item__block--left,
+.jip-our-initiatives-item__block--right {
+  width: 100%;
+
+  @include rwd('tablet', true)
+ {
+    width: 50%;
+  }
+}
+
+.jip-our-initiatives-item__block--left {
+  @include rwd('tablet', true)
+ {
+    padding-right: 0;
+  }
+}
+
+.jip-our-initiatives-item__icon-link {
+  padding-left: 11px;
+  margin-bottom: 3px;
+
+  svg {
+    width: 13px;
+    height: 13px;
+    color: $c-jip-green
+;
+
+    @include rwd('tablet', true)
+ {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.jip-our-initiatives-item__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jip-our-initiatives-item__image {
+  @include pseudo-ratio(277/288);
+
+  @include rwd('tablet', true)
+ {
+    @include pseudo-ratio(319/332);
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    @include pseudo-ratio(646/660);
+  }
+}
+
+.jip-our-initiatives-item__block--right {
+  @include rwd('tablet', true)
+ {
+    display: flex;
+    padding-left: 0;
+  }
+}
+
+.jip-our-initiatives-item__block--right {
+  .jip-our-initiatives-item__block-inner {
+    padding: 54px 20px 48px;
+    text-align: center;
+
+    @include rwd('tablet', true)
+ {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 45px;
+    }
+  }
+}
+
+.jip-our-initiatives-item__title {
+  margin-bottom: 8px;
+
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 10px;
+  }
+}
+
+.jip-our-initiatives-item__description {
+  margin-bottom: 9px;
+
+  @include rwd('large-laptop', true)
+ {
+    max-width: 370px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.jip-our-initiatives--flexible {
+  .jip-our-initiatives-item__inner {
+    border: 0;
+  }
+
+  .jip-our-initiatives-item__block--right {
+    .jip-our-initiatives-item__block-inner {
+      position: relative;
+      z-index: 1;
+      padding: 47px 23px 44px;
+      border-top: 0;
+      border-right: 1px solid $c-white
+;
+      border-bottom: 1px solid $c-white
+;
+      border-left: 1px solid $c-white
+;
+      margin-bottom: 1px;
+
+      @include rwd('tablet', true)
+ {
+        padding: 43px 18px;
+        border-top: 1px solid $c-white
+;
+        border-left: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

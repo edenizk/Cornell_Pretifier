@@ -1,0 +1,834 @@
+html {
+  font-size: 100%;
+}
+
+a {
+  transition: all .3s ease;
+}
+
+body,
+p,
+.p {
+  @include font-size-base;
+  color: var(--c-black);
+  font-family: var(--font-body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Normal font available
+.normal-bold {
+  font-weight: 700;
+}
+
+.normal-italic {
+  font-style: italic;
+}
+
+// Heading font available
+.heading-demi {
+ font-weight: 500;
+}
+
+.heading-bold {
+ font-weight: 700;
+}
+
+.heading {
+  font-family: var(--font-heading);
+}
+
+// Heading
+.main-title,
+.h1 {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 25px 27.5px;
+  @type --sm 50px 55px;
+  @type --ml 60px 66px;
+  @type --l 68px 74.8px;
+}
+
+.secondary-title,
+.h2 {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 21px 26.25px .42px;
+  @type --sm 28px 30.8px;
+  @type --m 32px 35.2px;
+  @type --ml 38px 41.8px;
+  text-transform: uppercase;
+}
+
+.main-heading,
+.h3 {
+  @extend .heading;
+  @extend .heading-demi;
+  @type 17px 32px 0;
+  @type --m 21px 23.1px;
+  @type --ml 28px 30.8px;
+}
+
+.sub-heading,
+.h4 {
+  @extend .heading;
+  @extend .heading-demi;
+  @type 15px 32px;
+  @type --m 18px 32px;
+  @type --ml 21px 32px;
+}
+
+.sub-heading-2 {
+  @extend .heading;
+  @extend .heading-demi;
+  @type 18px 32px;
+  @type --ml 19px 32px;
+  @type --l 21px 32px;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.sub-title {
+  @extend .heading;
+  @extend .heading-demi;
+  @type 21px 27px;
+  @type --sm 17px 19px;
+  @type --ml 28px 34px;
+}
+
+.sub-title-2 {
+  @extend .heading;
+  @extend .heading-demi;
+  @type 17px 24px;
+  @type --sm 19px 32px;
+  @type --l 21px 32px;
+}
+
+.sub-title-3 {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 17px 24px;
+  @type --sm 19px 26px;
+  @type --l 21px 26px 0.5px;
+  text-transform: uppercase;
+}
+
+.sub-title-4 {
+  @extend .heading;
+  @extend .heading-demi;
+  @type 21px 25px;
+  @type --ml 28px 32px;
+}
+
+.label-text {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 11px 24px 1.5px;
+  @type --m 13px 24px 1.5px;
+  @type --ml 14px 24px 1.5px;
+  text-transform: uppercase;
+}
+
+.button-link-text {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 21px 32px;
+  text-transform: none;
+}
+
+.button-link-text-lg {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 25px 32px 0;
+  @type --m 32px 41px 0;
+  @type --l 36px 46px 0;
+  text-transform: none;
+}
+
+// Paragraph
+.p {
+  @type 14px 21px;
+  @type --ml 16px 24px;
+}
+
+.p-small {
+  @type 12px 19px;
+  @type --ml 13px 21px;
+}
+
+.p-small-2 {
+  @type 12px 19px;
+  @type --ml 14px 22px;
+}
+
+.p-small-3 {
+  @type 12px 21px;
+  @type --ml 14px 23px;
+}
+
+.p-large {
+  @type 17px 25px 0;
+  @type --m 18px 25px;
+  @type --ml 20px 31px;
+  text-transform: none;
+}
+
+// Quote
+.quote {
+  @type 17px 25px;
+  @type --m 21px 32px;
+  @type --ml 28px 38px;
+}
+
+// Caption
+.caption {
+  @extend .normal-italic;
+  @type 14px 24px;
+  @type --ml 16px 24px;
+}
+
+// Menu
+.menu-primary {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 10px 24px 1px;
+  @type --m 11px 24px 1.18px;
+  @type --l 12px 24px 1.29px;
+  @type --xl 15px 24px 1.61px;
+  text-transform: uppercase;
+}
+
+.menu-sub {
+  @extend .heading;
+  @extend .heading-demi;
+  @type 12px 17px;
+  @type --l 13px 16px;
+}
+
+.mobile-nav {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 11px 14px;
+}
+
+.mobile-nav-block {
+  @type 12px 11px;
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/**
+Custom Template for Existing Homepage Style
+ */
+
+.home-tab-title {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 21px 24px;
+  @type --m 28px 32px;
+  @type --l 36px 52px;
+  text-transform: uppercase;
+
+  @media (--m) {
+    &:hover {
+      color: var(--c-dark-red) !important;
+    }
+
+    .tab-horizontal__header-line {
+      background: var(--c-dark-red);
+    }
+  }
+}
+
+.home-alumni-label {
+  @extend .heading;
+  @extend .heading-demi;
+  @type 11px 16px;
+  @type --s 12px;
+  letter-spacing: .0625rem;
+  text-transform: uppercase;
+}
+
+.home-alumni-quote-content {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 21px 24px;
+  @type --s 28px 38px;
+  @type --sm 21px 24px;
+  @type --m 28px 38px;
+  @type --l 38px 49px;
+}
+
+.home-alumni-stat-quantity {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 36px 40px;
+}
+
+.home-alumni-stat-description {
+  @extend .heading-demi;
+  @type 16px 24px;
+  @type --l 18px 23px;
+  font-family: var(--font-body);
+}
+
+.home-gallery-headline {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 21px 24px;
+  @type --ml 32px;
+  @type --l 38px;
+  text-transform: uppercase;
+}
+
+.home-gallery-order {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 16px 24px;
+  text-transform: uppercase;
+}
+
+.home-card-header-description {
+  @extend .heading;
+  @type 18px 24px;
+}
+
+.alumni-spotlight__icon {
+  &:before {
+    @type 35px;
+    color: var(--c-dark-red);
+  }
+}
+
+.card-fourth-title {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 21px 27px 0;
+  @type --m 17px 18px 0;
+  @type --ml 28px 34px 0;
+  text-transform: none;
+}
+
+.card-fourth__label {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 10px 16px 1.05px;
+  @type --m 11px 19px 1.2px;
+  @type --ml 14px 24px 1.5px;
+}
+
+.card-fourth__button {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 11px 24px 1.18px;
+  @type --ml 14px 24px 1.5px;
+}
+
+.home-tag-row-label {
+  @extend .heading;
+  @extend .heading-demi;
+  @type 11px 14.3px 1px;
+  @type --l 12px 15px;
+  text-transform: uppercase;
+}
+
+.home-card-author-name {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 21px 27.3px;
+  text-transform: none;
+}
+
+.home-card-author-title {
+  @extend .heading;
+  @type 21px 27.3px;
+}
+
+.home-five-up-header {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 28px 31px;
+  @type --m 38px 44px;
+}
+
+.home-card-title {
+  @extend .heading;
+  @extend .heading-demi;
+  @type 18px 26px;
+}
+
+.home-event-section-headline,
+.home-media-highlights-headline{
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.jacobs-institute-description {
+  @extend .heading;
+  @extend .heading-demi;
+  @type --sm-max 16px 24px;
+}
+
+.jacobs-institute-item-label {
+  @extend .heading;
+  @extend .heading-demi;
+  @type 11px 12.8334px;
+  @type --m 12px 14px;
+  @type --l 12px 15px;
+  letter-spacing: .0625rem;
+}
+
+.jacobs-institute-item-title-main {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 25px 32px;
+  @type --l 36px 46px;
+  letter-spacing: .0625rem;
+  text-transform: none;
+  @media (--l) {
+    letter-spacing: normal;
+  }
+}
+
+.jacobs-institute-item-title-secondary {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 21px 32px;
+  @type --l 28px 36px;
+  letter-spacing: .0625rem;
+  text-transform: none;
+  @media (--l) {
+    letter-spacing: normal;
+  }
+}
+
+.card-seventh-description {
+  @type 16px 24px;
+}
+
+.quote-text {
+  @type 17px 23px;
+  @type --sm 21px 28px;
+  @type --m 21px 32px;
+  @type --l 28px 38px;
+}
+
+.quote-text p {
+  @type 17px 23px;
+  @type --sm 21px 28px;
+  @type --m 21px 32px;
+  @type --l 28px 38px;
+}
+
+.quote-author-name {
+  @extend .heading;
+  @extend .heading-demi;
+  @type 17px 24px;
+  @type --sm 18px 32px;
+  @type --ml 21px 32px;
+}
+
+.quote-author-title {
+  @type 14px 21px;
+  @type --sm 14px 24px;
+  @type --l 16px 24px;
+}
+
+.button-link--has-underline {
+  @type 15px 23px 0;
+  font-weight: 400;
+  text-transform: none;
+  font-family: var(--font-body);
+}
+
+.slideout__menu .menu-item-has-children > a:after {
+  font-family: 'crn';
+  font-size: 20px;
+}
+
+.local-nav__headline-sm {
+  text-align: left;
+  font-size: 17px;
+}
+
+
+.card-author-secondary-title {
+  @extend .heading-demi;
+  @extend .heading;
+  @type 17px 32px;
+  @type --m 18px 32px;
+  @type --xl 21px 32px;
+  text-transform: none;
+}
+
+.card-course-secondary-description {
+  @type 14px 21px;
+  @type --m 14px 23px;
+  @type --xl 16px 24px;
+}
+
+.carousel-order {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 14px 18px;
+  text-transform: uppercase;
+}
+
+.hero-skew-title {
+  @extend .heading-bold;
+  @extend .heading;
+  @type 11px 24px 1.5px;
+  @type --sm 24px 32px;
+  @type --ml 28px 36px;
+  @type --l 32px 42px;
+  text-transform: uppercase;
+}
+
+.hero-skew-description {
+  @type 18px 24px;
+  @type --sm 24px 32px;
+  @type --ml 28px 36px;
+  @type --l 32px 42px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.feature-label {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 14px 18px 1.5px;
+  text-transform: uppercase;
+}
+
+.footer-menu-link {
+  @type 14px 23px;
+  @type --l 16px 33px;
+}
+
+.hero-video-title {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 40px 51px;
+  @type --m 48px 61px;
+  @type --ml 62px 67px;
+  @type --l 68px 74px;
+}
+
+.hero-video-description {
+  @extend .heading;
+  @type 18px 27px;
+  @type --ml 22px 33px;
+  @type --l 25px 38px;
+}
+
+.local-nav-label {
+  @extend .heading-bold;
+  @extend .heading;
+  @type 13px 16px 1.39px;
+  @type --l 14px 18px 1.5px;
+  text-transform: uppercase;
+}
+
+.company-list-item-description {
+  @type 12px 19px;
+  @type --l 13px 21px;
+}
+
+.company-list-item-meta {
+  @type 13px 21px;
+}
+
+.date-label {
+  @extend .heading;
+  @extend .heading-bold;
+  @type 12px 19px;
+  @type --ml 14px 22px;
+  text-transform: uppercase;
+}
+
+.event-filter-item-where-text {
+  @type 13px 21px 0.48px;
+}
+
+.event-filter-item-title-text {
+  @type 15px 18px;
+  @type --m 18px 18px;
+  @type --xl 21px 26px;
+}
+
+.event-filter-item-meta-tags-text {
+  @type 13px 21px 0.48px;
+}
+
+.event-where {
+  @type 13px 21px 0.48px
+
+  font-family: var(--font-body);
+}
+
+/* JIP Typo */
+.jip-heading {
+  color: var(--c-white);
+  font-family: var(--font-heading);
+}
+
+.jip-text {
+  color: var(--c-white);
+  font-family: var(--font-heading);
+}
+
+.jip-text-secondary {
+  color: var(--c-white);
+  font-family: var(--font-body);
+}
+
+.jip-label-text {
+  @extend .heading;
+  @extend .heading-bold;
+  @include jip-font-size(11px, 24px, 0.65px);
+  text-transform: uppercase;
+
+  @media (--m) {
+    @include jip-font-size(13px, 18px, 1px);
+  }
+
+  @media (--ml) {
+    @include jip-font-size(14px, 18px, 1.08px);
+  }
+}
+
+.jip-main-heading,
+.jip-h1 {
+  @extend .jip-heading;
+  @extend .heading-demi;
+  @include jip-font-size(25px, 33px, 1.67px);
+  text-transform: uppercase;
+
+  @media (--ml) {
+    @include jip-font-size(50px, 59px, 3.33px);
+  }
+}
+
+.jip-secondary-heading,
+.jip-h2 {
+  @extend .jip-heading;
+  @extend .heading-bold;
+  @include jip-font-size(19px, 26px, 1.3px);
+  text-transform: uppercase;
+
+  @media (--ml) {
+    @include jip-font-size(23px, 33px, 1.5px);
+    @extend .heading-demi;
+  }
+}
+
+.jip-secondary-heading-large {
+  @extend .jip-heading;
+  @extend .heading-bold;
+  @include jip-font-size(19px, 26px, 1.3px);
+  text-transform: uppercase;
+
+  @media (--ml) {
+    @extend .heading-demi;
+    @include jip-font-size(30px, 33px, 1.5px);
+  }
+}
+
+.jip-secondary-heading-medium {
+  @extend .jip-heading;
+  @extend .heading-demi;
+  @include jip-font-size(15px, 23px, 1px);
+  text-transform: uppercase;
+
+  @media (--ml) {
+    @include jip-font-size(23px, 33px, 1.53px);
+  }
+}
+
+.jip-sub-heading,
+.jip-h3 {
+  @extend .jip-heading;
+  @extend .heading-demi;
+  @include jip-font-size(15px, 23px, 1px);
+  text-transform: uppercase;
+
+  @media (--ml) {
+    @include jip-font-size(19px, 29px, 1.2px);
+    @extend .heading-demi;
+  }
+}
+
+.jip-sub-heading2 {
+  display: inline;
+  box-decoration-break: clone;
+  transition: all .25s ease;
+
+  &:hover {
+    background: var(--c-blue-gray);
+    color: var(--c-black);
+  }
+}
+
+
+.jip-sub-heading2,
+.jip-h4 {
+  @extend .jip-heading;
+  @extend .heading-demi;
+  @include jip-font-size(15px, 23px, 1px);
+  text-transform: uppercase;
+
+  @media (--ml) {
+    @include jip-font-size(19px, 29px, 1.2px);
+  }
+}
+
+.jip-label {
+  @extend .jip-heading;
+  @extend .heading-bold;
+  @include jip-font-size(11px, 24px, 0.7px);
+  text-transform: uppercase;
+
+  @media (--ml) {
+    @include jip-font-size(14px, 18px, 1.08px);
+  }
+}
+
+.jip-p {
+  @extend .jip-text;
+  @include jip-font-size(14px, 24px);
+
+  @media (--ml) {
+    @include jip-font-size(16px, 26px);
+  }
+}
+
+.jip-p-intro {
+  @extend .jip-text-secondary;
+  @include jip-font-size(16px, 25px);
+
+  @media (--ml) {
+    @include jip-font-size(20px, 31px);
+  }
+}
+
+.jip-p-large {
+  &,
+  p {
+    @extend .jip-text;
+    @extend .heading-demi;
+    @include jip-font-size(14px, 24px);
+
+    @media (--ml) {
+      @include jip-font-size(16px, 24px);
+    }
+  }
+}
+
+.jip-block-quote {
+  @extend .jip-text-secondary;
+  @include jip-font-size(20px, 29px);
+  font-style: italic;
+
+  @media (--ml) {
+    @include jip-font-size(26px, 42px);
+  }
+}
+
+.jip-link-text {
+  @include jip-font-size(14px, 24px);
+}
+
+.jip-title-text {
+  @include jip-font-size(44px, 50px, 2.96px);
+  @extend .heading-demi;
+
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+
+  @media (--ml) {
+    @include jip-font-size(64px, 88px, 4.23px);
+  }
+}
+
+.text-stroke {
+  color: var(--c-white);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: var(--c-white);
+
+  @media (--ml) {
+    -webkit-text-stroke-width: 0.7px;
+  }
+}
+
+.jip-card-title-text {
+  font-weight: 700;
+  @include jip-font-size(14px, 20px, 1px);
+
+  @media (--m) {
+    @include jip-font-size(15px, 20px, 1px);
+  }
+
+  @media (--ml) {
+    @include jip-font-size(23px, 29px, 1.53px);
+  }
+}
+
+.jip-sub-heading-text {
+  font-weight: 700;
+}
+
+.jip-card-description-text {
+  line-height: 20px;
+
+  @media (--ml) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.jip-card-image-subtitle-text {
+  font-size: 18px;
+}
+
+.jip-link {
+  @extend .jip-link-text;
+  color: var(--c-sunglow);
+  text-decoration: underline;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  display: inline;
+  box-decoration-break: clone;
+  transition: all .25s ease;
+
+  &:hover {
+    background: var(--c-blue-gray);
+    color: var(--c-black);
+  }
+}
+
+.jip-link-hover {
+  opacity: 0.5;
+}
+
+.side-nav-link {
+  font-family: var(--font-heading);
+  @type 11px 27px;
+  @type --m 13px 29px;
+  font-weight: 500;
+}
+
+.side-nav-link-sub {
+  font-family: var(--font-body);
+  @type 11px 25px;
+  @type --m 13px 20px;
+  font-weight: normal;
+}

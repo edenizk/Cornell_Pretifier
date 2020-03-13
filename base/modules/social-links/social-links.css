@@ -1,0 +1,22 @@
+.social-links--footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -15px;
+  @media (--sm) {
+    justify-content: flex-start;
+  }
+  .social-links__link {
+    @type 22px 22px;
+    @type --ml 16px 16px;
+    color: var(--c-sunglow);
+    &:hover {
+      color: var(--c-white);
+    }
+  }
+}
+
+.social-links__item {
+  display: inline-block;
+  padding: 0 12.5px;
+}

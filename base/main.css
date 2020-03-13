@@ -1,0 +1,23 @@
+// Imports from src directory
+
+@import 'base/reset.css';
+
+@import 'base/fonts.css';
+
+@import 'base/variables.css';
+@import 'base/mixins.css';
+@import "base/containers.css";
+@import 'base/typography.css';
+@import 'base/button.css';
+@import 'base/layout.css';
+@import 'base/jip-module.css';
+@import 'base/wysiwyg.css';
+@import 'base/icons.css';
+
+@import 'partials/gravity-form.css';
+@import 'partials/flickity.css';
+@import 'base/accessibility.css';
+
+
+// Imports from module folders (Paths are expanded within Gulp task)
+@import "<Modules>";

@@ -1,0 +1,137 @@
+.card-course {
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-course__wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 24px 20px;
+  background: $c-white
+;
+  @include rwd('small-tablet', true)
+ {
+    padding: 27px 29px;
+  }
+  @include rwd('tablet', true)
+ {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 38px 37px 45px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 52px 29px 43px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 59px 47px 55px;
+  }
+  @include rwd('ultra')
+ {
+    padding: 60px 52px 45px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $c-sunglow
+;
+    @include rwd('tablet', true)
+ {
+      height: 7px;
+    }
+    @include rwd('large-laptop', true)
+ {
+      height: 10px;
+    }
+  }
+}
+
+.card-course__block--header {
+  @include rwd('laptop', true)
+ {
+    margin-right: 55px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+  }
+}
+
+.card-course__block--description {
+  margin-top: 15px;
+  @include rwd('laptop', true)
+ {
+    margin-top: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.card-course__left-block {
+  @include rwd('tablet', true)
+ {
+    flex: 1 1 0;
+    margin-right: 30px;
+  }
+  @include rwd('laptop', true)
+ {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 50px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-right: 20px;
+  }
+}
+
+.card-course__right-block {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  @include rwd('small-tablet', true)
+ {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  @include rwd('tablet', true)
+ {
+    width: 25%;
+    margin: 0;
+  }
+  @include rwd('laptop', true)
+ {
+    width: 17%;
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: 20%;
+  }
+}
+
+.card-course__subtitle {
+  margin-bottom: 5px;
+}
+
+.card-course__credit {
+  color: $c-dark-gray
+;
+  @include rwd('ultra')
+ {
+    margin-top: 5px;
+  }
+}
+
+.card-course__headline {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,129 @@
+.theme-grid {
+  p {
+    color: inherit;
+  }
+  transition: all .5s ease-in-out;
+  &.theme-grid--activate {
+    .theme-grid__block,
+    .theme-grid__item {
+      transform: translateY(0);
+    }
+    .theme-grid__item {
+      @extend .fade-in;
+    }
+    .theme-grid__item--description {
+      transition-delay: .5s;
+    }
+    .theme-grid__wrapper {
+      z-index: 1;
+    }
+  }
+}
+
+.theme-grid__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 25px;
+  transition: all .3s ease-in-out;
+  z-index: -1;
+  @media (--sm) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media (--ml) {
+    flex-wrap: nowrap;
+    padding-left: 0;
+  }
+  @media (--l) {
+    justify-content: space-between;
+  }
+}
+
+.theme-grid__item {
+  @extend .fade-out;
+  width: 100%;
+  margin-bottom: 30px;
+  &:nth-child(2) {
+    @media (--ml) {
+      width: calc(5/12*100%);
+    }
+  }
+}
+
+.theme-grid__item-inner {
+  position: relative;
+  height: 100%;
+  @media (--sm) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.theme-grid__block-news {
+  .theme-grid__item {
+    width: 100%;
+  }
+  .theme-grid__item {
+    @extend .move-top;
+    .theme-grid--activate & {
+      transition-delay: .6s;
+    }
+  }
+  @media (--ml) {
+    width: 45%;
+    padding-right: 60px;
+  }
+}
+
+.theme-grid__block-program {
+  width: 100%;
+  @media (--sm) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (--ml) {
+    width: 55%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  @media (--l) {
+    justify-content: space-between;
+  }
+  .theme-grid__item {
+    @extend .move-top;
+    @media (--sm) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+    &:first-child {
+      .theme-grid--activate & {
+        transition-delay: .7s;
+      }
+      @media (--sm) {
+        margin-right: 25px;
+      }
+      @media (--ml) {
+        margin-right: 20px;
+      }
+      @media (--l) {
+        margin-right: 60px;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+      .theme-grid--activate & {
+        transition-delay: .8s;
+      }
+    }
+  }
+}
+
+.theme-grid__item--description {
+  @extend .move-top;
+  @extend .p-large;
+  @media (--ml) {
+    display: none;
+  }
+}

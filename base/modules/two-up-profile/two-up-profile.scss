@@ -1,0 +1,31 @@
+.two-up-profile {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  @extend .bg-diagonal;
+}
+.two-up-profile__wrapper {
+  display: block;
+  width: 100%;
+}
+.two-up-profile__list {
+  position: relative;
+  padding-top: 15px;
+  @include rwd('tablet', true)
+ {
+    padding-top: 30px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 45px;
+  }
+}
+.two-up-profile--style-2 {
+  background: $c-white
+;
+  .people-item__inner {
+    background: $c-light-grey
+;
+  }
+}

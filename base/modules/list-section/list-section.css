@@ -1,0 +1,31 @@
+.list-section {
+  position: relative;
+}
+
+.list-section--pb0 {
+  padding-bottom: 0;
+
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+
+.list-section--bg {
+  background: var(--c-light-grey);
+  @extend .bg-diagonal;
+  padding: 45px 0;
+  overflow: hidden;
+  @media (--sm) {
+    padding: 55px 0;
+  }
+  @media (--m) {
+    padding: 80px 0;
+  }
+  @media (--ml) {
+    padding: 70px 0;
+  }
+  @media (--l) {
+    padding: 115px 0;
+  }
+}

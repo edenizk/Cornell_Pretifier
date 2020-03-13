@@ -1,0 +1,89 @@
+.magnetic-link {
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  transform: translate3d(0, 100%, 0);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+  transition: opacity $duration
+ $ease
+, visibility $duration
+ $ease
+, transform $duration
+ $ease
+;
+  padding: 0;
+  width: 100%;
+  @include rwd('tablet', true)
+ {
+    width: auto;
+    bottom: auto;
+    top: 50%;
+    transform: translate3d(100%, -50%, 0);
+  }
+}
+
+.magnetic-link--active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+  @include rwd('tablet', true)
+ {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+.magnetic-link__container {
+  @include rwd('tablet', true)
+ {
+    padding: 0;
+  }
+}
+
+.magnetic-link__wrapper {
+  position: relative;
+  border: 1px solid $c-blue
+;
+  width: 100%;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.11);
+  @include rwd('tablet', true)
+ {
+    max-width: 320px;
+  }
+}
+
+.magnetic-link__inner {
+  padding: 10px;
+  text-align: center;
+  background: $c-white
+;
+  @include rwd('tablet', true)
+ {
+    padding: 30px;
+  }
+}
+
+.magnetic-link__close {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: $c-blue
+;
+  cursor: pointer;
+}
+
+.magnetic-link__description {
+  margin-top: 8px;
+}
+
+.magnetic-link__button {
+  display: block;
+  text-indent: 40px;
+  margin-top: 8px;
+  @include rwd('tablet', true)
+ {
+    margin-top: 16px;
+  }
+}

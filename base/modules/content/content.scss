@@ -1,0 +1,147 @@
+.content--intro {
+  position: relative;
+  text-align: center;
+  @include rwd('small-tablet', true)
+ {
+    padding: 40px 0;
+  }
+  @include rwd('tablet', true)
+ {
+    padding: 45px 0 40px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 60px 0 50px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 85px 0 70px;
+  }
+  + * {
+    @include rwd('small-tablet', true)
+ {
+      padding-top: 40px;
+    }
+    @include rwd('laptop', true)
+ {
+      padding-top: 60px;
+    }
+    @include rwd('large-laptop', true)
+ {
+      padding-top: 70px;
+    }
+  }
+  .content__wysiwyg {
+    position: relative;
+    width: 100%;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $c-border
+;
+      @include rwd('small-tablet', true)
+ {
+        bottom: -40px;
+      }
+      @include rwd('laptop', true)
+ {
+        bottom: -50px;
+      }
+      @include rwd('large-laptop', true)
+ {
+        bottom: -70px;
+      }
+      /*
+      * Disable bottom border on Curriculum v1 + People Grid page template
+      * This module is used on multiple pages so I disable it using page template class from body tag.
+      */
+      .page-template-page-curriculum &,
+      .page-template-page-people-grid & {
+        content: none;
+      }
+    }
+  }
+  .content__wysiwyg-inner {
+    margin: 0 auto;
+    @include rwd('tablet', true)
+ {
+      width: percentage(10/12);
+    }
+    @include rwd('large-laptop', true)
+ {
+      width: percentage(762/1155);
+    }
+  }
+}
+
+.content--side-navigation {
+  .content__wysiwyg-inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.content--fullwidth .content__wysiwyg,
+.content--fullwidth .content__wysiwyg-inner {
+  width: 100%;
+}
+
+.content__wysiwyg {
+  width: 100%;
+  margin: 0 auto;
+  @include rwd('tablet', true)
+ {
+    width: percentage(10/12);
+
+    .page-side-navigation__block & {
+      width: 100%;
+    }
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: percentage(762/1155);
+
+    .page-side-navigation__block & {
+      width: 100%;
+    }
+  }
+}
+
+.content--single-people {
+  padding-top: 0;
+  .content__wysiwyg {
+    @include rwd('tablet', true)
+ {
+      width: 100%;
+    }
+    @include rwd('laptop', true)
+ {
+      width: percentage(10/12);
+      max-width: 765px;
+    }
+  }
+}
+
+.content--single-post {
+  padding-top: 0;
+}
+
+.content:last-child {
+  .content__wysiwyg {
+    @include rwd('tablet', true)
+ {
+      padding-bottom: 65px;
+    }
+  }
+}
+
+.content--curriculum {
+  .content__wysiwyg:after {
+    content: none;
+  }
+}

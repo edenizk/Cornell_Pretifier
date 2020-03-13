@@ -1,0 +1,74 @@
+.quote-author {
+  margin-top: 20px;
+  margin-bottom: 0;
+  @media (--m) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.quote-author__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  @media (--m) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.quote-author__image-inner {
+  @include pseudo-ratio(1/1);
+  position: relative;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  overflow: hidden;
+  @media (--sm) {
+    height: 83px;
+    width: 83px;
+  }
+  @media (--m) {
+    width: 115px;
+    height: 115px;
+  }
+  @media (--ml) {
+    width: 104px;
+    height: 104px;
+  }
+}
+
+.quote-author__content {
+  margin: 0;
+  padding-left: 10px;
+  @media (--m) {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    text-align: left;
+    padding-left: 15px;
+  }
+  @media (--ml) {
+    padding-left: 25px;
+  }
+  @media (--l) {
+    margin: 15px 0 0 0;
+  }
+}
+
+.quote-author__title {
+  color: var(--c-dark-gray);
+}
+
+.quote-author__cta {
+  color: var(--c-blue);
+  flex-basis: 100%;
+  @media (--m) {
+    flex-basis: auto;
+  }
+}

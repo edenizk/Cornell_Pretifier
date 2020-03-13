@@ -1,0 +1,24 @@
+.tag-row {
+  display: flex;
+  margin-bottom: 10px;
+  .home-tag-row-label {
+    &:first-of-type {
+      color: $c-grey2
+;
+    }
+    &:first-of-type:hover {
+      color: $c-black
+;
+    }
+  }
+  a {
+    display: block;
+    &:nth-child(2n) {
+      margin-left: 10px;
+    }
+    @include rwd('small-tablet', true)
+ {
+      display: inline-block;
+    }
+  }
+}

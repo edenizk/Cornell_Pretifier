@@ -1,0 +1,50 @@
+.company-team {
+  @extend .bg-diagonal;
+  overflow: hidden;
+  background: $c-light-grey
+;
+  padding: 40px 0;
+  @include rwd('tablet', true)
+ {
+    padding: 60px 0;
+  }
+}
+.company-team__title {
+  margin-bottom: 5px;
+  @include rwd('small-tablet', true)
+ {
+    margin-bottom: 8px;
+  }
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 18px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 20px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 35px;
+  }
+}
+.company-team-item {
+  width: 100%;
+  margin-bottom: 5px;
+  @include rwd('tablet', true)
+ {
+    width: 25%;
+  }
+}
+.company-team-item:not(:first-child) {
+  margin-top: 15px;
+  @include rwd('tablet', true)
+ {
+    margin-top: 0;
+  }
+}
+.company-team-item__program,
+.company-team-item__title {
+  color: $c-dark-gray
+;
+}

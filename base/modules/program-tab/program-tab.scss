@@ -1,0 +1,178 @@
+.program-tab {
+  position: absolute;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  @include rwd('small-tablet', true)
+ {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  @include rwd('tablet', true)
+ {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-top: 50px;
+    padding-bottom: 35px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-top: 65px;
+    padding-bottom: 50px;
+  }
+}
+
+.program-tab--activate {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.program-tab__inner {
+  @include rwd('laptop', true)
+ {
+    width: calc(10/12*100% + 2*16px);
+    margin: 0 auto;
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: calc(10/12*100% + 2*25px);
+  }
+}
+
+.program-tab__row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  @include rwd('tablet', true)
+ {
+    flex-direction: row;
+  }
+}
+
+.program-tab__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.program-tab__intro {
+  margin-top: 12px;
+}
+
+.program-tab__block {
+  width: 100%;
+}
+
+.program-tab__block--overview {
+  width: 100%;
+  @include rwd('tablet', true)
+ {
+    width: calc(100% - 350px);
+  }
+}
+
+.program-tab__block--credit {
+  width: 100%;
+  @include rwd('tablet', true)
+ {
+    width: 340px;
+  }
+}
+
+.program-tab__block--half {
+  width: 100%;
+  @include rwd('tablet', true)
+ {
+    width: percentage(6/12);
+  }
+}
+
+.program-tab__block--first {
+  padding-bottom: 20px;
+  @include rwd('tablet', true)
+ {
+    position: relative;
+    padding-right: 30px;
+    padding-bottom: 0;
+  }
+  @include rwd('laptop', true)
+ {
+    &:after {
+      height: 100%;
+    }
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-right: 60px;
+  }
+}
+
+.program-tab__block--last {
+  width: calc(50% - 1px);
+  padding-bottom: 0;
+  @include rwd('tablet', true)
+ {
+    padding-left: 30px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-right: 60px;
+  }
+}
+
+.program-tab__block-divider {
+  width: 1px;
+  background: $c-border
+;
+}
+
+.program-tab__row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid $c-border
+;
+  margin-bottom: 25px;
+  @include rwd('laptop', true)
+ {
+    padding-bottom: 30px;
+    margin-bottom: 35px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    align-items: stretch;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+  }
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+}
+
+.program-tab__row--secondary {
+  display: flex;
+  align-items: stretch;
+}
+
+.program-tab__event {
+  @include rwd('large-laptop', true)
+ {
+    padding-bottom: 40px;
+  }
+}
+
+.program-tab__event-description {
+  color: $c-dark-gray1
+;
+}

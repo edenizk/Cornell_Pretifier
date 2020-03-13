@@ -1,0 +1,250 @@
+.local-nav {
+  text-align: center;
+  padding-bottom: 30px;
+  @media (--sm) {
+    padding-bottom: 45px;
+  }
+  @media (--m) {
+    padding-bottom: 53px;
+  }
+  @media (--ml) {
+    padding-bottom: 63px;
+  }
+  @media (--l) {
+    padding-bottom: 70px;
+  }
+}
+
+.local-nav__headline {
+  @media (--sm-max) {
+    @extend .local-nav__headline-sm;
+  }
+}
+
+.local-nav__wrapper {
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--c-border);
+  @media (--sm) {
+    padding-bottom: 45px;
+  }
+  @media (--ml) {
+    padding-bottom: 35px;
+  }
+  @media (--l) {
+    padding-bottom: 40px;
+  }
+}
+
+.local-nav__menu-current {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 8px 5px 12px;
+  pointer-events: none;
+  text-align: left;
+  .local-nav-label {
+    display: none;
+  }
+  @media (--m) {
+    display: none;
+    .local-nav-label {
+      display: block;
+    }
+  }
+}
+
+.local-nav__menu-selection {
+  overflow: hidden;
+  pointer-events: none;
+  width: 100%;
+  color: var(--c-blue);
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  @media (--m) {
+    display: none;
+  }
+}
+
+.local-nav__menu-desktop {
+  display: none;
+  @media (--m) {
+    display: block;
+  }
+}
+
+.local-nav__menu-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  @media (--m) {
+    display: none;
+    pointer-events: none;
+  }
+}
+
+.local-nav__menu-icon {
+  font-size: 21px;
+  position: absolute;
+  right: 8px;
+}
+
+.local-nav__menu-mobile--content {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  @extend .label-text;
+  padding-left: 8px;
+  background: transparent;
+  color: var(--c-blue);
+  border: none;
+}
+
+.local-nav__menu {
+  @extend .transition;
+  margin-top: 10px;
+  border: 1px solid var(--c-light-black);
+  position: relative;
+  padding: 15px 15px 16px;
+  @media(--m) {
+    margin-top: 20px;
+    padding: 0;
+    border: none;
+  }
+  @media (--ml) {
+    margin-top: 12px;
+  }
+}
+
+.local-nav__menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background: var(--c-white);
+  padding: 5px 0;
+  @media(--m) {
+    padding: 0;
+  }
+}
+
+.js-local-nav--activate {
+  .local-nav__menu-icon:after {
+    @media (--m) {
+      transform: rotate(180deg) translateY(50%);
+    }
+  }
+}
+
+.local-nav__menu-item {
+  list-style: none;
+  margin: 5px 17px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  &:first-child {
+    display: none;
+  }
+  @media(--m) {
+    width: auto;
+    margin: 12px 15px;
+    &:first-child {
+      display: block;
+    }
+  }
+  @media(--ml) {
+    margin: 12px 15px;
+  }
+  .icon-arrow {
+    font-size: var(--icon-size);
+    color: var(--c-blue);
+    margin-left: 10px;
+    margin-top: -4px;
+    margin-bottom: 0;
+  }
+}
+
+.local-nav__link {
+  position: relative;
+  display: block;
+  padding-bottom: 5px;
+  color: var(--c-dark-gray);
+  transition: all .3s ease;
+  cursor: pointer;
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: var(--c-blue2);
+    transition: all .3s ease;
+  }
+}
+
+.local-nav__menu-item--active,
+.local-nav__menu-item:hover {
+  .local-nav__link {
+    color: var(--c-blue);
+    border-color: var(--c-blue2);
+    &:after {
+      width: calc(100% + 10px);
+      left: -5px;
+    }
+  }
+}
+
+.local-nav__menu-item--apply {
+  a {
+    color: var(--c-blue);
+    border: none;
+  }
+  &:hover {
+    border: none;
+    a {
+      border: none;
+      color: var(--c-navy);
+    }
+  }
+}
+
+.local-nav--no-border {
+  .local-nav__wrapper {
+    padding-bottom: 0;
+    border: none;
+  }
+  + * {
+    padding-top: 0;
+  }
+}
+
+.local-nav--category-list {
+  padding-bottom: 0;
+  padding-top: 20px;
+  @media (--sm) {
+    padding-bottom: 10px;
+    padding-top: 38px;
+  }
+  @media (--ml) {
+    padding-bottom: 0;
+    padding-top: 48px;
+  }
+  @media (--l) {
+    padding-top: 57px;
+  }
+  .local-nav__container {
+    max-width: 100%;
+    padding: 0;
+  }
+}

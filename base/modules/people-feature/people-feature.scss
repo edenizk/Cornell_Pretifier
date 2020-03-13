@@ -1,0 +1,139 @@
+.people-feature__wrapper {
+  padding: 55px 0;
+  overflow: hidden;
+  @extend .bg-diagonal;
+  background: $c-light-grey
+;
+  @include rwd('small-tablet', true)
+ {
+    padding: 60px 0;
+  }
+  @include rwd('tablet', true)
+ {
+    padding: 75px 0;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 90px 0;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 115px 0;
+  }
+  @include rwd('ultra')
+ {
+    padding: 130px 0;
+  }
+}
+
+.people-feature__block {
+  .card-sixth__block {
+    @include rwd('laptop', true)
+ {
+      padding: 0 60px 41px;
+    }
+  }
+
+  .card-sixth__mask {
+    @include pseudo-ratio(300/1100);
+    position: relative;
+    overflow: hidden;
+    @include rwd('small-tablet', true)
+ {
+      @include pseudo-ratio(200/1100);
+    }
+    @include rwd('laptop', true)
+ {
+      @include pseudo-ratio(120/1100);
+    }
+  }
+
+  .card-sixth__mask:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -5%;
+    right: 0;
+    width: 110%;
+    height: 50px;
+    background: $c-white
+;
+    transform: rotate3d(0,0,1,2deg);
+    bottom: -30px;
+  }
+
+  .card-sixth__image-inner {
+    @include rwd('laptop', true)
+ {
+      transform: translateY(-100px);
+      margin-bottom: -100px;
+    }
+  }
+
+  .card-sixth__image-figure {
+    @include rwd('laptop', true)
+ {
+      width: 124px;
+    }
+  }
+
+  .card-sixth__subtitle {
+    margin-bottom: 5px;
+  }
+
+  .card-sixth__content {
+    position: relative;
+  }
+
+  .card-sixth__content-inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-sixth__content-left {
+    width: 100%;
+    @include rwd('laptop', true)
+ {
+      max-width: 250px;
+    }
+  }
+
+  .card-sixth__description {
+    display: block;
+    @include rwd('laptop', true)
+ {
+      width: calc(100% - 250px);
+    }
+    a {
+      color: $c-blue
+;
+    }
+  }
+
+  .card-sixth {
+    width: 100%;
+  }
+
+  .card-sixth:not(:last-child) {
+    @include rwd('laptop', true)
+ {
+      margin-bottom: 60px;
+    }
+  }
+
+  .card-sixth__footer--mobile {
+    display: block;
+    @include rwd('laptop', true)
+ {
+      display: none;
+    }
+  }
+
+  .card-sixth__footer--desktop {
+    display: none;
+    @include rwd('laptop', true)
+ {
+      display: block;
+    }
+  }
+}

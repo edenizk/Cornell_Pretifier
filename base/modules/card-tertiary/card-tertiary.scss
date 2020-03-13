@@ -1,0 +1,45 @@
+.card-tertiary__title {
+  margin-bottom: 8px;
+}
+
+.card-tertiary__description {
+  color: $c-white
+;
+  margin-bottom: 15px;
+  @include rwd('ultra')
+ {
+    margin-bottom: 25px;
+  }
+  p {
+    margin-top: 0;
+    color: $c-black
+;
+  }
+}
+
+.card-tertiary__footer {
+  a:before {
+    background-color: $c-dark-red
+;
+  }
+}
+
+.card-tertiary__cat {
+  margin-bottom: 4px;
+  @include rwd('small-tablet', true)
+ {
+    margin-bottom: 6px;
+  }
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 2px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 7px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 15px;
+  }
+}

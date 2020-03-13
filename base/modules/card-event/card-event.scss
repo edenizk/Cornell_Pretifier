@@ -1,0 +1,50 @@
+.card-event {
+  width: 100%;
+  margin-bottom: 25px;
+  @include rwd('tablet', true)
+ {
+    width: 50%;
+    margin-bottom: 0;
+  }
+  @media (--m-1) {
+    width: 100%;
+  }
+  &:last-child {
+    margin-bottom: 0;
+    .card-event__inner {
+      border: none;
+      @include rwd('laptop', true)
+ {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.card-event__sub-title {
+  margin-bottom: 5px;
+  color: $c-brown
+;
+}
+
+.card-event__inner {
+  @include rwd('tablet', true)
+ {
+    padding-right: 20px;
+    border-right: 1px solid $c-light-green
+;
+  }
+  @media (--m-1) {
+    margin-bottom: 20px;
+    padding: 0 0 15px;
+    border: none;
+  }
+}
+
+.card-event__link {
+  &:hover {
+    background-color: $c-green
+;
+  }
+}

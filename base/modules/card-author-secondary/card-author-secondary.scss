@@ -1,0 +1,38 @@
+.card-author--secondary {
+
+  .card-author__content {
+    display: flex;
+    align-items: center;
+    @include rwd('tablet', true)
+ {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .card-author__image-figure {
+    @include pseudo-ratio(1/1);
+    width: 73px;
+    border-radius: 50%;
+    overflow: hidden;
+    @include rwd('tablet', true)
+ {
+      width: 115px;
+    }
+  }
+
+  .card-author__info {
+    margin-left: 15px;
+    @include rwd('tablet', true)
+ {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+
+  .card-author__title {
+    color: $c-dark-gray
+;
+  }
+
+}

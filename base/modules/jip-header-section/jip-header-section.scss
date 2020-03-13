@@ -1,0 +1,110 @@
+.jip-header-section {
+  text-align: center;
+}
+
+.jip-header-section__headline {
+  max-width: 555px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 21px;
+
+  & + .jip-header-section__description {
+    margin-top: 6px;
+
+    @include rwd('tablet', true)
+ {
+      margin-top: 10px;
+    }
+
+    @include rwd('large-laptop', true)
+ {
+      margin-top: 0;
+    }
+  }
+
+  .jip-our-programs--about & {
+    max-width: 585px;
+    padding-top: 40px;
+    margin-bottom: 0;
+
+    @include rwd('tablet', true)
+ {
+      max-width: 100%;
+      padding-top: 69px;
+    }
+
+    @include rwd('ultra')
+ {
+      padding-top: 89px;
+    }
+  }
+}
+
+.jip-header-section__description {
+  max-width: 438px;
+  margin-left: auto;
+  margin-right: auto;
+  color: $c-white
+;
+
+  @include rwd('tablet', true)
+ {
+    max-width: 438px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    max-width: 558px;
+  }
+
+  .jip-our-programs--about & {
+    margin-top: 20px;
+
+    @include rwd('laptop', true)
+ {
+      max-width: 742px;
+    }
+  }
+}
+
+.jip-header-section--our-people {
+  margin-bottom: 27px;
+
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 82px;
+  }
+
+  .jip-header-section__headline {
+    @include rwd('tablet', true)
+ {
+      margin-bottom: 5px;
+    }
+
+    @include rwd('large-laptop', true)
+ {
+      margin-bottom: 4px;
+    }
+  }
+
+  .header-section__description {
+    @include rwd('tablet', true)
+ {
+      margin-top: 5px;
+    }
+  }
+}
+
+.jip-our-ideas__header {
+  .jip-header-section__headline {
+    @include rwd('tablet', true)
+ {
+      margin-bottom: 11px;
+    }
+
+    @include rwd('large-laptop', true)
+ {
+      margin-bottom: 3px;
+    }
+  }
+}

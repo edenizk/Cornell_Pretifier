@@ -1,0 +1,354 @@
+.jip-card__item {
+  position: relative;
+  width: 100%;
+  max-width: 243px;
+  padding: 15px 5px;
+  color: $c-dark-blue
+;
+  transition: left 0.3s, max-width 0.3s;
+
+  @include rwd('tablet', true)
+ {
+    padding: 15px 10px;
+    max-width: 253px;
+  }
+
+  @include rwd('laptop', true)
+ {
+    max-width: 441px;
+    padding: 20px;
+  }
+
+  &.jip-card__item--active:not(.jip-card__item--no-cta) {
+    z-index: 10;
+
+    @include rwd('tablet', true)
+ {
+      max-width: 486px;
+    }
+
+    @include rwd('laptop', true)
+ {
+      max-width: 842px;
+    }
+  }
+}
+
+.jip-card__item-wrap {
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-color: $c-white
+;
+}
+
+.jip-card__item-inner {
+  position: relative;
+  @include rwd('tablet', true)
+ {
+    display: flex;
+    align-items: flex-end;
+    max-width: 233px;
+    min-height: 199px;
+
+    .jip-card__item--active:not(.jip-card__item--no-cta) & {
+      min-height: 250px;
+    }
+  }
+
+  @include rwd('laptop', true)
+ {
+    max-width: 401px;
+  }
+}
+
+.jip-card__detail-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 12px 15px;
+  background: $c-white
+;
+  transition: padding 0.3s;
+
+  @include rwd('laptop', true)
+ {
+    padding: 20px 20px 30px 30px;
+  }
+
+  .jip-card__item--active & {
+    padding-top: 10px;
+
+    @include rwd('laptop', true)
+ {
+      padding-top: 5px;
+    }
+  }
+}
+
+.jip-card__image-wrap {
+  position: relative;
+  z-index: 2;
+
+  @include rwd('tablet', true)
+ {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  @include rwd('laptop', true)
+ {
+    position: relative;
+  }
+}
+
+.jip-card__image {
+  @include pseudo-ratio(150/230);
+
+  @include rwd('tablet', true)
+ {
+    @include pseudo-ratio(199/233);
+  }
+
+  @include rwd('laptop', true)
+ {
+    @include pseudo-ratio(430/401);
+  }
+}
+
+.jip-card__detail {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin-top: -35px;
+  width: 100%;
+
+  @include rwd('tablet', true)
+ {
+    margin-top: 0;
+    padding-top: 46px;
+  }
+
+  @include rwd('laptop', true)
+ {
+    margin-top: 0;
+    padding-top: 0;
+    position: absolute;
+  }
+}
+
+.jip-card__waving {
+  position: relative;
+  display: block;
+  bottom: -1px;
+
+  & svg {
+    display: block;
+    width: 100%;
+    max-height: 30px;
+  }
+}
+
+.jip-card__description {
+  max-height: 0;
+  transition: max-height 0.3s;
+  overflow: hidden;
+}
+
+.jip-card__toggle {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  z-index: 10;
+
+  @include rwd('laptop', true)
+ {
+    width: 36px;
+    height: 36px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 4px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $c-dark-blue
+;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  .jip-card__item--active & {
+    &::before,
+    &::after {
+      background-color: $c-jip-blue-sky
+;
+    }
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.jip-card__title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.jip-card__title-text {
+  width: calc(100% - 25px);
+  @include rwd('laptop', true)
+ {
+    width: calc(100% - 40px);
+    max-width: 275px;
+  }
+}
+
+.jip-card__title-text,
+.jip-card__description-text {
+  color: $c-dark-blue
+;
+}
+
+.jip-card__description-text {
+  padding-top: 5px;
+
+  @include rwd('laptop', true)
+ {
+    padding-top: 15px;
+  }
+}
+
+/* CTAs */
+.jip-card__ctas {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+
+  @include rwd('tablet', true)
+ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: none;
+  }
+
+  .jip-card__item--no-cta {
+    display: none;
+  }
+
+  .jip-card__item--active & {
+    @include rwd('tablet', true)
+ {
+      transform: translate3d(100%, 0, 0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.jip-card__cta {
+  padding: 7px 0 0 0;
+
+  @include rwd('tablet', true)
+ {
+    padding: 14px 24px 0;
+  }
+
+  @include rwd('laptop', true)
+ {
+    padding: 30px 30px 0;
+  }
+}
+
+.jip-card__cta-image-wrap {
+  position: relative;
+  display: block;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.jip-card__cta-title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+.jip-card__cta-link {
+  margin-top: 6px;
+
+  @include rwd('laptop', true)
+ {
+    margin-top: 15px;
+  }
+
+  a {
+    display: block;
+    text-align: left;
+    color: $c-dark-blue
+;
+
+    @include rwd('large-laptop', true)
+ {
+      color: $c-jip-dark-blue
+;
+    }
+  }
+}
+
+.jip-card__cta-image {
+  @include pseudo-ratio(79/203);
+
+  @include rwd('laptop', true)
+ {
+    @include pseudo-ratio(130/370);
+  }
+}
+
+.jip-card__cta--mobile {
+  margin-top: 5px;
+  @include rwd('tablet', true)
+ {
+    display: none;
+  }
+}
+
+.jip-card__cta--desktop {
+  display: none;
+  @include rwd('tablet', true)
+ {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}

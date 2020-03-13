@@ -1,0 +1,128 @@
+.five-up {
+  padding: 30px 0;
+  background: $c-white
+;
+  color: $c-black
+;
+  @include rwd('small-tablet', true)
+ {
+    padding: 60px 0;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 80px 0;
+  }
+}
+
+.five-up__headline {
+  max-width: 300px;
+  @include rwd('small-tablet', true)
+ {
+    max-width: 450px;
+  }
+}
+
+.five-up__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include rwd('small-tablet', true)
+ {
+    justify-content: flex-start;
+  }
+}
+
+.five-up__more {
+  display: block;
+  width: 100%;
+  color: $c-dark-red
+;
+  transition: background .3s ease;
+  @include rwd('small-tablet', true)
+ {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    max-width: none;
+    background: transparent;
+    border-left: solid 1px rgba($c-border2
+, .3);
+  }
+  @include rwd('tablet', true)
+ {
+    width: 33.33%;
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: 16.66%;
+  }
+  &:hover {
+    background: $c-blue-gray
+;
+
+    .five-up__more-inner {
+      color: $c-dark-red
+;
+      @include rwd('small-tablet', true)
+ {
+        background: transparent;
+      }
+    }
+    .icon-arrow:before {
+      color: $c-dark-red
+;
+    }
+    @include rwd('small-tablet', true)
+ {
+      color: $c-dark-red
+;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .label-text {
+    order: 1;
+  }
+  .icon-arrow {
+    order: 999;
+    font-size: 2rem;
+
+    @include rwd('small-tablet', true)
+ {
+      order: 0;
+      margin-top: -20px;
+      display: block;
+    }
+
+    &:before {
+      color: $c-dark-red
+;
+      @include rwd('small-tablet', true)
+ {
+        font-size: 45px;
+      }
+    }
+  }
+}
+
+.five-up__more-inner {
+  @extend .transition;
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+  text-align: center;
+  @include rwd('small-tablet', true)
+ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+}

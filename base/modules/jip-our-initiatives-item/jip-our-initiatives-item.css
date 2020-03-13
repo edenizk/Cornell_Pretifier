@@ -1,0 +1,126 @@
+.jip-our-initiatives-item {
+  width: 100%;
+  background-color: var(--c-dark-blue);
+}
+
+.jip-our-initiatives-item__inner {
+  @media (--m) {
+    border: 1px solid var(--c-white);
+  }
+}
+
+.jip-our-initiatives-item__block--left,
+.jip-our-initiatives-item__block--right {
+  width: 100%;
+
+  @media (--m) {
+    width: 50%;
+  }
+}
+
+.jip-our-initiatives-item__block--left {
+  @media (--m) {
+    padding-right: 0;
+  }
+}
+
+.jip-our-initiatives-item__icon-link {
+  padding-left: 11px;
+  margin-bottom: 3px;
+
+  svg {
+    width: 13px;
+    height: 13px;
+    color: var(--c-jip-green);
+
+    @media (--m) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.jip-our-initiatives-item__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jip-our-initiatives-item__image {
+  @include pseudo-ratio(277/288);
+
+  @media (--m) {
+    @include pseudo-ratio(319/332);
+  }
+
+  @media (--l) {
+    @include pseudo-ratio(646/660);
+  }
+}
+
+.jip-our-initiatives-item__block--right {
+  @media (--m) {
+    display: flex;
+    padding-left: 0;
+  }
+}
+
+.jip-our-initiatives-item__block--right {
+  .jip-our-initiatives-item__block-inner {
+    padding: 54px 20px 48px;
+    text-align: center;
+
+    @media (--m) {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 45px;
+    }
+  }
+}
+
+.jip-our-initiatives-item__title {
+  margin-bottom: 8px;
+
+  @media (--ml) {
+    margin-bottom: 10px;
+  }
+}
+
+.jip-our-initiatives-item__description {
+  margin-bottom: 9px;
+
+  @media (--l) {
+    max-width: 370px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.jip-our-initiatives--flexible {
+  .jip-our-initiatives-item__inner {
+    border: 0;
+  }
+
+  .jip-our-initiatives-item__block--right {
+    .jip-our-initiatives-item__block-inner {
+      position: relative;
+      z-index: 1;
+      padding: 47px 23px 44px;
+      border-top: 0;
+      border-right: 1px solid var(--c-white);
+      border-bottom: 1px solid var(--c-white);
+      border-left: 1px solid var(--c-white);
+      margin-bottom: 1px;
+
+      @media (--m) {
+        padding: 43px 18px;
+        border-top: 1px solid var(--c-white);
+        border-left: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

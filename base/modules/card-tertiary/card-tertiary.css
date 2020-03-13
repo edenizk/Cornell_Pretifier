@@ -1,0 +1,37 @@
+.card-tertiary__title {
+  margin-bottom: 8px;
+}
+
+.card-tertiary__description {
+  color: var(--c-white);
+  margin-bottom: 15px;
+  @media (--xl) {
+    margin-bottom: 25px;
+  }
+  p {
+    margin-top: 0;
+    color: var(--c-black);
+  }
+}
+
+.card-tertiary__footer {
+  a:before {
+    background-color: var(--c-dark-red);
+  }
+}
+
+.card-tertiary__cat {
+  margin-bottom: 4px;
+  @media (--sm) {
+    margin-bottom: 6px;
+  }
+  @media (--m) {
+    margin-bottom: 2px;
+  }
+  @media (--ml) {
+    margin-bottom: 7px;
+  }
+  @media (--l) {
+    margin-bottom: 15px;
+  }
+}

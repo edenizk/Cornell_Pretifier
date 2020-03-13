@@ -1,0 +1,121 @@
+.hero-grid {
+  .flickity-viewport {
+    transition: height .4s ease;
+  }
+}
+
+.hero-grid__inner {
+  @include rwd('tablet', true)
+ {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -7.5px;
+  }
+  &:after {
+    content: 'flickity';
+    display: none;
+    @include rwd('tablet', true)
+ {
+      content: '';
+    }
+  }
+}
+
+.hero-grid__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all .5s ease;
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 15px;
+    padding: 0 7.5px;
+    width: 50%;
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: 33.33%;
+  }
+}
+
+.is-initialized {
+  .hero-grid__item {
+    height: 100%;
+    @include rwd('tablet', true)
+ {
+      height: auto;
+    }
+  }
+  .hero-grid__item-inner {
+    height: 100%;
+    @include rwd('tablet', true)
+ {
+      height: auto;
+    }
+  }
+}
+
+.hero-grid__image {
+  @include pseudo-ratio(235/280);
+  width: 100%;
+  height: 100%;
+  @include rwd('tablet', true)
+ {
+    @include pseudo-ratio(338/400);
+  }
+}
+
+.hero-grid__item-inner {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: $c-grey3
+;
+  color: $c-white
+;
+  @include rwd('tablet', true)
+ {
+    padding: 40px;
+  }
+}
+
+.hero-grid__item-label {
+  margin-bottom: 10px;
+  color: $c-border2
+;
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 28px;
+  }
+}
+
+.hero-grid__item-title {
+  margin-bottom: 7px;
+}
+
+.hero-grid__item-description {
+  margin-bottom: 10px;
+}
+
+.hero-grid__item-description,
+.hero-grid__item-description p {
+  color: $c-white
+;
+}
+
+.hero-grid__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 30px;
+  }
+  @include rwd('tablet', true)
+ {
+    max-width: 80%;
+  }
+}

@@ -1,0 +1,52 @@
+.theme-block {
+  padding: 40px 0 100px;
+  color: $c-black
+;
+  background: $c-grey7
+;
+  overflow: hidden;
+  @include rwd('tablet', true)
+ {
+    padding: 60px 0;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 80px 0;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding: 100px 0;
+  }
+}
+
+.theme-block__headline {
+  color: $c-brown2
+;
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 20px;
+  }
+}
+
+.theme-block__container {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  @include rwd('tablet', true)
+ {
+    max-width: 720px;
+  }
+  @include rwd('laptop', true)
+ {
+    max-width: 960px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    max-width: 1240px;
+  }
+}
+
+.theme-block__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}

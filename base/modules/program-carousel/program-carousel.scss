@@ -1,0 +1,169 @@
+.program-carousel {
+  background-color: $c-light-grey
+;
+  padding: 30px 0 60px;
+
+  @include rwd('tablet', true)
+ {
+    padding: 60px 0 106px;
+  }
+}
+
+.program_carousel__content {
+  @include rwd('ultra')
+ {
+    max-width: 764px;
+  }
+}
+
+.program-carousel__inner {
+  position: relative;
+}
+
+.program-carousel__description {
+  margin-top: 15px;
+
+  @include rwd('tablet', true)
+ {
+    margin-top: 20px;
+  }
+
+  @include rwd('ultra')
+ {
+    margin-top: 22px;
+  }
+}
+
+.program-carousel__button {
+  display: inline-block;
+  margin-top: 20px;
+
+  @include rwd('ultra')
+ {
+    margin-top: 31px;
+  }
+}
+
+.program-carousel__list-wrap {
+  margin-top: 18px;
+}
+
+.program-carousel__list {
+  margin-left: -21px;
+  margin-right: -21px;
+
+  @include rwd('tablet', true)
+ {
+    margin-left: -11px;
+    margin-right: -53px;
+  }
+
+  @include rwd('laptop', true)
+ {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  .flickity-button {
+    width: 26px;
+    height: 26px;
+    top: auto;
+    transform: none;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid $c-dark-gray
+;
+
+    @include rwd('tablet', true)
+ {
+      bottom: -10px;
+    }
+
+    @include rwd('laptop', true)
+ {
+      width: 40px;
+      height: 40px;
+      bottom: -40px;
+    }
+
+    &.previous {
+      right: 52px;
+      left: auto;
+
+      @include rwd('tablet', true)
+ {
+        right: 60px;
+      }
+    }
+    &.next {
+      right: 20px;
+
+      @include rwd('tablet', true)
+ {
+        right: 28px;
+      }
+
+      @include rwd('laptop', true)
+ {
+        right: 12px;
+      }
+    }
+  }
+}
+
+.program-carousel__button {
+  color: $c-black
+;
+}
+
+.program-carousel__item {
+  width: 86%;
+  padding: 12px 0 12px 22px;
+
+  @include rwd('tablet', true)
+ {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  &:last-child {
+    @media (--m-max) {
+      padding-right: 22px;
+      padding-left: 0;
+      margin-left: 22px;
+    }
+  }
+
+  @include rwd('small-tablet')
+ {
+    width: 60%;
+  }
+
+  @include rwd('tablet', true)
+ {
+    width: 42.6%;
+  }
+
+  @include rwd('laptop', true)
+ {
+    width: 33.3333%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  @include rwd('ultra')
+ {
+    width: 25%;
+  }
+
+  & .company-list-item__wrapper {
+    box-shadow: 0 2px 7px 0 $c-black-01
+;
+  }
+
+  & .company-list-item__container {
+    background-color: $c-white
+;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,194 @@
+.transition {
+  transition: all .3s ease;
+}
+
+@mixin font-size($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: strip($line-height) / strip($font-size);
+}
+
+@mixin jip-font-size($font-size, $line-height, $letterSpacing: 0) {
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letterSpacing;
+}
+
+@mixin font-size-base {
+  @type 14px 21px;
+  @type $ml
+ 16px 24px;
+}
+
+
+@mixin pv($padding: 20px) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+@mixin mv($margin: 20px) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
+@mixin pseudo-ratio($ratio: 1) {
+  &:before {
+    content: '';
+    display: block;
+    padding-bottom: calc($ratio * 100%);
+  }
+}
+
+@mixin transition($attribute: all, $duration: $duration
+, $type: $ease
+) {
+  transition: $attribute $duration $type;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.absolute-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.bg-diagonal {
+  position: relative;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 10;
+    left: -5%;
+    right: -5%;
+    width: 110%;
+    height: 30px;
+    background: $c-white
+;
+    transform: rotate3d(0,0,1,4deg);
+    @include rwd('small-tablet')
+ {
+      height: 40px;
+      transform: rotate3d(0,0,1,4deg);
+    }
+    @include rwd('small-tablet', true)
+ {
+      height: 40px;
+      transform: rotate3d(0,0,1,2deg);
+    }
+    @include rwd('laptop', true)
+ {
+      transform: rotate3d(0,0,1,1.4deg);
+    }
+    @include rwd('large-laptop', true)
+ {
+      height: 50px;
+      transform: rotate3d(0,0,1,1.3deg);
+    }
+  }
+  &:before {
+    top: -13px;
+    @include rwd('small-tablet')
+ {
+      top: -18px;
+    }
+    @include rwd('laptop', true)
+ {
+      top: -25px;
+    }
+  }
+  &:after {
+    bottom: -13px;
+    @include rwd('small-tablet')
+ {
+      bottom: -18px;
+    }
+    @include rwd('laptop', true)
+ {
+      bottom: -25px;
+    }
+  }
+}
+
+.move-top {
+  transition: all .4s ease-in-out;
+  transform: translateY(150px);
+  transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.move-right {
+  transition: transform .4s ease;
+  transform: translateX(100vw);
+  transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.icon-play-video {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  border: 1px solid $c-white
+;
+  transition: all .3s ease;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 0 $c-green
+;
+    transition: all .3s ease-in-out;
+  }
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 5px;
+    border-style: solid;
+    border-width: 10px 0 10px 17.3px;
+    border-color: transparent transparent transparent #fff;
+    display: block;
+    margin: auto;
+    -webkit-transition: border .4s;
+    transition: border .4s;
+  }
+  &:hover {
+    border-color: $c-green
+;
+    background: $c-green
+;
+    &:after {
+      border-left-color: $c-black
+;
+    }
+    &:before {
+      box-shadow: inset 0 0 0 25px $c-green
+;
+    }
+  }
+}

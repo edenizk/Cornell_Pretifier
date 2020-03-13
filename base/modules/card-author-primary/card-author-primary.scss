@@ -1,0 +1,134 @@
+.card-author--primary {
+  margin-top: 73px;
+  display: flex;
+
+  @include rwd('small-tablet', true)
+ {
+    flex: 1 0 auto;
+    margin-top: 0;
+    min-height: 406px;
+  }
+
+  .card-author__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 219px;
+    padding: 60px 0 12px;
+    background: $c-white
+;
+    width: 100%;
+
+    @include rwd('small-tablet', true)
+ {
+      padding: 0;
+    }
+    @include rwd('tablet', true)
+ {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  .card-author__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &[data-background-color="#b31b1b"] + .card-author__content .card-author__link {
+      @media (--s-max) {
+        color: $c-white
+;
+      }
+    }
+
+    @include rwd('small-tablet', true)
+ {
+      position: static;
+      width: 100%;
+      height: 150px;
+    }
+  }
+
+  .card-author__name {
+    margin-bottom: 5px;
+  }
+
+  .card-author__image-figure {
+    @include pseudo-ratio(1/1);
+    width: 73px;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translateY(-50%);
+    &.image--cover {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      .image__img {
+        border-radius: 50%;
+      }
+      @include rwd('small-tablet', true)
+ {
+        left: 20px;
+        right: auto;
+      }
+    }
+  }
+
+  .card-author__link {
+    @extend .button-link-text;
+    color: $c-black
+;
+    display: block;
+
+    span {
+      transition: background .3s, color .3s;
+    }
+
+    .icon-arrow:before {
+      left: 0;
+    }
+
+    &:hover {
+      span {
+        background: $c-blue-gray
+;
+        color: $c-black
+;
+      }
+    }
+  }
+
+  .card-author__content {
+    padding-left: 20px;
+    padding-right: 20px;
+    @include rwd('small-tablet', true)
+ {
+      position: relative;
+      flex: 1 0 auto;
+      padding: 60px 20px 50px;
+    }
+    @include rwd('tablet', true)
+ {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  .card-author__background-image {
+    height: 100%;
+  }
+
+  .card-author__cta {
+    color: $c-blue
+;
+    flex-basis: 100%;
+    @include rwd('tablet', true)
+ {
+      flex-basis: auto;
+    }
+  }
+}

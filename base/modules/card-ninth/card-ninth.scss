@@ -1,0 +1,39 @@
+.card-ninth {
+  position: relative;
+  min-height: 219px;
+  @include rwd('small-tablet', true)
+ {
+    max-width: 415px;
+  }
+  @include rwd('tablet', true)
+ {
+    max-width: 440px;
+  }
+  @include rwd('laptop', true)
+ {
+    width: 100%;
+    max-width: none;
+  }
+  .icon-arrow {
+    width: 50px;
+    margin-bottom: 0;
+    @type 50px, 1;
+  }
+}
+
+.card-ninth__content {
+  margin-top: 15px;
+
+  .button-link-white .icon-arrow {
+    color: $c-black
+;
+  }
+}
+
+.card-ninth__link {
+  @extend .button-link-text-lg;
+}
+
+.card-ninth__image-figure {
+  @include pseudo-ratio(0.564);
+}

@@ -1,0 +1,61 @@
+.single-company--single-post {
+  .company-detail {
+    padding: 50px 0;
+    @media (--m) {
+      padding: 130px 0 85px;
+    }
+  }
+}
+.company-detail__block--left {
+  width: 100%;
+  @media (--m) {
+    width: calc(100% / 3);
+  }
+}
+.company-detail__block--middle {
+  width: 100%;
+  @media (--m) {
+    width: calc(100% / 2);
+  }
+}
+.company-detail__block--right {
+  width: 100%;
+  @media (--m) {
+    width: calc(100% / 6);
+  }
+}
+.company-detail__image {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: var(--c-white);
+  @include pseudo-ratio(220/360);
+}
+.company-detail__meta {
+  display: block;
+  margin-top: 5px;
+  color: var(--c-dark-gray);
+}
+.company-detail__block:not(:first-child) {
+  margin-top: 12px;
+  @media (--m) {
+    margin-top: 0;
+  }
+}
+.company-detail__title {
+  margin-bottom: 10px;
+  @media (--m) {
+    margin-bottom: 25px;
+  }
+}
+.company-detail__button {
+  margin-top: 20px;
+  @media (--m) {
+    margin-top: 35px;
+  }
+}
+.company-detail__stage {
+  margin-top: 7px;
+  @media (--m) {
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,27 @@
+.two-up-profile {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  @extend .bg-diagonal;
+}
+.two-up-profile__wrapper {
+  display: block;
+  width: 100%;
+}
+.two-up-profile__list {
+  position: relative;
+  padding-top: 15px;
+  @media (--m) {
+    padding-top: 30px;
+  }
+  @media (--l) {
+    padding-top: 45px;
+  }
+}
+.two-up-profile--style-2 {
+  background: var(--c-white);
+  .people-item__inner {
+    background: var(--c-light-grey);
+  }
+}

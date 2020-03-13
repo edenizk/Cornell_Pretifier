@@ -1,0 +1,38 @@
+/**
+ * Accessability.css
+ * @date 7/30/19
+ * @author iws-support@cornell.edu
+ * @description Hot fixs for accessibility issues.
+ **/
+
+ /* Color contrast fix. */
+#field_1_1 > label{
+  color: #ffffff !important;
+}
+
+/* Helper function to set visibility to hidden but screen reader accessible. */
+#field_1_1 > label:not(:focus):not(:active),
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+/* Add focus indicator to any element that has focus. */
+:focus {
+  outline: auto 1px -webkit-focus-ring-color !important;
+}
+
+/* focus overides */
+.flickity-enabled:focus {
+  outline: transparent !important;
+}
+
+/* Used to seperate contents with links into seperate paragraphs. */
+p.d-inline{
+  display: inline;
+}

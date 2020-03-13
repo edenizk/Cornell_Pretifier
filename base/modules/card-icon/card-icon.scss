@@ -1,0 +1,73 @@
+.card-icon {
+  width: 100%;
+  margin-bottom: 25px;
+  @include rwd('small-tablet', true)
+ {
+    width: 50%;
+    padding: 0 15px;
+    margin-bottom: 50px;
+  }
+  @include rwd('tablet', true)
+ {
+    width: 33.33%;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: 16.66%;
+    margin-bottom: 0;
+  }
+}
+
+.card-icon__inner {
+  display: flex;
+  @include rwd('tablet', true)
+ {
+    flex-direction: column;
+    max-width: 195px;
+  }
+  @include rwd('tablet', true)
+ {
+    max-width: 273px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    max-width: 145px;
+  }
+}
+
+.card-icon__image-figure {
+  flex: 0 0 auto;
+  width: 53px;
+  margin-bottom: 10px;
+  @include pseudo-ratio(1/1);
+  &.image--contain .image__img {
+    top: auto;
+    left: 50%;
+    bottom: 0;
+    height: auto;
+    max-height: 44px;
+    transform: translateX(-50%);
+  }
+}
+
+.card-icon__content {
+  padding-left: 10px;
+  &:hover {
+    .card-icon__title {
+      background: $c-blue-gray
+;
+    }
+  }
+  @include rwd('tablet', true)
+ {
+    padding-left: 0;
+  }
+}
+
+.card-icon__title {
+  display: inline-block;
+  margin-bottom: 5px;
+  transition: all .3s ease;
+}

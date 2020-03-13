@@ -1,0 +1,44 @@
+.people-grid {
+  margin-bottom: 40px;
+  @media(--ml) {
+    margin-bottom: 60px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.people-grid__inner {
+  .people-grid--border-top & {
+    border-top: 1px solid var(--c-border);
+  }
+}
+
+.people-grid__head {
+  margin-bottom: 15px;
+  @media(--sm) {
+    margin-bottom: 25px;
+  }
+  @media(--ml) {
+    margin-bottom: 30px;
+  }
+  @media(--ml) {
+    margin-bottom: 40px;
+  }
+  @media(--xl) {
+    margin-bottom: 60px;
+  }
+}
+
+.people-grid__list {
+  align-items: flex-start;
+  justify-content: flex-start;
+  @media(--xl) {
+    padding: 0 35px;
+  }
+}
+
+.people-grid__break {
+  width: 100%;
+  max-height: 0;
+}

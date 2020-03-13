@@ -1,0 +1,253 @@
+.alumni-spotlight {
+  background: $c-white
+;
+  padding: 40px 0 30px;
+  @include rwd('small-tablet', true)
+ {
+    padding: 60px 0 40px;
+  }
+  @include rwd('laptop', true)
+ {
+    padding: 80px 0 80px;
+  }
+}
+
+.alumni-spotlight__quote {
+  margin: 0 0 30px;
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 66px;
+  }
+}
+
+.alumni-spotlight__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.alumni-spotlight__body {
+  width: 100%;
+  padding: 0;
+  position: relative;
+  @include rwd('small-tablet', true)
+ {
+    width: 55%;
+    padding: 0;
+  }
+  @include rwd('tablet', true)
+ {
+    width: 62%;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-left: 140px;
+  }
+  @include rwd('large-laptop', true)
+ {
+    padding-left: 215px;
+
+  }
+}
+
+.alumni-spotlight__program {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @include rwd('small-tablet', true)
+ {
+    width: 45%;
+    padding-left: 40px;
+    margin-top: 0;
+    margin-bottom: 22px;
+  }
+  @include rwd('tablet', true)
+ {
+    width: 38%;
+  }
+  @include rwd('laptop', true)
+ {
+    padding-top: 0;
+  }
+}
+
+.alumni-spotlight__program-link {
+  @include button-link-global;
+  display: inline;
+  box-decoration-break: clone;
+  padding-right: 15px;
+  transition: all .25s ease;
+  color: $c-black
+;
+  .alumni-spotlight__icon {
+    @include rwd('tablet', true)
+ {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.alumni-spotlight__icon {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+}
+
+.alumni-spotlight__program--mobile {
+  display: block;
+  @include rwd('small-tablet', true)
+ {
+    display: none;
+  }
+}
+
+.alumni-spotlight__program--desktop {
+  display: none;
+  @include rwd('small-tablet', true)
+ {
+    display: block;
+  }
+}
+
+.image.alumni-spotlight__quote-image {
+  @include pseudo-ratio(1/1);
+  width: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 15px;
+    width: 120px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
+  @include rwd('large-laptop', true)
+ {
+    width: 175px;
+  }
+}
+
+.alumni-spotlight__quote-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+  @include rwd('laptop', true)
+ {
+    margin-bottom: 12px;
+  }
+}
+
+.alumni-spotlight__program-image {
+  @include pseudo-ratio(224/397);
+}
+
+.alumni-spotlight__quote-label {
+  padding-left: 10px;
+  span {
+    display: block;
+    &:first-of-type {
+      @include rwd('laptop', true)
+ {
+        margin-right: 6px;
+      }
+    }
+  }
+  @include rwd('laptop', true)
+ {
+    padding-left: 0;
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+.alumni-spotlight__quote-label,
+.alumni-spotlight__program-label {
+  text-transform: uppercase;
+
+  span:first-of-type {
+    color: $c-brown
+;
+  }
+}
+
+.alumni-spotlight__quote-content {
+  margin-top: 15px;
+  padding-top: 15px;
+  position: relative;
+  quotes: "“" "”" "‘" "’";
+  @include rwd('small-tablet', true)
+ {
+    margin-top: 30px;
+  }
+  @include rwd('laptop', true)
+ {
+    margin-top: 12px;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: open-quote;
+    display: block;
+    line-height: 1;
+  }
+  &:after {
+    content: close-quote;
+  }
+}
+
+.alumni-spotlight__quote-cta {
+  margin-top: 10px;
+  @include rwd('small-tablet', true)
+ {
+    margin-top: 25px;
+  }
+}
+
+.alumni-spotlight__stat {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.alumni-spotlight__stat-block {
+  width: 100%;
+  margin-bottom: 20px;
+  @include rwd('small-tablet', true)
+ {
+    width: 50%;
+  }
+  &:first-child .alumni-spotlight__stat-quantity {
+    color: $c-dark-red
+;
+  }
+  &:nth-child(2) .alumni-spotlight__stat-quantity {
+    color: $c-dark-red
+;
+  }
+}
+
+.alumni-spotlight__stat-description {
+  margin-top: 8px;
+}
+
+.alumni-spotlight__program-image {
+  margin-top: 10px;
+}
+
+.alumni-spotlight__program-title {
+  @extend .main-heading;
+  margin-top: 10px;
+  @include rwd('laptop', true)
+ {
+    max-width: 65%;
+    margin-top: 20px;
+  }
+}
+
+.alumni-spotlight__quote-cta-link {
+  font-family: $font-heading
+;
+}

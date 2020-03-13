@@ -1,0 +1,75 @@
+.jip-our-initiatives {
+  margin-top: -230px;
+
+  @include rwd('tablet', true)
+ {
+    margin-top: -150px;
+  }
+
+  @include rwd('laptop', true)
+ {
+    margin-top: -205px;
+  }
+}
+
+.jip-our-initiatives__wrapper {
+  padding-top: 30px;
+
+  @include rwd('tablet', true)
+ {
+    padding-top: 25px;
+  }
+}
+
+.jip-our-initiatives__inner {
+  margin-bottom: 35px;
+
+  @include rwd('tablet', true)
+ {
+    margin-bottom: 55px;
+  }
+
+  @include rwd('large-laptop', true)
+ {
+    margin-bottom: 85px;
+  }
+}
+
+.jip-our-initiatives__list {
+  margin-top: 21px;
+
+  @include rwd('tablet', true)
+ {
+    margin-top: 61px;
+  }
+}
+
+.jip-our-initiatives--flexible {
+  margin-top: 0;
+  padding-bottom: 68px;
+  background-color: $c-dark-blue
+;
+
+  @include rwd('tablet', true)
+ {
+    padding-bottom: 95px;
+  }
+
+  @include rwd('ultra')
+ {
+    padding-bottom: 140px;
+  }
+
+  .jip-our-initiatives__inner {
+    margin-bottom: 0;
+  }
+
+  .jip-our-initiatives__list {
+    margin-top: 20px;
+
+    @include rwd('tablet', true)
+ {
+      margin-top: 41px;
+    }
+  }
+}

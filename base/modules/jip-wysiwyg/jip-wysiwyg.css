@@ -1,0 +1,24 @@
+.jip-wysiwyg__inner {
+  padding-top: 30px;
+
+  @media (--m) {
+    padding-top: 40px;
+  }
+
+  @media (--l) {
+    padding-top: 84px;
+  }
+}
+
+.jip-wysiwyg__title {
+  padding-bottom: 26px;
+  color: var(--c-black);
+
+  @media (--m) {
+    padding-bottom: 20px;
+  }
+
+  @media (--l) {
+    padding-bottom: 30px;
+  }
+}
